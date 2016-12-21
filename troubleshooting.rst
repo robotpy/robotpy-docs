@@ -35,24 +35,15 @@ You should also have the latest version of the RobotPy software packages:
       Linux/OSX: pip3 list
 
 1. Did you run the deploy command to put the code on the robot?
-1. Make sure you have the latest version of pyfrc! Older versions **won't** work.
-2. Read any error messages that pyfrc might give you. They might be useful. :)
+2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
+3. Read any error messages that pyfrc might give you. They might be useful. :)
 
+Problem: no module named 'wpilib'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go through this checklist:
+If you're on your local computer, did you :ref:`install pyfrc via pip <install_pyfrc>`?
 
-- Updated image
-- Updated Driver Station tools?
-- Updated pyfrc
-- Updated robotpy?
-
-no library named wpilib
-
-Also... somehow integrate the pyfrc documentation into this.
-
-
-
-
+If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
 
 Problem: pyfrc cannot connect to the robot, or appears to hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,8 +79,6 @@ If you `really` don't want pyfrc to do the version check and need to deploy the 
 
 pynetworktables
 ---------------
-
-Have 
 
 Ensure you're using the correct mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
