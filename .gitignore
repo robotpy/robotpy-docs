@@ -1,0 +1,7 @@
+
+*.py[cod]
+__pycache__
+
+_build
+
+_sidebar.rst.inc
