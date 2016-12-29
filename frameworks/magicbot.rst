@@ -155,6 +155,13 @@ can inspect the error::
     except:
         self.onException()
         
+MagicRobot also provides a ``consumeExceptions`` method that you can wrap your
+code with using a ``with`` statement instead::
+
+    with self.consumeExceptions():
+        if self.joystick.getTrigger():
+            self.component.doSomething()
+
         
 .. note:: Most of the time when you write code, you never want to create
           generic exception handlers, but you should try to catch specific
