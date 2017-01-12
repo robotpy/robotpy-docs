@@ -69,11 +69,11 @@ your roboRIO.
 * SSH in, and copy the following to /etc/opkg/robotpy.conf::
 
     src/gz robotpy http://www.tortall.net/~robotpy/feeds/2017
-	
+
 * Run this::
 
-    opkg install python35
-	
+    opkg install python36
+
 * Then run this::
 
     pip3 install robotpy-hal-roborio wpilib
