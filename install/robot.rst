@@ -10,11 +10,17 @@ Robot Installation
 Automated installation
 ----------------------
 
+.. warning:: This guide assumes that your RoboRIO has the current legal RoboRIO
+             image installed. If you haven't done this yet, see `the screensteps
+             documentation <http://wpilib.screenstepslive.com/s/4485/m/13503/l/144984-imaging-your-roborio>`_
+             for imaging instructions. To image the RoboRIO for RobotPy, you
+             only need to have the latest FRC Update Suite installed.
+
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
 distributions, and from Mac OSX also. Here's how you do it:
 
 * `Download RobotPy from github <https://github.com/robotpy/robotpy-wpilib/releases>`_
-* `Make sure Python 3.5 is installed <https://www.python.org/downloads/>`_
+* `Make sure Python 3.4 or newer is installed <https://www.python.org/downloads/>`_
 
 Unzip the RobotPy zipfile somewhere on your computer (not on the roboRIO),
 and there should be an installer.py there. Open up a command line, change
@@ -72,7 +78,7 @@ your roboRIO.
 
 * Run this::
 
-    opkg install python36
+    opkg install python36 netconsole-host
 
 * Then run this::
 
