@@ -77,6 +77,8 @@ You should either:
 
 If you `really` don't want pyfrc to do the version check and need to deploy the code `now`, you can specify the ``--no-version-check`` option. However, this isn't recommended.
 
+.. _troubleshooting_nt:
+
 pynetworktables
 ---------------
 
@@ -108,12 +110,19 @@ Use static IPs when using pynetworktables
 Problem: I can't determine if networktables has connected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have enabled python logging (each of the pynetworktables examples have
-basic logging enabled), look for messages that look like this::
+Make sure that you have enabled python logging (it's not enabled by default)::
+   
+   # To see messages from networktables, you must setup logging
+   import logging
+   logging.basicConfig(level=logging.DEBUG)
+
+Once you've enabled logging, look for messages that look like this::
 
     INFO:nt:CONNECTED 10.14.18.2 port 40162 (...)
 
 If you see a message like this, it means that your client has connected to the
 robot successfully. If you don't see it, that means there's still a problem.
+Usually the problem is that you set the hostname incorrectly in your call to
+``NetworkTables.initialize``.
 
 

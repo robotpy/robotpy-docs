@@ -100,6 +100,11 @@ See the :ref:`pynetworktables examples <pynetworktables_examples>` page.
 
 .. seealso:: :ref:`NetworkTables API Reference <pynetworktables_api>`
 
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+.. seealso:: :ref:`pynetworktables troubleshooting <troubleshooting_nt>`
+
 External tools
 --------------
 
