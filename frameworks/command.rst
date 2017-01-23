@@ -110,7 +110,7 @@ instantiated. Then you can access your subsystem from any Command like this::
 By using this method you can override any Command provided by WPILib or
 robotpy-wpilib-utilities, with pythonic namespacing. For even better structure,
 make ``subsystems`` a package that holds the code for all of your subsystems, as
-demonstrated in the `example program <https://github.com/robotpy/robotpy-wpilib-utilities/tree/master/samples/command_based/subsystems>`_.
+demonstrated in the `example program <https://github.com/robotpy/examples/tree/master/command-based/subsystems>`_.
 
 RobotMap
 ~~~~~~~~
