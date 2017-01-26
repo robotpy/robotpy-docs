@@ -4,8 +4,13 @@
 Robot Installation
 ==================
 
-.. note:: If you install RobotPy on your RoboRIO, you are still able to deploy
-          C++ and Java programs without any conflicts.
+These instructions will help you get RobotPy installed on your RoboRIO, which will
+allow you to write robot code using Python. If you install RobotPy on your
+RoboRIO, you are still able to deploy C++ and Java programs without any conflicts.
+
+.. note:: If you're looking for instructions to use NetworkTables from Python,
+          you probably want the :ref:`pynetworktables installation documentation
+          <install_pynetworktables>`.
 
 Automated installation
 ----------------------

@@ -4,9 +4,10 @@
 pyfrc install
 =============
 
-Installing pyfrc will install all of the packages needed to work with RobotPy
-on your system, including WPILib, pynetworktables, unit testing support, and
-the :ref:`robot simulator <simulator>`.
+Installing pyfrc will install all of the packages needed to help you write and 
+test Python-based Robot code on your development computer. These tools include
+WPILib, pynetworktables, unit testing support, and the
+:ref:`robot simulator <simulator>`.
 
 pyfrc requires Python 3.4 or greater to be installed on your computer.
 
