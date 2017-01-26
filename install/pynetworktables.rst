@@ -82,3 +82,9 @@ You can download the source code, extract it, and run this::
 
 If you are using Python 2.7, you will need to also install the
 `monotonic package from pypi <https://pypi.python.org/pypi/monotonic>`_
+
+Getting Started
+---------------
+
+See the :ref:`NetworkTables guide <networktables_guide>` to learn more about
+using pynetworktables to communicate with your robot.
