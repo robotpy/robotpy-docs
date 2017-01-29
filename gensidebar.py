@@ -77,6 +77,7 @@ def generate_sidebar(conf, conf_api):
     toctree('Additional Info')
     write("Troubleshooting", 'troubleshooting')
     write('Support', 'support')
+    write('FAQ', 'faq')
     endl()
     
     toctree('RobotPy Developers')
