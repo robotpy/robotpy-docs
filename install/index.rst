@@ -18,6 +18,12 @@ Using NetworkTables from Python:
   or pyfrc installed on it (such as a coprocessor like the Raspberry Pi), see the
   :ref:`pynetworktables installation documentation <install_pynetworktables>`.
 
+Installing extra software packages on the RoboRIO:
+
+* You can install third party packages such as OpenCV, NumPy, robotpy-cscore,
+  robotpy-ctre, and other python packages on your RoboRIO using the :ref:`RobotPy
+  Installer <install_packages>`. 
+
 
 .. toctree::
     :hidden:
@@ -25,3 +31,4 @@ Using NetworkTables from Python:
     robot
     pyfrc
     pynetworktables
+    packages
