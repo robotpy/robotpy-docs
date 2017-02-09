@@ -7,3 +7,4 @@ point.
 
 * `Robot Code examples <https://github.com/robotpy/examples>`_
 * :ref:`NetworkTables samples <pynetworktables_examples>`
+* `RobotPy CSCore examples <https://github.com/robotpy/robotpy-cscore/tree/master/examples>`_

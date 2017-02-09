@@ -36,15 +36,12 @@ them at your own risk.
 Each of the commands supports various options, which you can read about by
 invoking the --help command.
 
-Executing the installer
------------------------
+Installing/Executing the installer
+----------------------------------
 
-There are several ways to install and execute the installer.
-
-Install via pip
-~~~~~~~~~~~~~~~
-
-This is the recommended installation/usage method.
+To install/use the installer, you must have Python 3 installed. You can install
+the installer via pip (recommended) or you can use ``installer.py`` directly
+(see below).
 
 On Windows::
   
@@ -56,6 +53,9 @@ On Linux/OSX::
 
 To upgrade the installed version of the installer, you need to add the ``-U``
 flag to pip.
+
+Executing the installer
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have the installer program installed, to execute the installer on
 Windows you can do::
@@ -162,6 +162,8 @@ be downloaded.
 
 .. warning:: If your robot does not have a python3 interpeter installed, this
              command will fail. Run the `install-robotpy` command first.
+
+.. _install_ipk:
 
 IPK (binary) packages
 ---------------------
