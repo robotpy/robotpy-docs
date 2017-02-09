@@ -14,5 +14,4 @@ Programmer's Guide
     testing
     guidelines
     nt
-    vision
     examples
