@@ -153,8 +153,8 @@ The `intermediate vision example <https://github.com/robotpy/examples/tree/maste
 can be found in the RobotPy examples repository.
 
 More information
-~~~~~~~~~~~~~~~~
+----------------
 
 * The `WPILib screensteps documentation for cscore <http://wpilib.screenstepslive.com/s/4485/m/24194/l/682778-read-and-process-video-cameraserver-class>`_
   may be useful to explain concepts (though some details are different)
-* TODO: the cscore API documentation will be available soon ref`robotpy-cscore API documentation <cscore_api>`
+* :ref:`robotpy-cscore API documentation <cscore_api>`

@@ -67,6 +67,7 @@ intersphinx_mapping = {
     'networktables': ('http://pynetworktables.readthedocs.io/en/%s/' % rtd_version, None),
     'wpilib': ('http://robotpy-wpilib.readthedocs.io/en/%s/' % rtd_version, None),
     'robotpy_ext': ('http://robotpy-wpilib-utilities.readthedocs.io/en/%s/' % rtd_version, None),
+    'cscore': ('http://robotpy-cscore.readthedocs.io/en/%s/' % rtd_version, None),
 }
 
 # The version info for the project you're documenting, acts as replacement for
