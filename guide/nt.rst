@@ -110,3 +110,5 @@ External tools
 
 WPILib's OutlineViewer (requires Java) is a great tool for connecting to
 networktables and seeing what's being transmitted.
+
+* `Download OutlineViewer <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/networktables/OutlineViewer/>`_
