@@ -5,13 +5,9 @@ Anatomy of a robot
 
 .. note:: The following assumes you have some familiarity with python, and
           is meant as a primer to creating robot code using the python version
-          of wpilib. If you're not familiar with python, you might try these
-          resources:
+          of wpilib. See our :ref:`python primer <python_primer>` for a brief
+          introduction to the python programming language.
 
-          * `List of various guides to learn Python <http://docs.python-guide.org/en/latest/intro/learning/>`_
-          * `CodeAcademy <http://www.codecademy.com/tracks/python>`_
-          * `Python 3.5 Tutorial <https://docs.python.org/3.5/tutorial/>`_
-          
 This tutorial will go over the things necessary for very basic robot
 code that can run on an FRC robot using the python version of WPILib.
 Code that is written for RobotPy can be ran on your PC using various
