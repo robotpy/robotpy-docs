@@ -82,6 +82,14 @@ If you `really` don't want pyfrc to do the version check and need to deploy the 
 pynetworktables
 ---------------
 
+isConnected() returns False!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Keep in mind that NetworkTables does not immediately connect, and it will
+connect/disconnect as devices come up and down. For example, if your program
+initializes NetworkTables, sends a value, and exits -- that almost certainly
+will fail.
+
 Ensure you're using the correct mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
