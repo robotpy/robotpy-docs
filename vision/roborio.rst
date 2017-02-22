@@ -152,6 +152,32 @@ Important notes
 The `intermediate vision example <https://github.com/robotpy/examples/tree/master/cscore-intermediate-vision>`_
 can be found in the RobotPy examples repository.
 
+Multiple Cameras
+----------------
+
+cscore easily supports multiple cameras! Here's a really simple ``vision.py``
+file that will get you started streaming two cameras to the FRC Dashboard
+program::
+    
+    from cscore import CameraServer
+    
+    def main():
+        cs = CameraServer.getInstance()
+        cs.enableLogging()
+        
+        usb1 = cs.startAutomaticCapture(dev=0)
+        usb2 = cs.startAutomaticCapture(dev=1)
+        
+        cs.waitForever()
+
+One thing to be careful of: if you get USB Bandwidth errors, then you probably
+need to do one of the following:
+
+* Reduce framerate (FPS). The default is 30, but you can get by with 10 or even
+  as low as 5 FPS.
+* Lower image resolution: you'd be surprised how much you can do with a 160x120
+  image!
+
 More information
 ----------------
 
