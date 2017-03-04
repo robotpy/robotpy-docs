@@ -112,3 +112,9 @@ WPILib's OutlineViewer (requires Java) is a great tool for connecting to
 networktables and seeing what's being transmitted.
 
 * `Download OutlineViewer <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/networktables/OutlineViewer/>`_
+
+WPILib's SmartDashboard (requires Java) is often used by teams to connect
+to NetworkTables and used as a dashboard.
+
+* `Download SmartDashboard <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/SmartDashboard/>`_
+
