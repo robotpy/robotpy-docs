@@ -24,6 +24,12 @@ On the RoboRIO
           crashes please `file a bug on github <https://github.com/robotpy/robotpy-cscore/issues>`_
           or use one of our :ref:`support channels <support>`.
 
+.. note::  The following assumes you're writing your robot code and your image
+           processing code using RobotPy. However, if you're writing your Robot
+           code using Java, we do have an example which would allow you to
+           launch Python image processing code from your Java Robot code. `See
+           this file for details <https://github.com/robotpy/robotpy-cscore/blob/master/examples/CameraServer.java>`_.
+
 Installation
 ------------
 
