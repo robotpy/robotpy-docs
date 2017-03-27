@@ -36,7 +36,7 @@ additional steps that you need to do:
    * If you compile from source, you **must** enable shared library support, 
      cscore cannot use a statically compiled OpenCV python module at this time
      
-5. Install pybind11 via pip3: ``pip3 install pybind11``
+5. Install pybind11 via pip3: ``pip3 install pybind11==2.0.1``
 6. Install robotpy-cscore via pip3. It should be as easy as running
    ``pip3 install robotpy-cscore`` -- though be warned, it takes several minutes to
    compile!
