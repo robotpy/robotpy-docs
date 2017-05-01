@@ -193,7 +193,7 @@ advantage of it in creative ways!
 .. note:: Some limitations to notice:
 
           * You cannot access components from the ``createObjects`` function
-          * You cannot access injected varaibles from component constructors. If
+          * You cannot access injected variables from component constructors. If
             you need to do this, define a ``setup`` method for your component
             instead, and it will be called after variables have been injected.
 
