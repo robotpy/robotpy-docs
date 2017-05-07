@@ -4,6 +4,13 @@
 Robot Simulator
 ===============
 
+.. figure:: sim-ss.png
+   :align: right
+   :width: 250px
+   :alt: Screenshot of pyfrc simulator
+   
+   Screenshot of pyfrc simulator
+
 An important (but often neglected) part of developing your robot code is to
 test it! Because we feel strongly about testing and simulation, the RobotPy
 project provides tools to make those types of things easier through the 
