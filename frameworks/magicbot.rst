@@ -111,6 +111,19 @@ magic components by defining the variable names and types in your MyRobot object
             
             # self.elevator is now an instance of Elevator
 
+You can also use Python 3.6 variable annotations to tell the MagicRobot class
+to create magic components:
+
+.. code-block:: python
+
+    from components import Elevator, Forklift
+
+    class MyRobot(MagicRobot):
+        elevator: Elevator
+        forklift: Forklift
+
+        def teleopPeriodic(self):
+            # self.elevator is an instance of Elevator
 
 Variable injection
 ~~~~~~~~~~~~~~~~~~
@@ -187,6 +200,23 @@ are readonly):
         def execute(self):
             # you can access self.cfg.param1, self.cfg.param2, etc...
 
+Like component creation, you can alternatively use Python 3.6 variable
+annotations to declare variables to be injected:
+
+.. code-block:: python
+
+    class Elevator:
+        motor: wpilib.Talon
+
+        def execute(self):
+            # self.motor is the Talon instance created in MyRobot.createObjects
+
+    class MyRobot(MagicRobot):
+        elevator: Elevator
+
+        def createObjects(self):
+            self.elevator_motor = wpilib.Talon(1)
+
 Variable injection in magicbot is one of its most useful features, take
 advantage of it in creative ways!
 
@@ -244,8 +274,8 @@ package called 'autonomous'. To create this package, you must:
 Any ``.py`` files that you add to the autonomous package will
 automatically be loaded at robot startup.
 
-.. seealso:: :class:`.AutonomousModeSelector` on how to define an
-             autonomous mode.
+.. seealso:: :class:`AutonomousModeSelector <robotpy_ext.autonomous.selector.AutonomousModeSelector>`
+             on how to define an autonomous mode.
 
 Dashboard & coprocessor communications
 --------------------------------------
