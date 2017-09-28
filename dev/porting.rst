@@ -94,15 +94,33 @@ Additionally, if you answer 'y' after running ``git source-track diff FILENAME``
 then it will update the validation header in the file.
 
 HAL Changes
-~~~~~~~~~~~
+-----------
 
-If there are changes to the HAL, we have some scripts that should be able to
-help out here.
+RobotPy uses the WPILib HAL API to talk to the hardware. This API is not
+guaranteed to be stable, so every year we have to update it. There are several
+pieces to this that need to be updated.
 
-* ``devtools/hal_fix.sh``: This detects errors in the HAL,
-  and if you pass it the ``--stubs`` argument it can print out the correct 
-  HAL definitions or a python stub. Use ``--help`` for more information.
-  
+Each WPILib build publishes new header files and library files to their website,
+and in ``hal-roborio/hal_impl/distutils.py`` there is code to download and
+extract the package. The version number of the HAL release we want to use
+needs to be updated there.
+
+Once that's updated, you can run the unit tests to see if there are any breaking
+HAL changes. If they fail and there are changes to the HAL, there are two places
+that HAL code updates need to be made aside from the code in WPILib that uses
+the HAL:
+
+* ``hal-base/hal/functions.py`` - contains ctypes signatures for each HAL
+  function, which must match the functions in the HAL headers. Running the
+  robotpy-wpilib unit tests will fail if the functions do not match.
+* ``hal-sim/hal_impl/functions.py`` - contains simulated HAL definitions,
+  which need to have the same parameter names as defined in hal-base
+
+Additionally, ``devtools/hal_fix.sh`` is a script that can be used to detect
+errors in the HAL and print out the correct HAL definitions for a given function
+or generate empty python stubs (via the ``--stubs`` argument). Use ``--help``
+for more information on the capabilities of this tool.
+
 Syntax/Style Guide
 ------------------
 
