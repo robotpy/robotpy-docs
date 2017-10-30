@@ -157,11 +157,98 @@ Whichever method you choose, you can utilize it simply by importing::
         def __init__():
             front_left_motor = robotmap.drive_front_left
 
-Final Thoughts
+Flow Control
 --------------
 
-Welcome to FRC programming with Python. This documentation is still developing,
-so if you find a great trick to make programming your robot in the Command based
-paradigm more "pythonic", please update it with your ideas.
+`Command groups <http://robotpy.readthedocs.io/projects/wpilib/en/latest/wpilib.command/CommandGroup.html>`_
+are great tools for writing complex behaviors, especially for the autonomous
+period. A few commands can be strung together effortlessly, creating a readable
+flow of behavior. It is possible to run multiple commands at the same time using
+the parallel scheduling, or force them into order with sequential scheduling.
+
+`Conditional commands <http://robotpy.readthedocs.io/projects/wpilib/en/latest/wpilib.command/ConditionalCommand.html>`_
+are a great tool for adding logic to a robotics program. With their introduction
+it is possible to choose which ``Command`` to run based on arbitrarily complex
+conditions.
+
+Using these two great tools together, however, can be frustrating. If you
+attempt to use a ``ConditionalCommand`` inside a ``CommandGroup``, you can no
+longer see the complete flow of your logic in a single file. Instead, you must
+look at a separate ``ConditionalCommand`` class. And that ``ConditionalCommand``
+will reference one or two other commands, which might be command groups with
+more conditional commands. As the number of files grow, your project directory
+become more cluttered and tracing the flow becomes more of a chore.
+
+It's not that you should not encapsulate behaviors. If you have a ``Command``
+that
+is called from multiple places, it should be in its own class, but often these
+conditional commands and command groups are created to facilitate a single
+complex behavior. The ``flowcontrol`` module is meant to address this common
+issue. It allows a programmer to use common programming idioms that will be
+automatically converted to conditional commands and command groups.
+
+An example::
+
+    import commandbased.flowcontrol as fc
+    from wpilib.command import CommandGroup
+    from wpilib import DriverStation
+
+    from .drivecommand import DriveCommand
+    from .turncommand import TurnCommand
+
+    def noTarget():
+        # Arbitrary logic here
+        return False
+
+    class Autonomous(CommandGroup):
+        ds = DriverStation.getInstance()
+
+        self.addSequential(DriveCommand(24))
+
+        @fc.IF(lambda: ds.getAlliance() == ds.Alliance.Red)
+        def turnLeft(self):
+            self.addSequential(TurnCommand(90))
+
+        @fc.ELSE
+        def turnRight(self):
+            self.addSequential(TurnCommand(-90))
+
+        self.addSequential(DriveCommand(12))
+
+        @fc.WHILE(noTarget)
+        def turnAround(self):
+            self.addSequential(TurnCommand(180))
+
+When the above ``CommandGroup`` is instantiated, the decorators from the
+``flowcontrol`` module will automatically build the correct series of
+conditional commands and command groups to perform the described steps. The
+``flowcontrol`` module provides the following functions:
+
+``IF(condition)``
+    A decorator that turns the function it decorates into a
+    ``CommandGroup``, and calls that in a ``ConditionalCommand`` if its argument
+    returns a ``True`` value. The argument to ``IF`` can be any Python callable,
+    including a lambda or class method. It will be evaluated when the
+    ``ConditionalCommand`` is started.
+``ELIF(condition)``
+    Like ``IF``, but it will only happen if all previous
+    ``IF`` and ``ELIF`` decorator's conditions returned ``False`` and its
+    condition returns ``True``.
+``ELSE``
+    Follows one or more ``IF`` and ``ELIF`` decorated functions, and only runs if
+    all previous conditions returned ``False``.
+``WHILE(condition)``
+    Creates a ``CommandGroup`` out of the function it decorates, and runs that
+    ``CommandGroup`` repeatedly as long as its condition returns ``True``.
+``BREAK()``
+    This function is not a decorator. It can be placed inline with the
+    ``addSequential`` and ``addParallel`` directives of a ``CommandGroup``. When
+    this function is encountered, the containing loop will be canceled and
+    execution will continue after the loop. If a number is passed to ``BREAK``,
+    that many levels of loops will be canceled.
+``RETURN()``
+    Like ``BREAK``, this is not a decorator. When it is encountered the base
+    ``CommandGroup`` in the file will be canceled. Nothing after it will be
+    executed.
 
 .. seealso:: :ref:`magicbot_framework_docs`
