@@ -146,14 +146,16 @@ invaluable and will save you a ton of time -- but feel free to improve it!
 Enums
 ~~~~~
 
-Though Python 3 does have an enum module, we currently are not using it to
-implement the enums found in the Java WPILib (this may change in the future).
-Instead, we define a class that has static variables with appropriate names and
-assign integers appropriately::
+Python 3.4 and up have an enum module. In the past, we did not use it to
+implement the enums found in the Java WPILib, however, we are slowly moving
+towards its use, starting with moving existing enums to IntEnum.
+New enums should preferably use a plain Enum (although this may be up for discussion).
+See `robotpy-wpilib issue #78 <https://github.com/robotpy/robotpy-wpilib/issues/78>`_ for details.
+For example::
     
     class SomeObject:
     
-        class MyEnum:
+        class MyEnum(enum.IntEnum):
             VALUE1 = 1
             VALUE2 = 2
 
