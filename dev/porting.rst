@@ -42,7 +42,8 @@ include:
 * ``OK``: File is up to date, no changes required
 * ``OLD``: The tracked file has been updated, ```git source-track diff FILENAME`` can
   be used to show all of the git log messages and associated diffs.
-* ``ERR``: The tracked file has moved or has been deleted
+* ``??``: The tracked file has moved or has been deleted
+* ``IGN``: The file has explicitly been marked as do not track
 * ``--``: The file is not currently being tracked
 
 Sometimes, commits are added to WPILib which only change comments, formatting,
