@@ -25,7 +25,7 @@ RobotPy is truly cross platform, and can be installed from Windows, most Linux
 distributions, and from Mac OSX also. Here's how you do it:
 
 * `Download RobotPy from github <https://github.com/robotpy/robotpy-wpilib/releases>`_
-* `Make sure Python 3.4 or newer is installed <https://www.python.org/downloads/>`_
+* `Make sure Python 3.5 or newer is installed <https://www.python.org/downloads/>`_
 
 Unzip the RobotPy zipfile somewhere on your computer (not on the roboRIO),
 and there should be an installer.py there. Open up a command line, change
