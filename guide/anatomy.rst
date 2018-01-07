@@ -114,13 +114,13 @@ Robot drivetrain control
 For standard types of drivetrains (2 or 4 wheel, mecanum, kiwi), you'll want to
 use the various included class to control the motors instead of writing
 your own code to do it. For most standard drivetrains, you'll want to use one
-of three classes.
+of three classes:
 
-* :class:`wpilib.drive.DifferentialDrive` for differential drive/skid-steer drive platforms such as the Kit of Parts drive base, "tank drive", or West Coast Drive.
+* :class:`wpilib.drive.DifferentialDrive` for differential drive/skid-steer drive platforms such as 2 or 4 wheel platforms, the Kit of Parts drive base, "tank drive", or West Coast Drive.
 * :class:`wpilib.drive.KilloughDrive` for Killough (Kiwi) triangular drive platforms.
 * :class:`wpilib.drive.MecanumDrive` for mecanum drive platforms.
 
-For example, when you create a :class:`.DifferentialDrive` object, you can pass in motor controller ( instances::
+For example, when you create a :class:`.DifferentialDrive` object, you can pass in motor controller instances::
 
     l_motor = wpilib.Talon(0)
     r_motor = wpilib.Talon(1)
