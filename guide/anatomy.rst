@@ -207,41 +207,46 @@ below, taken from one of the samples in our github repository::
     """
         This is a good foundation to build your robot code on
     """
-
+    
     import wpilib
-
+    import wpilib.drive
+    
+    
     class MyRobot(wpilib.IterativeRobot):
-        
+    
         def robotInit(self):
             """
             This function is called upon program startup and
             should be used for any initialization code.
             """
-            self.robot_drive = wpilib.RobotDrive(0,1)
+            self.left_motor = wpilib.Spark(0)
+            self.right_motor = wpilib.Spark(1)
+            self.drive = wpilib.drive.DifferentialDrive(self.left_motor, self.right_motor)
             self.stick = wpilib.Joystick(1)
-
+    
         def autonomousInit(self):
             """This function is run once each time the robot enters autonomous mode."""
             self.auto_loop_counter = 0
-
+    
         def autonomousPeriodic(self):
             """This function is called periodically during autonomous."""
-            
+    
             # Check if we've completed 100 loops (approximately 2 seconds)
             if self.auto_loop_counter < 100:
-                self.robot_drive.drive(-0.5, 0) # Drive forwards at half speed
+                self.drive.arcadeDrive(-0.5, 0)  # Drive forwards at half speed
                 self.auto_loop_counter += 1
             else:
-                self.robot_drive.drive(0, 0)    #Stop robot
-
+                self.drive.arcadeDrive(0, 0)  # Stop robot
+    
         def teleopPeriodic(self):
             """This function is called periodically during operator control."""
-            self.robot_drive.arcadeDrive(self.stick)
-
+            self.drive.arcadeDrive(self.stick.getY(), self.stick.getX())
+    
         def testPeriodic(self):
             """This function is called periodically during test mode."""
-            wpilib.LiveWindow.run()
-
+            pass
+    
+    
     if __name__ == "__main__":
         wpilib.run(MyRobot)
 
