@@ -142,7 +142,7 @@ Once you have one of these objects, it has various methods that you can use
 to control the robot via joystick, or you can specify the control inputs
 manually.
 
-.. seealso:: Documentation for the :class:`wpilib.drive.DifferentialDrive`, :class:`wpilib.drive.KilloughDrive`, and :class:`wpilib.drive.MecanumDrive` objects, and the FIRST WPILib Programming Guide.
+.. seealso:: Documentation for the :mod:`wpilib.drive` module, and the FIRST WPILib Programming Guide.
 
 Robot Operating Modes (IterativeRobot)
 --------------------------------------
