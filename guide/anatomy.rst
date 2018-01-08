@@ -111,25 +111,38 @@ Other motors and sensors have similar conventions.
 Robot drivetrain control
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-For standard types of drivetrains (2 or 4 wheel, and mecanum), you'll want to
-use the :class:`.RobotDrive` class to control the motors instead of writing
-your own code to do it. When you create a RobotDrive object, you either specify
-which PWM channels to automatically create a motor for::
+For standard types of drivetrains (2 or 4 wheel, mecanum, kiwi), you'll want to
+use the various included class to control the motors instead of writing
+your own code to do it. For most standard drivetrains, you'll want to use one
+of three classes:
 
-	self.robot_drive = wpilib.RobotDrive(0,1)
+* :class:`wpilib.drive.DifferentialDrive` for differential drive/skid-steer drive platforms such as 2 or 4 wheel platforms, the Kit of Parts drive base, "tank drive", or West Coast Drive.
+* :class:`wpilib.drive.KilloughDrive` for Killough (Kiwi) triangular drive platforms.
+* :class:`wpilib.drive.MecanumDrive` for mecanum drive platforms.
 
-Or you can pass in motor controller instances::
+For example, when you create a :class:`.DifferentialDrive` object, you can pass in motor controller instances::
 
-	l_motor = wpilib.Talon(0)
-	r_motor = wpilib.Talon(1)
-	self.robot_drive = wpilib.RobotDrive(l_motor, r_motor)
-	
+    l_motor = wpilib.Talon(0)
+    r_motor = wpilib.Talon(1)
+    self.robot_drive = wpilib.drive.DifferentialDrive(l_motor, r_motor)
+
+Or you can pass in motor controller groups to use more than one controller per side::
+
+    self.frontLeft = wpilib.Spark(1)
+    self.rearLeft = wpilib.Spark(2)
+    self.left = wpilib.SpeedControllerGroup(self.frontLeft, self.rearLeft)
+
+    self.frontRight = wpilib.Spark(3)
+    self.rearRight = wpilib.Spark(4)
+    self.right = wpilib.SpeedControllerGroup(self.frontRight, self.rearRight)
+
+    self.drive = wpilib.drive.DifferentialDrive(self.left, self.right)
+
 Once you have one of these objects, it has various methods that you can use
 to control the robot via joystick, or you can specify the control inputs
 manually.
 
-.. seealso:: Documentation for the :class:`wpilib.robotdrive.RobotDrive`
-             object, and the FIRST WPILib Programming Guide.
+.. seealso:: Documentation for the :mod:`wpilib.drive` module, and the FIRST WPILib Programming Guide.
 
 Robot Operating Modes (IterativeRobot)
 --------------------------------------
@@ -194,41 +207,46 @@ below, taken from one of the samples in our github repository::
     """
         This is a good foundation to build your robot code on
     """
-
+    
     import wpilib
-
+    import wpilib.drive
+    
+    
     class MyRobot(wpilib.IterativeRobot):
-        
+    
         def robotInit(self):
             """
             This function is called upon program startup and
             should be used for any initialization code.
             """
-            self.robot_drive = wpilib.RobotDrive(0,1)
+            self.left_motor = wpilib.Spark(0)
+            self.right_motor = wpilib.Spark(1)
+            self.drive = wpilib.drive.DifferentialDrive(self.left_motor, self.right_motor)
             self.stick = wpilib.Joystick(1)
-
+    
         def autonomousInit(self):
             """This function is run once each time the robot enters autonomous mode."""
             self.auto_loop_counter = 0
-
+    
         def autonomousPeriodic(self):
             """This function is called periodically during autonomous."""
-            
+    
             # Check if we've completed 100 loops (approximately 2 seconds)
             if self.auto_loop_counter < 100:
-                self.robot_drive.drive(-0.5, 0) # Drive forwards at half speed
+                self.drive.arcadeDrive(-0.5, 0)  # Drive forwards at half speed
                 self.auto_loop_counter += 1
             else:
-                self.robot_drive.drive(0, 0)    #Stop robot
-
+                self.drive.arcadeDrive(0, 0)  # Stop robot
+    
         def teleopPeriodic(self):
             """This function is called periodically during operator control."""
-            self.robot_drive.arcadeDrive(self.stick)
-
+            self.drive.arcadeDrive(self.stick.getY(), self.stick.getX())
+    
         def testPeriodic(self):
             """This function is called periodically during test mode."""
-            wpilib.LiveWindow.run()
-
+            pass
+    
+    
     if __name__ == "__main__":
         wpilib.run(MyRobot)
 
