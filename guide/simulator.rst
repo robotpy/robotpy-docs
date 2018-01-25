@@ -82,10 +82,14 @@ If you have pygame installed for Python 3, when you run the simulator any
 supported joysticks you have plugged in should automatically provide joystick
 input to the simulator. 
 
-.. note:: Installing pygame requires having a compiler installed, as it has
-          many binary dependencies. It can be a tricky thing to accomplish,
+.. note:: The easiest way to install pygame is to install one of the precompiled
+          wheels available on pypi via ``pip install pygame``. This should work
+	  on OSX, Windows, and Linux.
+          
+	  Installing pygame from source requires having a compiler installed,
+	  as it has many binary dependencies. It can be a tricky thing to accomplish,
           please refer to the pygame documentation for the right way to install
-          it for your platform. 
+          it for your platform.
 
 .. versionadded:: 2015.3.6
 
