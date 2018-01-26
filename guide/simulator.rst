@@ -91,10 +91,9 @@ The contents of config.json should look something like this:
 
 This file is in JSON object format. To learn more about JSON read here https://www.w3schools.com/js/js_json_intro.asp
 
-The "pyfrc" object is the main object which holds all the other values.
-"robot" contains specifics about the dimensions and starting position of the robot on the grid.
-"field" contains specifics for the field. The width, height, and pixels per foot. In here you can add
-a property called "image" and assign it a string with a path to an image in gif or png format like so.
+- The "pyfrc" object is the main object which holds all the other values.
+- "robot" contains specifics about the dimensions and starting position of the robot on the grid.
+- "field" contains specifics for the field. The width, height, and pixels per foot. In here you can add a property called "image" and assign it a string with a path to an image in gif or png format like so.
 
 .. code-block:: js
 
