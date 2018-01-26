@@ -91,19 +91,33 @@ The contents of config.json should look something like this:
 
 This file is in JSON object format. To learn more about JSON read here https://www.w3schools.com/js/js_json_intro.asp
 
-- The "pyfrc" object is the main object which holds all the other values.
-- "robot" contains specifics about the dimensions and starting position of the robot on the grid.
-- "field" contains specifics for the field. The width, height, and pixels per foot. In here you can add a property called "image" and assign it a string with a path to an image in gif or png format like so.
+* The "pyfrc" object is the main object which holds all the other values. Don't change this.
+* "robot" contains specifics about the dimensions and starting position of the robot on the grid. Adjust these to suit your needs.
+* "field" contains specifics for the field. The width, height, and pixels per foot. Adjust these to suit your needs as well.
 
-.. code-block:: js
+	- In here you can add a property called "image" and assign it a string with a path to an image in gif or png format like so.
 
-	"field": {
-	  "w": 25,
-	  "h": 27,
-	  "px_per_ft": 10,
-	  "image": "/path/to/your/code/sim/pic.png",
+		.. code-block:: js
 
-You can still draw shapes on top of the image in the "objects" property.
+			"field": {
+			  "w": 25,
+			  "h": 27,
+			  "px_per_ft": 10,
+			  "image": "/path/to/your/code/sim/pic.png",
+
+* The "objects" property contains simple colored geometric shapes drawn using the coordinate plane.
+
+	- Use the "color" property to set the color of the shape. Html color codes should work as described here https://www.w3schools.com/colors/default.asp
+	- Use the "points" property to create a list of coordinate points. The shape will be drawn in the order you place them.
+	- Drawing a full FRC field from scratch with correct dimensions and proportions can be tedious and challenging. If you plan to do so consider the following.
+
+		+ Assigning it to it's own team of developers can make the process more feasible.
+		+ Creating a mockup in GeoGebra or on graph paper first is easier. You can then reference the coordinates. Use the fourth quadrant and convert the negative Y values to positive.
+		+ Share your work on github for other RobotPy users to benefit. Being the author of the virtual field can be a good discussion point before a judge.
+		+ Be sure to adjust the "field" properties to match the field proportions. This can take some thinking and discussion.
+		+ Be sure to adjust the robot size to match your robot's bumper dimensions.
+
+
 
 
 Communicating with SmartDashboard
