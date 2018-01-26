@@ -79,7 +79,7 @@ your roboRIO.
 * Connect your roboRIO to the internet
 * SSH in, and copy the following to /etc/opkg/robotpy.conf::
 
-    src/gz robotpy http://www.tortall.net/~robotpy/feeds/2017
+    src/gz robotpy http://www.tortall.net/~robotpy/feeds/2018
 
 * Run this::
 
