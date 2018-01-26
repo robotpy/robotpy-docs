@@ -54,6 +54,57 @@ for early testing of autonomous movements.
 
 .. _smartdashboard:
 
+Customizing The Simulator and Making Fields.
+---------------------------------
+When you load your physics engine and copy the 'sim' folder from the example
+repository you should have a file in the 'sim' folder called config.json.
+The contents of config.json should look something like this:
+
+.. code-block:: js
+
+	{
+	  "pyfrc": {
+
+		"robot": {
+		  "w": 2,
+		  "h": 3,
+		  "starting_x": 2,
+		  "starting_y": 20,
+		  "starting_angle": 0
+		},
+
+		"field": {
+		  "w": 25,
+		  "h": 27,
+		  "px_per_ft": 10,
+
+		  "objects": [
+			{ "color": "grey",
+			  "points": [ [7.25,11.21], [10.333,11.21], [10.333,27], [7.25,27] ] },
+
+			{ "color": "grey",
+			  "points": [ [16.83, 0], [19.90, 0], [19.90, 15.75], [16.83, 15.75] ] }
+		  ]
+		}
+	  }
+	}
+
+This file is in JSON object format. To learn more about JSON read here https://www.w3schools.com/js/js_json_intro.asp
+
+- The "pyfrc" object is the main object which holds all the other values.
+- "robot" contains specifics about the dimensions and starting position of the robot on the grid.
+- "field" contains specifics for the field. The width, height, and pixels per foot. In here you can add
+a property called "image" and assign it a string with a path to an image in gif or png format like so.
+.. code-block:: js
+	"field": {
+	  "w": 25,
+	  "h": 27,
+	  "px_per_ft": 10,
+	  "image": "/path/to/your/code/sim/pic.png",
+
+You can still draw shapes on top of the image in the "objects" property.
+
+
 Communicating with SmartDashboard
 ---------------------------------
 
