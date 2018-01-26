@@ -36,4 +36,5 @@ Installing extra software packages on the RoboRIO:
     pyfrc
     pynetworktables
     cscore
+    ctre
     packages
