@@ -41,21 +41,21 @@ To import wpilib, it's just as simple as this::
 Robot object
 ------------
 
-Every valid robot program must define a robot object that inherits from either
-:class:`wpilib.iterativerobot.IterativeRobot` or :class:`wpilib.samplerobot.SampleRobot`. These
-objects define a number of functions that you need to override, which get
-called at various times.
+Every valid robot program must define a robot object that inherits from
+:class:`wpilib.iterativerobot.IterativeRobot`, :class:`wpilib.timedrobot.TimedRobot`,
+or :class:`wpilib.samplerobot.SampleRobot`. These classes define a number of
+functions that you need to override, which get called at various times.
 
 * :class:`wpilib.iterativerobot.IterativeRobot` functions
+* :class:`wpilib.timedrobot.TimedRobot` functions
 * :class:`wpilib.samplerobot.SampleRobot` functions
 
 .. note:: It is recommended that inexperienced programmers use the
-		  IterativeRobot framework, which is what this guide will
-		  discuss.
+		  TimedRobot class, which is what this guide will discuss.
 
 An incomplete version of your robot object might look like this::
 
-    class MyRobot(wpilib.IterativeRobot):
+    class MyRobot(wpilib.TimedRobot):
 
         def robotInit(self):
             self.motor = wpilib.Jaguar(1)
@@ -81,7 +81,7 @@ library to do so. Starting in 2015, full documentation for the python version
 of WPILib is published online. Check out the API documentation (:mod:`wpilib`)
 for details on all the objects available in WPILib.
 
-.. note:: 
+.. note::
   You should *only* create instances of your motors and other WPILib hardware
   devices (Gyros, Joysticks, Sensors, etc) either during or after robotInit is
   called on your main robot object. If you don't, there are a lot of things
@@ -144,7 +144,7 @@ manually.
 
 .. seealso:: Documentation for the :mod:`wpilib.drive` module, and the FIRST WPILib Programming Guide.
 
-Robot Operating Modes (IterativeRobot)
+Robot Operating Modes (TimedRobot)
 --------------------------------------
 
 During a competition, the robot transitions into various modes depending on
@@ -171,7 +171,7 @@ joystick might have a teleopPeriodic function that looks like this::
 This function gets called over and over again (about 50 times per second)
 while the robot remains in teleoperated mode.
 
-.. warning:: When using the IterativeRobot as your Robot class, you should
+.. warning:: When using the TimedRobot as your Robot class, you should
              avoid doing the following operations in the xxxPeriodic functions
              or functions that have xxxPeriodic in the call stack:
              
@@ -212,7 +212,7 @@ below, taken from one of the samples in our github repository::
     import wpilib.drive
 
 
-    class MyRobot(wpilib.IterativeRobot):
+    class MyRobot(wpilib.TimedRobot):
 
         def robotInit(self):
             """
@@ -250,8 +250,11 @@ below, taken from one of the samples in our github repository::
 There are a few different python-based robot samples available, and you
 can find them in `our github examples repository <https://github.com/robotpy/examples>`_.
 
+.. seealso:: RobotPy comes with various frameworks that make it easier to create
+             your robot code. See the page on :ref:`frameworks`.
+
 Next Steps
 ----------
 
 This is a good foundation for building your robot, next you will probably want
-to know about :ref:`running_robot_code`. 
+to know about :ref:`running_robot_code`.
