@@ -39,8 +39,8 @@ class as your base robot class. You'll  note that it's similar to
 
 
 A robot control program can be divided into several logical parts (think
-drivetrain, forklift, elevator, etc). We refer to these parts as 
-"Components". 
+drivetrain, forklift, elevator, etc). We refer to these parts as
+"Components".
 
 Components
 ~~~~~~~~~~
@@ -271,17 +271,57 @@ package called 'autonomous'. To create this package, you must:
 - Create a folder called 'autonomous' in the same directory as robot.py
 - Add an empty file called '__init__.py' to that folder
 
-Any ``.py`` files that you add to the autonomous package will
-automatically be loaded at robot startup.
+Any ``.py`` files that you add to the autonomous package will automatically be
+loaded at robot startup. Each class that is in the python module will be
+inspected, and added as an autonomous mode if it has a class attribute named
+``MODE_NAME``.
 
-.. seealso:: :class:`AutonomousModeSelector <robotpy_ext.autonomous.selector.AutonomousModeSelector>`
-             on how to define an autonomous mode.
+Autonomous mode objects must implement the following functions:
+
+- ``on_enable`` - Called when autonomous mode is initially enabled
+- ``on_disable`` - Called when autonomous mode is no longer active
+- ``on_iteration`` - Called for each iteration of the autonomous control loop
+
+Your autonomous object may have the following attributes:
+
+- ``MODE_NAME`` - The name of the autonomous mode to display to users (required)
+- ``DISABLED`` - If True, don't allow this mode to be selected
+- ``DEFAULT`` - If True, this is the default autonomous mode selected
+
+If you build your autonomous mode using the :class:`AutonomousStateMachine <magicbot.state_machine.AutonomousStateMachine>`
+class, it makes it easier to build more expressive autonomous modes that
+are easier to reason about.
+
+Here's an example autonomous mode that drives straight for 3 seconds.
+
+::
+
+    from magicbot import AutonomousStateMachine, timed_state, state
+    import wpilib
+
+    # this is one of your components
+    from components.drivetrain import DriveTrain
+
+    class DriveForward(AutonomousStateMachine):
+
+        MODE_NAME = 'Drive Forward'
+        DEFAULT = True
+
+        # Injected from the definition in robot.py
+        drivetrain = DriveTrain
+
+        @timed_state(duration=3, first=True)
+        def drive_forward(self):
+            self.drivetrain.move(-0.7, 0)
+
+Note that the ``AutonomousStateMachine`` object already defines default
+``on_enable``/``on_disable``/``on_iteration`` methods that do the right thing.
 
 Dashboard & coprocessor communications
 --------------------------------------
 
 The simplest method to communicate with other programs external to your robot
-code (examples include dashboards and image processing code) is using 
+code (examples include dashboards and image processing code) is using
 NetworkTables. NetworkTables is a distributed keystore, or put more simply,
 it is similar to a python dictionary that is shared across multiple processes.
  
@@ -344,7 +384,7 @@ Here's an example single-wheel shooter component::
 
         def is_ready(self):
             # in a real robot, you'd be using an encoder to determine if the
-            # shooter were at the right speed.. 
+            # shooter were at the right speed..
             return True
 
         def execute(self):
@@ -421,8 +461,8 @@ There's a few special things to point out here:
             expired.
                     
 Now obviously this is a very simple example, but you can extend the sequence of
-events that happens as much as you want. It allows you to specify arbitrarily 
-complex sets of steps to happen, and the resulting code is really easy to 
+events that happens as much as you want. It allows you to specify arbitrarily
+complex sets of steps to happen, and the resulting code is really easy to
 understand.
 
 Using these components
@@ -439,7 +479,7 @@ Here's one way that you might put them together in your robot.py file::
         intake = Intake
         shooter = Shooter
         
-        ... 
+        ...
         
         def teleopPeriodic(self):
         
