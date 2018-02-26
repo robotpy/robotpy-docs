@@ -57,7 +57,7 @@ Is there an easy way to test my code outside of the robot?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Glad you asked! Our pyfrc project has a built in :ref:`lightweight robot simulator <simulator>`
-you can use to run your code, and also has builtin support for unit testing 
+you can use to run your code, and also has builtin support for unit testing
 with `py.test <http://pytest.org>`_.
 
 Is RobotPy compatible with the 2015+ FRCSim/Gazebo Robot Simulator
@@ -97,9 +97,15 @@ exception and 5 second restart. Make sure to test your code thoroughly
 Is RobotPy stable?
 ~~~~~~~~~~~~~~~~~~
 
-Yes! While it is not an officially supported language, teams have been
-using RobotPy since 2010. Most of the time when bugs are found, they are
-found in the underlying WPILib, instead of RobotPy itself.
+Yes! While Python is not an officially supported language, teams have been
+using RobotPy since 2010, and the maintainer of RobotPy is a member of the
+WPILib team. Much of the time when bugs are found, they are found in the
+underlying WPILib, instead of RobotPy itself.
+
+One caveat to this is that because RobotPy doesn't have a beta period like
+WPILib does, bugs tend to be found during the first half of competition season.
+However, by the time build season ends, RobotPy is just as stable as any of
+the officially suported languages.
 
 Performance
 -----------
@@ -146,4 +152,3 @@ that you think others can use:
    the
    `robotpy-wpilib-utilities <https://github.com/robotpy/robotpy-wpilib-utilities>`__
    package!)
-
