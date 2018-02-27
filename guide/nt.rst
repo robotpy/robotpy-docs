@@ -23,13 +23,13 @@ home and sometimes in the pits, it tends to not work correctly on the field at
 events. For this reason, if you use pynetworktables on the field, we strongly
 encourage teams to `ensure every device has a static IP address`.
 
-* Static IPs are ``10.XX.XX.2`` 
+* Static IPs are ``10.XX.XX.2``
 * mDNS Hostnames are ``roborio-XXXX-frc.local`` (don't use these!)
 
 For example, if your team number was 1234, then the static IP to connect to
-would be  ``10.12.34.2``. 
+would be  ``10.12.34.2``.
 
-For information on configuring your RoboRIO and other devices to use static IPs, see the 
+For information on configuring your RoboRIO and other devices to use static IPs, see the
 `WPILib screensteps documentation <https://wpilib.screenstepslive.com/s/4485/m/24193/l/319135-ip-networking-at-the-event>`_.
 
 Server initialization (Robot)
@@ -63,8 +63,8 @@ be retrieved there.
 
 The keys of this dictionary **must** be strings, but the values can be numbers,
 strings, booleans, various array types, or raw binary. Strictly speaking, the
-keys can be any string value, but they are typically path-like values such as 
-``/SmartDashboard/foo``. 
+keys can be any string value, but they are typically path-like values such as
+``/SmartDashboard/foo``.
 
 When you call :meth:`NetworkTables.getTable <networktables.NetworkTables.getTable>`,
 this retrieves a :class:`NetworkTable <networktables.NetworkTable>` instance
@@ -111,10 +111,14 @@ External tools
 WPILib's OutlineViewer (requires Java) is a great tool for connecting to
 networktables and seeing what's being transmitted.
 
-* `Download OutlineViewer <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/networktables/OutlineViewer/>`_
+* `Download OutlineViewer <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/OutlineViewer/>`_
 
-WPILib's SmartDashboard (requires Java) is often used by teams to connect
+WPILib's Shuffleboard (requires Java) is the new (as of 2018) tool to replace
+SmartDashboard for creating custom NetworkTables-enabled dashboards.
+
+* `Download Shuffleboard <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/shuffleboard/app/>`_
+
+WPILib's SmartDashboard (requires Java) is an older tool used by teams to connect
 to NetworkTables and used as a dashboard.
 
 * `Download SmartDashboard <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/SmartDashboard/>`_
-

@@ -13,7 +13,7 @@ Robot Simulator
 
 An important (but often neglected) part of developing your robot code is to
 test it! Because we feel strongly about testing and simulation, the RobotPy
-project provides tools to make those types of things easier through the 
+project provides tools to make those types of things easier through the
 `pyfrc <https://github.com/robotpy/pyfrc>`_ project.
 
 The pyfrc robot simulator allows very simplistic simulation of your code
@@ -33,7 +33,7 @@ A new feature as of version 2014.7.0 is the addition of showing the robot's
 simulated motion on a miniature field in the UI. This feature is really useful
 for early testing of autonomous movements.
 
-.. note:: For this to work, you must implement a physics module (it's a lot 
+.. note:: For this to work, you must implement a physics module (it's a lot
    easier than it sounds!). Helper functions are provided to calculate robot
    position for common drivetrain types (see below for details). There are
    physics examples provided in the `RobotPy Examples Repository <https://github.com/robotpy/examples>`_
@@ -107,33 +107,49 @@ a property called "image" and assign it a string with a path to an image in gif 
 You can still draw shapes on top of the image in the "objects" property.
 
 
-Communicating with SmartDashboard
----------------------------------
+Communicating via NetworkTables
+-------------------------------
 
-The simulator can be used to communicate with the SmartDashboard or
-other NetworkTables clients. For this to work, you need to tell SmartDashboard
-to connect to the IP address that your simulator is listening on (typically
-this is 127.0.0.1). Using the original SmartDashboard, you need to launch the
-jar using the following command:
+The simulator launches a NetworkTables server (just as the robot does), so it
+can be communicated with via standard NetworkTables tools (such as OutlineViewer,
+Shuffleboard, or SmartDashboard).
+
+For this to work, you need to tell the client to connect to the IP address that
+your simulator is listening on (this will be ``localhost`` or ``127.0.0.1``).
+
+pynetworktables2js
+~~~~~~~~~~~~~~~~~~
+
+pynetworktables2js will automatically connect to ``localhost`` if no arguments
+are given.
+
+OutlineViewer
+~~~~~~~~~~~~~
+
+You can type an address in when OutlineViewer launches, then tell it to start in
+client mode.
+
+Shuffleboard
+~~~~~~~~~~~~
+
+Shuffleboard can be configured to connect to localhost in the preferences.
+
+SmartDashboard
+~~~~~~~~~~~~~~
+
+Using SmartDashboard, you need to launch the jar using the following command:
 
 .. code-block:: sh
 
   $ java -jar SmartDashboard.jar ip 127.0.0.1
 
-If you are using the SFX dashboard, there is a configuration option that you 
-can tweak to get it to connect to a different IP. You can also launch it from
-the command line using the following command:
-
-.. code-block:: sh
-
-  $ java -jar sfx.jar 127.0.0.1
 
 Real Joystick support via pygame
 --------------------------------
 
 If you have pygame installed for Python 3, when you run the simulator any
 supported joysticks you have plugged in should automatically provide joystick
-input to the simulator. 
+input to the simulator.
 
 .. note:: The easiest way to install pygame is to install one of the precompiled
           wheels available on pypi via ``pip install pygame``. This should work
