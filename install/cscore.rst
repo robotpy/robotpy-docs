@@ -19,8 +19,8 @@ is very simple::
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
 
-Compile from source
--------------------
+Non-roborio installation (compiling from source)
+------------------------------------------------
 
 If you're not installing on a RoboRIO, then installation of cscore has a few
 additional steps that you need to do:
@@ -50,3 +50,8 @@ and so that won't be until at least 2018 if not later.
              package distributed on Pypi. Long term, I'd like to get that to
              work, but it's going to take a bit of work. To track this issue,
              see https://github.com/skvark/opencv-python/issues/22
+
+Next steps
+----------
+
+See our :ref:`cscore documentation <vision>` for examples and deployment thoughts.
