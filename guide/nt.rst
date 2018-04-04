@@ -53,6 +53,34 @@ As of 2017, this is very easy to do. Here's the code::
 The key is specifying the correct server hostname. See the above section on
 robot configuration for this.
 
+.. warning:: NetworkTables does not connect instantly! If you write a script
+             that calls ``initialize`` and immediately tries to read from
+             NetworkTables, you will almost certainly not be able to read
+             any data.
+             
+             To write a script that waits for the connection, you can use the
+             following code::
+                 
+                import threading
+                from networktables import NetworkTables
+
+                cond = threading.Condition()
+
+                def connectionListener(connected, info):
+                    print(info, '; Connected=%s' % connected)
+                    with cond:
+                        cond.notify()
+
+                NetworkTables.initialize(server='10.xx.xx.2')
+                NetworkTables.addConnectionListener(connectionListener, immediateNotify=True)
+
+                with cond:
+                    print("Waiting")
+                    cond.wait()
+                
+                # Insert your processing code here
+                print("Connected!")
+
 Theory of operation
 -------------------
 
