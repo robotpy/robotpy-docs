@@ -7,8 +7,8 @@ robotpy-ctre install
 Setup (tests/simulator)
 -----------------------
 
-If you intend to use robotpy-ctre in your robot tests or via the pyfrc
-simulator, you must install this package locally::
+If you intend to use robotpy-ctre in your *robot tests* or via the *pyfrc
+simulator*, you must install this package locally::
 
     pip3 install -U robotpy-ctre
 
@@ -19,8 +19,8 @@ Or on Windows::
 Setup (RoboRIO)
 ---------------
 
-Even if you have robotpy-ctre installed locally, you need to install it on your
-robot separately.
+Even if you have robotpy-ctre installed locally, you **must** install it on your
+robot **separately**. See below.
 
 Python package
 ~~~~~~~~~~~~~~
