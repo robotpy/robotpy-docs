@@ -7,6 +7,20 @@ FAQ
 Here you can find answers to some of the most frequently asked questions
 about RobotPy.
 
+Should our team use RobotPy?
+----------------------------
+
+What we often recommend teams to do is to take their existing code for their
+existing robot, and translate it to RobotPy and try it out first in the
+robot simulator, followed by the real robot. This will give you a good taste
+for what developing code for RobotPy will be like.
+
+Related questions for those curious about RobotPy:
+
+* :ref:`is_legal`
+* :ref:`is_stable`
+* :ref:`is_fast`
+
 Installing and Running RobotPy
 ------------------------------
 
@@ -23,7 +37,7 @@ Python 3. This means you should reference the `Python 3.x
 documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
--  RobotPy WPILib 2017 uses Python 3.6.0 on the RoboRIO. When using
+-  RobotPy WPILib 2017 uses Python 3.6 on the RoboRIO. When using
    pyfrc or similar projects, you should use a Python 3.5 or newer
    interpreter.
 -  RobotPy 2014.x is based on Python 3.2.5.
@@ -44,6 +58,9 @@ Is WPILib available?
 Of course! Just ``import wpilib``. Class and function names are identical
 to the Java version. Check out the :ref:`Python WPILib API Reference <wpilib_api>`
 for more details.
+
+As of 2018, almost all classes and functions from the Java WPILib are available
+in RobotPy's WPILib implementation.
 
 Prior to 2015, the API matched the C++ version of WPILib.
 
@@ -70,6 +87,8 @@ project <https://github.com/robotpy/robotpy-frcsim>`_.
 Competition
 -----------
 
+.. _is_legal:
+
 Is RobotPy competition-legal?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -94,6 +113,9 @@ until your robot runs that particular line of code, resulting in an
 exception and 5 second restart. Make sure to test your code thoroughly
 (see our :ref:`unit testing documentation <unit_tests>`).
 
+
+.. _is_stable:
+
 Is RobotPy stable?
 ~~~~~~~~~~~~~~~~~~
 
@@ -107,8 +129,20 @@ WPILib does, bugs tend to be found during the first half of competition season.
 However, by the time build season ends, RobotPy is just as stable as any of
 the officially suported languages.
 
+How often does RobotPy get updated?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RobotPy is a community project, and updates are made whenever community members
+contribute changes and the developers decide to push a new release.
+
+Historically, RobotPy tends to have frequent releases at the beginning of build
+season, with less frequent releases as build season goes on. We try hard to avoid
+WPILib releases after build season ends, unless critical bugs are found.
+
 Performance
 -----------
+
+.. _is_fast:
 
 Is RobotPy fast?
 ~~~~~~~~~~~~~~~~
@@ -119,8 +153,7 @@ We've not yet benchmarked it, but it's almost certainly just as fast as
 Java for typical WPILib-using robot code. RobotPy uses the native C++
 WPILib, and thus the only interpreted portions are your specific robot
 actions. If you have particularly performance sensitive code, you can
-write it in C++ and add SWIG wrappers to interface to it from Python
-(note, however, that this takes a fair amount of coding expertise).
+write it in C++ and use pybind11 wrappers to interface to it from Python.
 
 RobotPy Development
 -------------------
@@ -137,7 +170,7 @@ and also created the `ntcore <https://github.com/wpilibsuite/ntcore/>`_
 and `cscore <https://github.com/wpilibsuite/cscore/>`_ libraries.
 
 The current RobotPy maintainer is `Dustin
-Spicuzza <http://github.com/virtuald>`_.
+Spicuzza <http://github.com/virtuald>`_, also a member of the FIRST WPILib team.
 
 How can I help?
 ---------------
