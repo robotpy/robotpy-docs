@@ -143,6 +143,12 @@ paste in a  function definition too) and it will output a python docstring in
 the bottom box. When adding new APIs that have documentation, this tool is
 invaluable and will save you a ton of time -- but feel free to improve it!
 
+This tool has also been converted to a command line application called
+`sphinxify <https://github.com/auscompgeek/sphinxify>`_,
+which you can install by running::
+
+    pip install sphinxify
+
 Enums
 ~~~~~
 
