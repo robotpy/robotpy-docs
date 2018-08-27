@@ -16,9 +16,7 @@ Using git-source-track
 ----------------------
 
 First, you need to checkout the git repo for `allwpilib <https://github.com/wpilibsuite/allwpilib>`_
-and the RobotPy WPILib next to each other in the same directory like so:
-
-::
+and the RobotPy WPILib next to each other in the same directory like so::
     
     allwpilib/
     robotpy-wpilib/
@@ -65,7 +63,7 @@ not show changes for other files (use ``git log -p COMMITHASH`` in the
 original source directory if you want to see other changes).
 
 After running ``git source-track diff`` it will ask you if you want to validate
-the file. If no python-significant changes have been made, then you can answer
+the file. If no Python-significant changes have been made, then you can answer
 'y' and the validation header will be updated.
 
 Adding new files
@@ -83,7 +81,7 @@ takes care of it.
 After you finish porting the changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you've finished making the appropriate changes to the python code, then
+Once you've finished making the appropriate changes to the Python code, then
 you should update the validation header in the source file. Thankfully,
 there's a command to do this::
     
@@ -131,15 +129,15 @@ a few guidelines that can be helpful when translating Java to Python:
 
 * Member variables such as ``m_foo`` should be converted to ``self.foo``
 * Private/protected functions (but NOT variables) should start with an underscore
-* Always retain original javadoc documentation, and convert it to the appropriate
-  standard python docstring (see below)
+* Always retain original Javadoc documentation, and convert it to the
+  appropriate standard Python docstring (see below)
 
 Converting javadocs to docstrings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is an HTML page in devtools called ``convert_javadoc.html`` that you can
 use. The way it works is you copy a Java docstring in the top box (you can also
-paste in a  function definition too) and it will output a python docstring in
+paste in a function prototype too) and it will output a Python docstring in
 the bottom box. When adding new APIs that have documentation, this tool is
 invaluable and will save you a ton of time -- but feel free to improve it!
 
@@ -171,7 +169,7 @@ translations.
 Synchronized
 ~~~~~~~~~~~~
 
-The python language has no equivalent to the Java ``synchronized`` keyword.
+The Python language has no equivalent to the Java ``synchronized`` keyword.
 Instead, create a ``threading.RLock`` instance object called ``self.lock``, and
 surround the internal function body with a ``with self.lock:`` block::
   
@@ -190,7 +188,7 @@ Final thoughts
 
 Before translating WPILib Java code to RobotPy's WPILib, first take some time
 and read through the existing RobotPy code to get a feel for the style of the
-code. Try to keep it pythonic and yet true to the original spirit of the code.
+code. Try to keep it Pythonic and yet true to the original spirit of the code.
 Style *does* matter, as students will be reading through this code and it will
 potentially influence their decisions in the future.
 
