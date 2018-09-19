@@ -290,6 +290,10 @@ Your autonomous object may have the following attributes:
 - ``DISABLED`` - If True, don't allow this mode to be selected
 - ``DEFAULT`` - If True, this is the default autonomous mode selected
 
+You cannot access injected variables from component constructors.
+If you need to do so you can implement a ``setup`` function, which will
+be called after variables have been injected.
+
 If you build your autonomous mode using the :class:`AutonomousStateMachine <magicbot.state_machine.AutonomousStateMachine>`
 class, it makes it easier to build more expressive autonomous modes that
 are easier to reason about.
