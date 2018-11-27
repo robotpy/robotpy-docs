@@ -123,6 +123,11 @@ for more information on the capabilities of this tool.
 Syntax/Style Guide
 ------------------
 
+As of the 2019 season, RobotPy projects will use the `black <https://github.com/ambv/black>`_
+code autoformatter. Black generates pretty good looking code, and it makes it
+easier to review incoming pull requests. Before making pull requests, please
+install black and run it on the repo you're changing.
+
 Except where it makes sense, developers should try to retain the structure and
 naming conventions that the Java implementation of WPILib follows. There are
 a few guidelines that can be helpful when translating Java to Python:
