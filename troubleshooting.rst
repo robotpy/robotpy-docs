@@ -133,4 +133,54 @@ robot successfully. If you don't see it, that means there's still a problem.
 Usually the problem is that you set the hostname incorrectly in your call to
 ``NetworkTables.initialize``.
 
+.. _troubleshooting_cscore:
 
+cscore
+------
+
+Problem: I can't view my cscore stream via a dashboard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, make sure that your stream is actually working. Connect with a web
+browser to the host that the stream is running on on the correct port (if
+you are using CameraServer, this will be output via a python logging
+message). The default port is 1181.  
+
+The LabVIEW dashboard and Shuffleboard both receive information about
+connecting to the stream via NetworkTables. This means that both your
+cscore code and the dashboard need to be connected to your robot, and your
+robot's code needs to be running. If you have python logging enabled,
+then your cscore code should output a message like this if it's connected
+to a robot::
+
+    INFO:nt:CONNECTED 10.14.18.2 port 40162 (...)
+
+If it's connected to NetworkTables, then you can use something like the
+TableViewer to view the contents of NetworkTables and see if the correct
+URL is being published. Look under the 'CameraPublisher' key.
+
+Problem: My image processing code is running at 100% CPU usage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You should only encounter this if running your own image processing code. 
+If you're just streaming a camera, this should never happen and is a bug.
+When doing image processing, there's a few ways you can use too much
+CPU, particularly if you do it on a RoboRIO. Here are some thoughts:
+
+* Resizing images is really expensive, don't do that. Instead, set the
+  resolution of your camera via the API provided by cscore
+* Preallocate your image buffers. Most OpenCV functions will optionally take a
+  final argument called 'dst' that it will write the result of the 
+  image processing operation to. If you don't provide a 'dst' argument,
+  then it will allocate a new image buffer each time. Because image buffers
+  can be really large, this adds up quickly.
+* Try a really small resolution like 160x120. Most image processing
+  tasks for FRC are still perfectly doable at small resolutions. 
+* If your framerate is over 10fps, consider bringing it down and see
+  if that helps.
+
+Problem: It still doesn't work!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please `file a bug on github <https://github.com/robotpy/robotpy-cscore/issues>`_
+or use one of our :ref:`support channels <support>`.

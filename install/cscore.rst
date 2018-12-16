@@ -25,7 +25,7 @@ Non-roborio installation (compiling from source)
 If you're not installing on a RoboRIO, then installation of cscore has a few
 additional steps that you need to do:
 
-1. Install a newer C++ compiler that supports C++11
+1. Install a newer C++ compiler that supports C++14
    
    .. note:: robotpy-cscore has not been tested on Windows
 
