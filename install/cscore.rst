@@ -11,15 +11,15 @@ If you have robotpy-installer on your computer, then installing ``robotpy-cscore
 is very simple::
    
    # While connected to the internet
-   robotpy-installer download-opkg python36-robotpy-cscore
+   robotpy-installer download-opkg python37-robotpy-cscore
    
    # While connected to the network with a RoboRIO on it
-   robotpy-installer install-opkg python36-robotpy-cscore
+   robotpy-installer install-opkg python37-robotpy-cscore
     
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
 
-Non-roborio installation (compiling from source)
+Non-roboRIO installation (compiling from source)
 ------------------------------------------------
 
 If you're not installing on a RoboRIO, then installation of cscore has a few
@@ -36,8 +36,7 @@ additional steps that you need to do:
    * If you compile from source, you **must** enable shared library support,
      cscore cannot use a statically compiled OpenCV python module at this time
      
-5. Install pybind11 via pip3: ``pip3 install "pybind11>=2.2"``
-6. Install robotpy-cscore via pip3. It should be as easy as running
+5. Install robotpy-cscore via pip3. It should be as easy as running
    ``pip3 install robotpy-cscore`` -- though be warned, it takes several minutes to
    compile!
 

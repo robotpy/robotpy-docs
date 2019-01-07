@@ -47,7 +47,7 @@ On Windows::
   
   py -3 -m pip install robotpy-installer
   
-On Linux/OSX::
+On Linux/macOS::
 
   pip3 install robotpy-installer
 
@@ -62,7 +62,7 @@ Windows you can do::
   
   py -3 -m robotpy_installer [command..]
   
-On Linux/OSX::
+On Linux/macOS::
 
   robotpy-installer [command..]
 
@@ -77,7 +77,7 @@ On Windows::
 
   py -3 installer.py [command..]
   
-On OSX/Linux::
+On macOS/Linux::
 
   python3 installer.py [command..]
 

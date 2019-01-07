@@ -25,10 +25,10 @@ and then running this:
 
     py -3 robot.py
 
-Linux/OSX
-~~~~~~~~~
+Linux/macOS
+~~~~~~~~~~~
 
-On Linux/OSX, you will typically execute your robot code by opening up the
+On Linux/macOS, you will typically execute your robot code by opening up the
 Terminal program, changing directories to where your robot code is, and
 then running this:
 
@@ -62,7 +62,7 @@ robot code. To discover the various features that are installed, you can use the
 
     Windows:   py -3 robot.py --help
     
-    Linux/OSX: python3 robot.py --help
+    Linux/macOS: python3 robot.py --help
 
 .. note:: RobotPy supports an extension mechanism that allows advanced users the
           ability to create their own custom ``robot.py`` commandline options.

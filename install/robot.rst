@@ -22,7 +22,7 @@ Automated installation
              only need to have the latest FRC Update Suite installed.
 
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
-distributions, and from Mac OSX also. Here's how you do it:
+distributions, and from Mac macOS also. Here's how you do it:
 
 * `Download RobotPy from github <https://github.com/robotpy/robotpy-wpilib/releases>`_
 * `Make sure Python 3.5 or newer is installed <https://www.python.org/downloads/>`_
@@ -33,7 +33,7 @@ directory to the installer location, and run this::
 
 	Windows:   py -3 installer.py install-robotpy
 	
-	Linux/OSX: python3 installer.py install-robotpy
+	Linux/macOS: python3 installer.py install-robotpy
 
 It will ask you a few questions, and copy the right files over to your robot
 and set things up for you. 
@@ -54,13 +54,13 @@ When connected to the internet::
 
 	Windows:   py installer.py download-robotpy
 	
-	Linux/OSX: python3 installer.py download-robotpy
+	Linux/macOS: python3 installer.py download-robotpy
 	
 Then connect to the Robot's network::
 
 	Windows:   py installer.py install-robotpy
 	
-	Linux/OSX: python3 installer.py install-robotpy
+	Linux/macOS: python3 installer.py install-robotpy
 
 If you want to use a beta version of RobotPy (if available), you can add the 
 --pre argument to the download/install command listed above.
