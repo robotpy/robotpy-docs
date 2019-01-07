@@ -8,7 +8,7 @@ updated to maintain compatibility. While this is largely a manual process, we
 now use a tool called `git-source-track <https://github.com/virtuald/git-source-track>`_
 to assist with this process.
 
-.. note:: git-source-track only works on Linux/OSX at this time. If you're
+.. note:: git-source-track only works on Linux/macOS at this time. If you're
           interested in helping with the porting process and you use Windows,
           file a github issue and we'll try to help you out.
 

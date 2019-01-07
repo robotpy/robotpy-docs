@@ -24,7 +24,7 @@ the simulator, run your robot.py with the following arguments:
 
     Windows:   py -3 robot.py sim
     
-    Linux/OSX: python3 robot.py sim
+    Linux/macOS: python3 robot.py sim
 
 As there is interest, we will add more features to the simulator. Please feel
 free to improve it and submit pull requests!
@@ -153,7 +153,7 @@ input to the simulator.
 
 .. note:: The easiest way to install pygame is to install one of the precompiled
           wheels available on pypi via ``pip install pygame``. This should work
-	  on OSX, Windows, and Linux.
+	  on macOS, Windows, and Linux.
           
 	  Installing pygame from source requires having a compiler installed,
 	  as it has many binary dependencies. It can be a tricky thing to accomplish,

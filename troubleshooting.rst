@@ -32,7 +32,7 @@ You should also have the latest version of the RobotPy software packages:
       
       Windows: py -3 -m pip list
       
-      Linux/OSX: pip3 list
+      Linux/macOS: pip3 list
 
 1. Did you run the deploy command to put the code on the robot?
 2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
@@ -49,7 +49,7 @@ Problem: pyfrc cannot connect to the robot, or appears to hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Can you ping your robot from the machine that you're deploying code from? If not, pyfrc isn't going to be able to connect to the robot either.
-2. Try to ssh into your robot, using `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ or the ``ssh`` command on Linux/OSX. The username to use is ``lvuser``, and the password is an empty string. If this doesn't work, pyfrc won't be able to copy files to your robot
+2. Try to ssh into your robot, using `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ or the ``ssh`` command on Linux/macOS. The username to use is ``lvuser``, and the password is an empty string. If this doesn't work, pyfrc won't be able to copy files to your robot
 3. If all of that works, it might just be that you typed the wrong hostname to connect to. There's a file called ``.deploy_cfg`` next to your ``robot.py`` that pyfrc created. Delete it, and try again.
 
 

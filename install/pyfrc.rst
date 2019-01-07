@@ -12,7 +12,7 @@ WPILib, pynetworktables, unit testing support, and the
 pyfrc requires Python 3.5 or greater to be installed on your computer.
 
 * `Python for Windows <https://www.python.org/downloads/windows/>`_
-* `Python for OSX <https://www.python.org/downloads/mac-osx/>`_
+* `Python for macOS <https://www.python.org/downloads/mac-osx/>`_
 
 Install via pip on Windows
 --------------------------
@@ -40,13 +40,13 @@ or you can install to the user site-packages directory:
 
     py -3 -m pip install --user pyfrc
 
-Install via pip on OSX/Linux
-----------------------------
+Install via pip on macOS/Linux
+------------------------------
 
 .. note:: pip typically requires internet access
 
 The easiest installation is by using pip. pip is installed by default with
-Python 3.5 (though on Linux it may not be installed). On a Linux or OSX system
+Python 3.5 (though on Linux it may not be installed). On a Linux or macOS system
 that has pip installed, just run the following command from the Terminal
 applciation (may require admin rights):
 
@@ -86,13 +86,13 @@ binary wheel instead, which removes the need for a compiler.
 
     Windows:   py -3 -m pip install coverage
 
-    Linux/OSX: pip3 install coverage
+    Linux/macOS: pip3 install coverage
     
 If you run into compile errors, then you will need to install a compiler on your
 system.
 
 * On Windows you can download the Visual Studio compilers for Python (be sure to
   download the one for your version of Python).
-* On OSX it requires XCode to be installed
+* On macOS it requires XCode to be installed
 * On Linux you will need to have python3-dev/python3-devel or a similar package
   installed

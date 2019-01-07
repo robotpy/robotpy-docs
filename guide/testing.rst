@@ -11,7 +11,7 @@ robot.py with the following arguments:
 
     Windows:   py -3 robot.py test
     
-    Linux/OSX: python3 robot.py test
+    Linux/macOS: python3 robot.py test
 
 Your tests must be in a directory called 'tests' either next to robot.py, or in
 the directory above where robot.py resides. See 'samples/simple' for an example
@@ -30,7 +30,7 @@ tests to your robot code, you can run the following:
 
     Windows:   py -3 robot.py add-tests
     
-    Linux/OSX: python3 robot.py add-tests
+    Linux/macOS: python3 robot.py add-tests
 
 Running this command creates a directory called 'tests' if it doesn't already
 exist, and then creates a file in your tests directory called pyfrc_test.py,
@@ -84,7 +84,7 @@ For example, to run the 'test' command to run unit tests:
 
     Windows:   py -3 robot.py coverage test
     
-    Linux/OSX: python3 robot.py coverage test
+    Linux/macOS: python3 robot.py coverage test
     
 Or to run coverage over the simulator:
 
@@ -92,7 +92,7 @@ Or to run coverage over the simulator:
 
     Windows:   py -3 robot.py coverage sim
     
-    Linux/OSX: python3 robot.py coverage sim
+    Linux/macOS: python3 robot.py coverage sim
     
 Running code coverage while the simulator is running is nice, because you
 don't have to write unit tests to make sure that you've completely covered

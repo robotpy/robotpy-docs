@@ -44,10 +44,10 @@ or you can install to the user site-packages directory:
     Python 2.7: py -2 -m pip install --user pynetworktables
     Python 3.x: py -3 -m pip install --user pynetworktables
     
-Install via pip on OSX/Linux
-----------------------------
+Install via pip on macOS/Linux
+------------------------------
 
-On a Linux or OSX system that has pip installed, just run the following command
+On a Linux or macOS system that has pip installed, just run the following command
 from the Terminal application (may require admin rights):
 
 .. code-block:: sh

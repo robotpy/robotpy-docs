@@ -20,7 +20,7 @@ code before you run it on the robot.
     
     Windows:   py -3 robot.py deploy
 
-    Linux/OSX: python3 robot.py deploy
+    Linux/macOS: python3 robot.py deploy
 
 You can watch your robot code's output (and see any problems) by using the
 netconsole program (you can either use NI's tool, or `pynetconsole <https://github.com/robotpy/pynetconsole>`_.
@@ -43,7 +43,7 @@ your program's console output, by launching a netconsole listener.
 
     Windows:   py -3 robot.py deploy --nc
     
-    Linux/OSX: python3 robot.py deploy --nc
+    Linux/macOS: python3 robot.py deploy --nc
 
 Skipping Tests
 ~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ don't care about the tests. That's OK, you can still upload code to the robot:
 
     Windows:   py -3 robot.py deploy --skip-tests
 
-    Linux/OSX: python3 robot.py deploy --skip-tests
+    Linux/macOS: python3 robot.py deploy --skip-tests
 
 Starting deployed code at boot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
