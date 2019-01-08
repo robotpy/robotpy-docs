@@ -37,7 +37,7 @@ Python 3. This means you should reference the `Python 3.x
 documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
--  RobotPy WPILib 2017 uses Python 3.6 on the RoboRIO. When using
+-  RobotPy WPILib 2017 uses Python 3.7 on the RoboRIO. When using
    pyfrc or similar projects, you should use a Python 3.5 or newer
    interpreter.
 -  RobotPy 2014.x is based on Python 3.2.5.
@@ -171,6 +171,13 @@ and `cscore <https://github.com/wpilibsuite/cscore/>`_ libraries.
 
 The current RobotPy maintainer is `Dustin
 Spicuzza <http://github.com/virtuald>`_, also a member of the FIRST WPILib team.
+
+Current RobotPy developers include:
+
+* Dustin Spicuzza (`@virtuald <https://github.com/virtuald>`_)
+* David Vo (`@auscompgeek <https://github.com/auscompgeek>`_)
+* Ellery Newcomer (`@ariovistus <https://github.com/ariovistus>`_)
+* Tim Winters (`@ArchdukeTim <https://github.com/ArchdukeTim>`_)
 
 How can I help?
 ---------------
