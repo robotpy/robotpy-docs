@@ -84,7 +84,7 @@ your roboRIO.
 * Run this::
 
     opkg update
-    opkg install python36 netconsole-host
+    opkg install python37 netconsole-host
 
 * Then run this::
 
