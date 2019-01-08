@@ -170,7 +170,7 @@ IPK (binary) packages
 
 The RobotPy project maintains a number of custom binary packages that are useful
 for FRC teams. For a list of packages that you can install, see
-`https://www.tortall.net/~robotpy/feeds/2018/ <https://www.tortall.net/~robotpy/feeds/2018/>`_.
+`https://www.tortall.net/~robotpy/feeds/2019/ <https://www.tortall.net/~robotpy/feeds/2019/>`_.
 These commands can be used to install those and other precompiled Linux packages
 that NI makes available.
 
