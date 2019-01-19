@@ -45,6 +45,19 @@ If you're on your local computer, did you :ref:`install pyfrc via pip <install_p
 
 If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
 
+Problem: no module named ...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you're using a non-WPILib vendor library, it must be installed separately.
+
+* :ref:<install_ctre>
+* :ref:<install_navx>
+* :ref:<install_rev>
+
+If you're on your local computer, did you :ref:`install pyfrc via pip <install_pyfrc>`?
+
+If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
+
 Problem: pyfrc cannot connect to the robot, or appears to hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
