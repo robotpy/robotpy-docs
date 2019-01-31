@@ -37,5 +37,6 @@ Installing extra software packages on the RoboRIO:
     pynetworktables
     cscore
     ctre
+    navx
     rev
     packages
