@@ -37,7 +37,7 @@ additional steps that you need to do:
      cscore cannot use a statically compiled OpenCV python module at this time
      
 5. Install robotpy-cscore via pip3. It should be as easy as running
-   ``pip3 install robotpy-cscore`` -- though be warned, it takes several minutes to
+   ``pip3 install --no-build-isolation robotpy-cscore`` -- though be warned, it takes several minutes to
    compile!
 
 In the future we may provide binaries that can be installed on commonly used
