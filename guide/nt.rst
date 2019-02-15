@@ -147,7 +147,7 @@ networktables and seeing what's being transmitted.
 WPILib's Shuffleboard (requires Java) is the new (as of 2018) tool to replace
 SmartDashboard for creating custom NetworkTables-enabled dashboards.
 
-* `Download Shuffleboard <http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/shuffleboard/app/>`_
+* `Download Shuffleboard <https://github.com/wpilibsuite/shuffleboard/releases/>`_
 
 WPILib's SmartDashboard (requires Java) is an older tool used by teams to connect
 to NetworkTables and used as a dashboard.
