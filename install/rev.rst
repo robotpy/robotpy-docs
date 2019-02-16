@@ -13,11 +13,11 @@ Setup (tests/simulator)
 If you intend to use robotpy-rev in your *robot tests* or via the *pyfrc
 simulator*, you must install this package locally::
 
-    pip3 install -U --pre robotpy-rev
+    pip3 install -U robotpy-rev
 
 Or on Windows::
     
-    py -3 -m pip install -U --pre robotpy-rev
+    py -3 -m pip install -U robotpy-rev
 
 Setup (RoboRIO)
 ---------------
