@@ -30,13 +30,17 @@ additional steps that you need to do:
    .. note:: robotpy-cscore has not been tested on Windows
 
 2. Install Python 3 (cscore is not supported on Python 2) and development headers
-3. Install Numpy (either via pip3 or using a Linux package manager)
-4. Install OpenCV (either via a Linux package manager or compile from source)
+3. Ensure that you have a recent version of pip3/setuptools installed (either via pip3 or using a Linux package manager)
+
+   * It has been reported that build failures may occur with certain combinations of pip/setuptools installed
+   
+4. Install Numpy (either via pip3 or using a Linux package manager)
+5. Install OpenCV (either via a Linux package manager or compile from source)
 
    * If you compile from source, you **must** enable shared library support,
      cscore cannot use a statically compiled OpenCV python module at this time
      
-5. Install robotpy-cscore via pip3. It should be as easy as running
+6. Install robotpy-cscore via pip3. It should be as easy as running
    ``pip3 install --no-build-isolation robotpy-cscore`` -- though be warned, it takes several minutes to
    compile!
 
