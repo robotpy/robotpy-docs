@@ -50,9 +50,9 @@ Problem: no module named ...
 
 If you're using a non-WPILib vendor library, it must be installed separately.
 
-* :ref:<install_ctre>
-* :ref:<install_navx>
-* :ref:<install_rev>
+* :ref:`install_ctre`
+* :ref:`install_navx`
+* :ref:`install_rev`
 
 If you're on your local computer, did you :ref:`install pyfrc via pip <install_pyfrc>`?
 
