@@ -37,13 +37,14 @@ Python 3. This means you should reference the `Python 3.x
 documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
--  RobotPy WPILib 2017 uses Python 3.7 on the RoboRIO. When using
-   pyfrc or similar projects, you should use a Python 3.5 or newer
-   interpreter.
+-  RobotPy WPILib on the roboRIO uses the latest version of Python 3 at kickoff.
+   In 2019, this was Python 3.7.  When using pyfrc or similar projects,
+   you should use a Python 3.6 or newer interpreter (the latest is recommended).
 -  RobotPy 2014.x is based on Python 3.2.5.
 
 `pynetworktables <https://github.com/robotpy/pynetworktables>`__ is
-compatible with Python 2.7 and 3.3 or newer
+compatible with Python 3.5 or newer, since 2019.
+Releases from 2018 are also compatible with Python 2.7.
 
 What happens when my code crashes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -102,31 +102,14 @@ by annotating the variable names and types in your MyRobot class.
 
     from components import Elevator, Forklift
 
+
     class MyRobot(MagicRobot):
         elevator: Elevator
         forklift: Forklift
 
         def teleopPeriodic(self):
             # self.elevator is now an instance of Elevator
-
-Note that the above uses variable annotations, introduced in Python 3.6.
-There is also an older syntax compatible with Python 3.5:
-
-.. code-block:: python
-
-    from components import Elevator, Forklift
-
-    class MyRobot(MagicRobot):
-        elevator = Elevator
-        forklift = Forklift
-
-        def teleopPeriodic(self):
-            # self.elevator is an instance of Elevator
-
-Note that using this assignment syntax to declare magic components is considered
-to be deprecated, and will be removed once Python 3.5 support is dropped.
-This should only be important to your team if you're using Python 3.5 to
-develop your robot code.
+            ...
 
 Variable injection
 ~~~~~~~~~~~~~~~~~~
@@ -140,17 +123,18 @@ out this example:
 
     class MyRobot(MagicRobot):
         elevator: Elevator
-    
+
         def createObjects(self):
             self.elevator_motor = wpilib.Talon(2)
-    
-    
+
+
     class Elevator:
         elevator_motor: wpilib.Talon
-        
+
         def execute(self):
             # self.elevator_motor is a reference to the Talon instance
             # created in MyRobot.createObjects
+            ...
 
 As you may be able to infer, by declaring in your ``Elevator`` class an annotation
 that matches an attribute in your Robot class, Magicbot automatically notices
@@ -166,14 +150,15 @@ variable name:
     class MyRobot(MagicRobot):
         front_swerve: SwerveModule
         back_swerve: SwerveModule
-        
+
         def createObjects(self):
             # this is injected into the front_swerve instance of SwerveModule as 'motor'
             self.front_swerve_motor = wpilib.Talon(1)
-            
+
             # this is injected into the back_swerve instance of SwerveModule as 'motor'
             self.back_swerve_motor = wpilib.Talon(2)
-            
+
+
     class SwerveModule:
         motor: wpilib.Talon
 
@@ -186,38 +171,22 @@ are readonly):
 .. code-block:: python
 
     from collections import namedtuple
-    ShooterConfig = namedtuple("ShooterConfig", ['param1', 'param2', 'param3'])
+
+    ShooterConfig = namedtuple("ShooterConfig", ["param1", "param2", "param3"])
+
 
     class MyRobot(MagicRobot):
-        
+
         shooter: Shooter
         shooter_cfg = ShooterConfig(param1=1, param2=2, param3=3)
-        
+
+
     class Shooter:
         cfg: ShooterConfig
-        
+
         def execute(self):
             # you can access self.cfg.param1, self.cfg.param2, etc...
-
-Like component creation, there is a Python 3.5 compatible syntax that uses
-assignment to declare variables to be injected:
-
-.. code-block:: python
-
-    class Elevator:
-        motor = wpilib.Talon
-
-        def execute(self):
-            # self.motor is the Talon instance created in MyRobot.createObjects
-
-    class MyRobot(MagicRobot):
-        elevator = Elevator
-
-        def createObjects(self):
-            self.elevator_motor = wpilib.Talon(1)
-
-This syntax is similarly deprecated and will be removed once Python 3.5 support
-is dropped.
+            ...
 
 Variable injection in magicbot is one of its most useful features, take
 advantage of it in creative ways!
@@ -308,9 +277,10 @@ Here's an example autonomous mode that drives straight for 3 seconds.
     # this is one of your components
     from components.drivetrain import DriveTrain
 
+
     class DriveForward(AutonomousStateMachine):
 
-        MODE_NAME = 'Drive Forward'
+        MODE_NAME = "Drive Forward"
         DEFAULT = True
 
         # Injected from the definition in robot.py
