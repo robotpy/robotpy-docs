@@ -184,12 +184,12 @@ download-opkg
 Downloads an ipk file from the RobotPy and NI's online opkg repositories, along
 with the dependencies for the package.
 
-You can also use a `requirements.txt` file to specify which packages should be downloaded
+You can also use a `requirements.txt` file to specify which packages should be downloaded:
 ::
 
   robotpy-installer download-opkg -r requirements.txt
 
-This file matches the syntax of a standard pip `requirements.txt`.
+This file is a list of packages to install, similar to the syntax of a standard pip `requirements.txt`.
 
 ::
 
@@ -198,7 +198,6 @@ This file matches the syntax of a standard pip `requirements.txt`.
   # Vendor dependencies for motor controllers
   python37-robotpy-ctre
   python37-robotpy-rev
-
 
 install-opkg
 ~~~~~~~~~~~~
@@ -210,12 +209,10 @@ install-opkg
 Copies ipk files over to the roboRIO, and installs them and their dependencies.
 If the package already has been installed, it will do nothing.
 
-You can also use a `requirements.txt` file to specify which packages should be downloaded
+You can also use a `requirements.txt` file to specify which packages should be downloaded:
 ::
 
-  robotpy-installer download-opkg -r requirements.txt
-
-
+  robotpy-installer install-opkg -r requirements.txt
 
 .. warning:: The ``install-opkg`` command will only install packages that have
              been downloaded using the ``download-opkg`` command, or packages
