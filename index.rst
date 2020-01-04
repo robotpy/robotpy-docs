@@ -9,6 +9,10 @@ students dedicated to developing python-related projects for the FIRST Robotics
 Competition. This documentation site contains information about various projects
 that RobotPy supports, including guides and API references.
 
+.. note:: This is the RobotPy 2019 documentation, RobotPy 2020 will be available soon!
+          See our `post on Chief Delphi <https://www.chiefdelphi.com/t/robotpy-2020-availability/369479>`_ 
+          for more details.
+
 .. note:: RobotPy is a community project and the tools we create are not
           officially supported by FIRST. Please see the
           :ref:`FAQ <faq>` for more information.

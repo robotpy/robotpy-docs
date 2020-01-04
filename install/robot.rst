@@ -4,6 +4,10 @@
 Robot Installation
 ==================
 
+.. note:: This is the RobotPy 2019 documentation, RobotPy 2020 will be available soon!
+          See our `post on Chief Delphi <https://www.chiefdelphi.com/t/robotpy-2020-availability/369479>`_ 
+          for more details.
+
 These instructions will help you get RobotPy installed on your RoboRIO, which will
 allow you to write robot code using Python. If you install RobotPy on your
 RoboRIO, you are still able to deploy C++ and Java programs without any conflicts.
