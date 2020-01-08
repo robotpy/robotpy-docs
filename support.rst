@@ -8,7 +8,11 @@ surrounding RobotPy has continued to grow! If you have questions about how
 to do something with RobotPy, you can ask questions in the following locations:
 
 * `RobotPy mailing list <https://groups.google.com/forum/#!forum/robotpy>`_
-* `ChiefDelphi Python Forums <http://www.chiefdelphi.com/forums/forumdisplay.php?f=187>`_
+* `ChiefDelphi Python Forums <https://www.chiefdelphi.com/c/technical/python/77>`_
+
+.. warning:: When posting on ChiefDelphi, post on the Python forum, **not**
+             the main programming forum, otherwise your support request may get
+             lost in the noise!
 
 We have found that most problems users have are actually questions generic to
 WPILib-based languages like C++/Java, so searching around the ChiefDelphi forums
