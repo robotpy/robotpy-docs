@@ -38,13 +38,13 @@ documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
 -  RobotPy WPILib on the roboRIO uses the latest version of Python 3 at kickoff.
-   In 2019, this was Python 3.7.  When using pyfrc or similar projects,
+   In 2020, this was Python 3.8.  When using pyfrc or similar projects,
    you should use a Python 3.6 or newer interpreter (the latest is recommended).
 -  RobotPy 2014.x is based on Python 3.2.5.
 
 `pynetworktables <https://github.com/robotpy/pynetworktables>`__ is
 compatible with Python 3.5 or newer, since 2019.
-Releases from 2018 are also compatible with Python 2.7.
+Releases prior to 2019 are also compatible with Python 2.7.
 
 What happens when my code crashes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +60,10 @@ Of course! Just ``import wpilib``. Class and function names are identical
 to the Java version. Check out the :ref:`Python WPILib API Reference <wpilib_api>`
 for more details.
 
-As of 2018, almost all classes and functions from the Java WPILib are available
+As of 2020, the API mostly matches the C++ version of WPILib, except that protected
+functions are prefixed with an underscore (but are availble to all Python code).
+
+From 2015-2019, almost all classes and functions from the Java WPILib are available
 in RobotPy's WPILib implementation.
 
 Prior to 2015, the API matched the C++ version of WPILib.
@@ -78,12 +81,7 @@ Glad you asked! Our pyfrc project has a built in :ref:`lightweight robot simulat
 you can use to run your code, and also has builtin support for unit testing
 with `py.test <http://pytest.org>`_.
 
-Is RobotPy compatible with the 2015+ FRCSim/Gazebo Robot Simulator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sorta... it's still a bit rough, but you can find more information at
-the `robotpy-frcsim
-project <https://github.com/robotpy/robotpy-frcsim>`_.
+.. note:: These are in the process of being updated for 2020
 
 Competition
 -----------

@@ -11,10 +11,10 @@ If you have robotpy-installer on your computer, then installing ``robotpy-cscore
 is very simple::
    
    # While connected to the internet
-   robotpy-installer download-opkg python37-robotpy-cscore
+   robotpy-installer download-opkg cscore
    
    # While connected to the network with a RoboRIO on it
-   robotpy-installer install-opkg python37-robotpy-cscore
+   robotpy-installer install-opkg cscore
     
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

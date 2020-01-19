@@ -4,10 +4,6 @@
 Robot Installation
 ==================
 
-.. note:: This is the RobotPy 2019 documentation, RobotPy 2020 will be available soon!
-          See our `post on Chief Delphi <https://www.chiefdelphi.com/t/robotpy-2020-availability/369479>`_ 
-          for more details.
-
 These instructions will help you get RobotPy installed on your RoboRIO, which will
 allow you to write robot code using Python. If you install RobotPy on your
 RoboRIO, you are still able to deploy C++ and Java programs without any conflicts.
@@ -26,18 +22,32 @@ Automated installation
              only need to have the latest FRC Update Suite installed.
 
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
-distributions, and from Mac macOS also. Here's how you do it:
+distributions, and from Mac macOS also. To install/use the installer, you must
+have Python 3.6+ installed. You should install the installer via pip (requires
+internet access).
 
-* `Download RobotPy from github <https://github.com/robotpy/robotpy-wpilib/releases>`_
-* `Make sure Python 3.5 or newer is installed <https://www.python.org/downloads/>`_
+On Windows::
+  
+  py -3 -m pip install robotpy-installer
+  
+On Linux/macOS::
 
-Unzip the RobotPy zipfile somewhere on your computer (not on the roboRIO),
-and there should be an installer.py there. Open up a command line, change
-directory to the installer location, and run this::
+  pip3 install robotpy-installer
 
-	Windows:   py -3 installer.py install-robotpy
+There are two stages to installing RobotPy. First, download the artifacts.
+Open up a command line, change to a directory you'd like to store the 
+downloaded artifacts, and run this::
+
+    Windows:   py -3 -m robotpy_installer download-robotpy
 	
-	Linux/macOS: python3 installer.py install-robotpy
+	Linux/macOS: robotpy-installer download-robotpy
+
+Once everything has downloaded, you can switch to your Robot's network, and
+use the following commands to install.
+
+	Windows:   py -3 -m robotpy_installer install-robotpy
+	
+	Linux/macOS: robotpy-installer install-robotpy
 
 It will ask you a few questions, and copy the right files over to your robot
 and set things up for you. 
@@ -56,15 +66,15 @@ and one while connected to the Robot's network.
 
 When connected to the internet::
 
-	Windows:   py installer.py download-robotpy
+    Windows:   py -3 -m robotpy_installer download-robotpy
 	
-	Linux/macOS: python3 installer.py download-robotpy
+	Linux/macOS: robotpy-installer download-robotpy
 	
 Then connect to the Robot's network::
 
-	Windows:   py installer.py install-robotpy
+	Windows:   py -3 -m robotpy_installer install-robotpy
 	
-	Linux/macOS: python3 installer.py install-robotpy
+	Linux/macOS: robotpy-installer install-robotpy
 
 If you want to use a beta version of RobotPy (if available), you can add the 
 --pre argument to the download/install command listed above.
@@ -83,16 +93,12 @@ your roboRIO.
 * Connect your roboRIO to the internet
 * SSH in, and copy the following to /etc/opkg/robotpy.conf::
 
-    src/gz robotpy http://www.tortall.net/~robotpy/feeds/2018
+    src/gz robotpy http://www.tortall.net/~robotpy/feeds/2020
 
 * Run this::
 
     opkg update
-    opkg install python37 netconsole-host
-
-* Then run this::
-
-    pip3 install robotpy-hal-roborio wpilib
+    opkg install python38-wpilib netconsole-host
 
 .. note:: When powered off, your roboRIO does not keep track of the correct
           date, and as a result pip may fail with an SSL related error message.

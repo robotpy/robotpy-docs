@@ -9,7 +9,9 @@ test Python-based Robot code on your development computer. These tools include
 WPILib, pynetworktables, unit testing support, and the
 :ref:`robot simulator <simulator>`.
 
-pyfrc requires Python 3.5 or greater to be installed on your computer.
+pyfrc requires Python 3.6 or greater to be installed on your computer. On
+Windows, the `Visual Studio 2019 redistributable <https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads>`_
+package is required to be installed.
 
 * `Python for Windows <https://www.python.org/downloads/windows/>`_
 * `Python for macOS <https://www.python.org/downloads/mac-osx/>`_
@@ -20,7 +22,7 @@ Install via pip on Windows
 .. note:: pip typically requires internet access
 
 The easiest installation is by using pip. pip is installed by default with Python
-3.5. Run the following command from the command line:
+3.5+. Run the following command from the command line:
 
 .. code-block:: sh
 

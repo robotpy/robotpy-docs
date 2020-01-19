@@ -3,6 +3,8 @@
 robotpy-ctre install
 ====================
 
+.. note:: CTRE has not been updated for 2020 yet, so these instructions do not work
+
 
 Setup (tests/simulator)
 -----------------------
@@ -30,11 +32,11 @@ and install it. Instead, you can download a pre-packaged version from our opkg
 repository. Use the RobotPy installation script (comes with the RobotPy download),
 and run the following on your computer while connected to the internet::
 
-  py -3 installer.py download-opkg python37-robotpy-ctre
+  py -3 -m robotpy_installer download-opkg python38-robotpy-ctre
 
 Then, when connected to the roborio's network, run::
 
-  py -3 installer.py install-opkg python37-robotpy-ctre
+  py -3 -m robotpy_installer install-opkg python38-robotpy-ctre
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

@@ -39,9 +39,8 @@ invoking the --help command.
 Installing/Executing the installer
 ----------------------------------
 
-To install/use the installer, you must have Python 3 installed. You can install
-the installer via pip (recommended) or you can use ``installer.py`` directly
-(see below).
+To install/use the installer, you must have Python 3 installed. You should install
+the installer via pip.
 
 On Windows::
   
@@ -65,22 +64,6 @@ Windows you can do::
 On Linux/macOS::
 
   robotpy-installer [command..]
-
-Download and use installer.py
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can download the file directly, or use the version that comes with the
-RobotPy download files. Once you have obtained the ``installer.py`` file, to
-execute the file:
-
-On Windows::
-
-  py -3 installer.py [command..]
-  
-On macOS/Linux::
-
-  python3 installer.py [command..]
-
 
 RobotPy
 -------
@@ -170,7 +153,7 @@ IPK (binary) packages
 
 The RobotPy project maintains a number of custom binary packages that are useful
 for FRC teams. For a list of packages that you can install, see
-`https://www.tortall.net/~robotpy/feeds/2019/ <https://www.tortall.net/~robotpy/feeds/2019/>`_.
+`https://www.tortall.net/~robotpy/feeds/2020/ <https://www.tortall.net/~robotpy/feeds/2020/>`_.
 These commands can be used to install those and other precompiled Linux packages
 that NI makes available.
 
@@ -195,8 +178,8 @@ This file is a list of packages to install, similar to the syntax of a standard 
   # Example requirements.txt file
 
   # Vendor dependencies for motor controllers
-  python37-robotpy-ctre
-  python37-robotpy-rev
+  python38-robotpy-ctre
+  python38-robotpy-rev
 
 install-opkg
 ~~~~~~~~~~~~
