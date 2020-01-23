@@ -24,11 +24,11 @@ robot **separately**.
 Use the RobotPy installation script (comes with the RobotPy download),
 and run the following on your computer while connected to the internet::
 
-  py -3 -m robotpy_installer download-pip robotpy-navx
+  py -3 -m robotpy_installer download-opkg robotpy-navx
 
 Then, when connected to the roborio's network, run::
 
-  py -3 -m robotpy_installer install-pip robotpy-navx
+  py -3 -m robotpy_installer install-opkg robotpy-navx
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
