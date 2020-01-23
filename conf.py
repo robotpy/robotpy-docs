@@ -57,7 +57,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "RobotPy"
-copyright = "2014-2020, RobotPy development team"
+copyright = "2014-2017, RobotPy development team"
 
 # TODO: detect this at
 rtd_version = "latest"
@@ -81,7 +81,7 @@ intersphinx_mapping = {
 # built documents.
 #
 # The short X.Y version.
-version = "2020"
+version = "2019"
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -152,7 +152,7 @@ texinfo_documents = [
 epub_title = "RobotPy"
 epub_author = "RobotPy development team"
 epub_publisher = "RobotPy development team"
-epub_copyright = "2014-2020, RobotPy development team"
+epub_copyright = "2014-2016, RobotPy development team"
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]
