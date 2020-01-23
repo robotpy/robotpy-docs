@@ -26,13 +26,13 @@ The easiest installation is by using pip. pip is installed by default with Pytho
 
 .. code-block:: sh
 
-    py -3 -m pip install --pre pyfrc
+    py -3 -m pip install pyfrc
 
 To upgrade, you can run this:
 
 .. code-block:: sh
 
-    py -3 -m pip install --pre --upgrade pyfrc
+    py -3 -m pip install --upgrade pyfrc
 
 If you don't have administrative rights on your computer, either use
 `virtualenv/virtualenvwrapper-win <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_, or
@@ -40,7 +40,7 @@ or you can install to the user site-packages directory:
 
 .. code-block:: sh
 
-    py -3 -m pip install --user --pre pyfrc
+    py -3 -m pip install --user pyfrc
 
 Install via pip on macOS/Linux
 ------------------------------
@@ -54,13 +54,13 @@ applciation (may require admin rights):
 
 .. code-block:: sh
 
-    pip3 install --pre pyfrc
+    pip3 install pyfrc
 
 To upgrade, you can run this:
 
 .. code-block:: sh
 
-    pip3 install --upgrade --pre  pyfrc
+    pip3 install --upgrade pyfrc
 
 If you don't have administrative rights on your computer, either use
 `virtualenv/virtualenvwrapper <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_, or
@@ -68,7 +68,7 @@ or you can install to the user site-packages directory:
 
 .. code-block:: sh
 
-    pip3 install --user --pre pyfrc
+    pip3 install --user pyfrc
 
 Manual install (without pip)
 ----------------------------
