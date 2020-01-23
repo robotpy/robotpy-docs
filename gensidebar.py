@@ -82,6 +82,7 @@ def generate_sidebar(conf, conf_api):
     write_api("ctre", "CTRE Libraries")
     write_api("navx", "NavX Library")
     write_api("rev", "SPARK MAX Library")
+    write_api("rev-color", "REV Color Sensor")
     endl()
 
     toctree("Additional Info")
