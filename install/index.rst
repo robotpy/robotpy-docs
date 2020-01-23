@@ -39,4 +39,5 @@ Installing extra software packages on the RoboRIO:
     ctre
     navx
     rev
+    revcolor
     packages
