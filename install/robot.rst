@@ -24,7 +24,7 @@ Automated installation
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
 distributions, and from Mac macOS also. To install/use the installer, you must
 have Python 3.6+ installed. You should install the installer via pip (requires
-internet access).
+internet access). The recommended way to install this is bundled in :ref:`pyfrc <install_pyfrc>`, but the following will show individual installation
 
 On Windows::
   

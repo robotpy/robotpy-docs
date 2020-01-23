@@ -3,8 +3,6 @@
 robotpy-ctre install
 ====================
 
-.. note:: CTRE has not been updated for 2020 yet, so these instructions do not work
-
 
 Setup (tests/simulator)
 -----------------------
