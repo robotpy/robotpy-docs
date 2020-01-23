@@ -4,6 +4,10 @@
 Robot Simulator
 ===============
 
+.. important:: As of 2020, this simulator isn't being used, as the default
+   wpilib simulator is wrapped in robotpy. Older versions of robotpy (<2020)
+   will still use this simulator but will no longer recieve support.
+
 .. figure:: sim-ss.png
    :align: right
    :width: 250px
