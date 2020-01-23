@@ -47,7 +47,7 @@ REV Firmware and Diagnostics
 
 robotpy-rev supports all the control features of 
 the C++ Spark Max library. Firmware, diagnostics, and other things
-must be installed separatelyusing the tools released by REV.
+must be installed separately using the tools released by REV.
 
 Refer to `the REV C++ documentation <https://www.revrobotics.com/content/sw/max/sw-docs/cpp/index.html>`_
 for more details.
