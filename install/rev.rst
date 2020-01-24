@@ -45,9 +45,9 @@ the :ref:`robotpy-installer documentation <install_packages>`.
 REV Firmware and Diagnostics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-robotpy-dev only installs the pieces needed to operate the SPARK MAX from
-python. Firmware, diagnostics, and other things must be installed separately
-using the tools released by REV.
+robotpy-rev supports all the control features of 
+the C++ Spark Max library. Firmware, diagnostics, and other things
+must be installed separately using the tools released by REV.
 
-Refer to `the REV documentation <https://www.revrobotics.com/sparkmax-software/#api-info>`_
+Refer to `the REV C++ documentation <https://www.revrobotics.com/content/sw/max/sw-docs/cpp/index.html>`_
 for more details.
