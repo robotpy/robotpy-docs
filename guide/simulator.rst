@@ -37,7 +37,7 @@ for early testing of autonomous movements.
    easier than it sounds!). Helper functions are provided to calculate robot
    position for common drivetrain types (see below for details). There are
    physics examples provided in the `RobotPy Examples Repository <https://github.com/robotpy/examples>`_
-   for each supported drivetrain type.
+   for each supported drivetrain type, and the PyFRC Physics API documentation is `here <https://robotpy.readthedocs.io/projects/pyfrc/en/stable/physics.html>`_.
 
 ..  Adding custom tooltips to motors/sensors (doesn't work in 2015!)
 	
