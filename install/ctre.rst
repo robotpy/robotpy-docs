@@ -7,8 +7,8 @@ robotpy-ctre install
 Setup (tests/simulator)
 -----------------------
 
-If you intend to use robotpy-ctre in your *robot tests* or via the *pyfrc
-simulator*, you must install this package locally::
+If you intend to use robotpy-ctre in your *robot tests* or via the robot *simulator*,
+you must install this package locally::
 
     pip3 install -U robotpy-ctre
 
@@ -30,11 +30,11 @@ and install it. Instead, you can download a pre-packaged version from our opkg
 repository. Use the RobotPy installation script (comes with the RobotPy download),
 and run the following on your computer while connected to the internet::
 
-  py -3 -m robotpy_installer download-opkg python38-robotpy-ctre
+  py -3 -m robotpy_installer download-opkg robotpy-ctre
 
 Then, when connected to the roborio's network, run::
 
-  py -3 -m robotpy_installer install-opkg python38-robotpy-ctre
+  py -3 -m robotpy_installer install-opkg robotpy-ctre
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
@@ -46,5 +46,5 @@ CTRE Phoenix can integrate with the NI Web Dashboard on the RoboRIO. This is not
 run robotpy-ctre on the RoboRIO, but it can be a useful diagnostic tool. To install this, you
 will need to use the CTRE Lifeboat tool to install it separately.
 
-Refer to `the CTRE documentation <https://github.com/CrossTheRoadElec/Phoenix-Documentation#installing-phoenix-framework-onto-your-frc-robot>`_
+Refer to `the CTRE documentation <https://phoenix-documentation.readthedocs.io/en/latest/ch05_PrepWorkstation.html#workstation-installation>`_
 for more details.
