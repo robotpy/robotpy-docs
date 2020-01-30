@@ -36,11 +36,21 @@ the rough spots and make 2021 a seamless transition!
 Upgrading from prior years
 --------------------------
 
-You should uninstall the following packages manually:
+Before installing 2020 software (or after if you forgot), you should uninstall
+the following packages manually:
 
 .. code-block:: sh
 
     py -3 -m pip uninstall robotpy-hal-sim robotpy-hal-base
+
+After that, you can install pyfrc et al in the normal way:
+
+.. code-block:: sh
+
+    py -3 -m pip install --upgrade pyfrc
+
+See :ref:`Installing pyfrc <install_pyfrc>` for more details about installing
+RobotPy on your computer.
 
 Windows-specific notes
 ----------------------

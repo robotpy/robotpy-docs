@@ -39,7 +39,7 @@ invoking the --help command.
 Installing/Executing the installer
 ----------------------------------
 
-To install/use the installer, you must have Python 3 installed. You should install
+To install/use the installer, you must have Python 3.6+ installed. You should install
 the installer via pip.
 
 On Windows::
