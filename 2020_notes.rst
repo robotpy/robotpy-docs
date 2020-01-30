@@ -16,7 +16,22 @@ report.
 Why is everything so different this year?
 -----------------------------------------
 
-There's 
+From 2015-2020, RobotPy maintained a pure python version of WPILib and bindings
+around third party vendor libraries. However, maintaining RobotPy is a lot of
+work, and as WPILib and third party vendors add even more features it was
+becoming slowly impossible to keep up.
+
+In 2020, we switched to using mostly automatically generated wrappers around
+C++ libraries. Ideally, once completed, this will significantly lower the
+amount of work needed to update/maintain RobotPy in the future. Unfortunately
+in the short term, there's a lot of work needed to get there (however -- we're
+most of the way there as of this writing!).
+
+See this `github issue <https://github.com/robotpy/robotpy-wpilib/issues/605>`_ 
+for a longer discussion about this.
+
+2020 has been a bit bumpy, but with your help hopefully we can smooth out
+the rough spots and make 2021 a seamless transition!
 
 Upgrading from prior years
 --------------------------
