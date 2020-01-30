@@ -73,15 +73,55 @@ in developing something, contact us!
 Class inheritance
 -----------------
 
-When inheriting from RobotPy provided objects, you *must* call the super
-constructor otherwise your code will crash with a difficult to diagnose
-error::
+When inheriting from RobotPy provided objects, and you provide your own
+``__init__`` function, you *must* call the base class' ``__init__`` 
+function. If you don't have your own ``__init__`` function, there is
+no need to add one, Python will do the right thing automatically.
+
+Here are some examples using the command framework objects, but this 
+applies to any RobotPy object that you might inherit from::
 
     from wpilib.command import Command
 
-    class MyCommand(Command):
+    class GoodCommand(Command):
+        
+        # no custom __init__, nothing extra required
+
+        def foo(self):
+            pass
+
+    class AlsoGoodCommand(Command):
+
         def __init__(self):
+
+            # Call this first!!
             Command.__init__(self)
+
+            # custom stuff here
+            self.my_cool_thing = 1
+    
+    class BadCommand(Command):
+        def __init__(self):
+            self.my_cool_thing = 1
+
+            # BAD!! you forgot to call Command.__init__, which will result
+            # in a difficult to diagnose crash!
+    
+    class MaybeBadCommand(Command):
+        def __init__(self):
+            # This is not recommended, as it may fail in some cases 
+            # of multiple inheritance. See below
+            super().__init__()
+            self.my_cool_thing = 1
+
+The `pybind11 documentation <https://pybind11.readthedocs.io/en/stable/advanced/classes.html#overriding-virtual-functions-in-python>`_
+recommends against using ``super().__init__()``:
+
+    Note that a direct ``__init__`` constructor should be called, and ``super()``
+    should not be used. For simple cases of linear inheritance, ``super()``
+    may work, but once you begin mixing Python and C++ multiple inheritance,
+    things will fall apart due to differences between Python’s MRO and C++’s
+    mechanisms.
 
 Where is physics and tests?
 ---------------------------
