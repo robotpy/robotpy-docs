@@ -13,6 +13,9 @@ that RobotPy supports, including guides and API references.
           date due to significant changes in RobotPy this year. We'll try to 
           update the docs soon.
 
+          See the :ref:`2020 Notes <2020_notes>` for important information about 
+          RobotPy in 2020.
+
 .. note:: RobotPy is a community project and the tools we create are not
           officially supported by FIRST. Please see the
           :ref:`FAQ <faq>` for more information.

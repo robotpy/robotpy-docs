@@ -66,6 +66,7 @@ def generate_sidebar(conf, conf_api):
 
     toctree("Robot Programming")
     write("Getting Started", "getting_started")
+    write("2020 Notes", "2020_notes")
     write("Installation", "install/index")
     write("Programmer's Guide", "guide/index")
     write("Frameworks", "frameworks/index")
