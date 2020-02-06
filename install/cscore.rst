@@ -32,6 +32,9 @@ If you're using Arch Linux, you can follow the instructions at
 https://software.opensuse.org/download.html?project=home%3Aauscompgeek%3Arobotpy&package=python-cscore
 to install a precompiled package.
 
+A full list of supported platforms is available on
+https://build.opensuse.org/package/show/home:auscompgeek:robotpy/robotpy-cscore
+
 Compiling from source
 ~~~~~~~~~~~~~~~~~~~~~
 
