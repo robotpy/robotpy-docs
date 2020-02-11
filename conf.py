@@ -159,9 +159,14 @@ epub_exclude_files = ["search.html"]
 
 # -- Custom Document processing ----------------------------------------------
 
-import gensidebar
+from robotpy_sphinx.sidebar import generate_sidebar
 
-gensidebar.generate_sidebar(globals(), "robotpy")
+generate_sidebar(
+    globals(),
+    "robotpy",
+    "https://raw.githubusercontent.com/robotpy/docs-sidebar/master/sidebar.toml",
+)
+
 
 
 import sphinx.addnodes
