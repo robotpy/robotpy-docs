@@ -19,16 +19,29 @@ is very simple::
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
 
-Non-roboRIO installation (compiling from source)
-------------------------------------------------
+Non-roboRIO installation
+------------------------
+
+GNU/Linux packages
+~~~~~~~~~~~~~~~~~~
+
+If you're using Debian, Ubuntu, Fedora, or openSUSE, follow the instructions on
+https://software.opensuse.org/download.html?project=home%3Aauscompgeek%3Arobotpy&package=python3-cscore
+
+If you're using Arch Linux, you can follow the instructions at
+https://software.opensuse.org/download.html?project=home%3Aauscompgeek%3Arobotpy&package=python-cscore
+to install a precompiled package.
+
+A full list of supported platforms is available on
+https://build.opensuse.org/package/show/home:auscompgeek:robotpy/robotpy-cscore
+
+Compiling from source
+~~~~~~~~~~~~~~~~~~~~~
 
 If you're not installing on a RoboRIO, then installation of cscore has a few
 additional steps that you need to do:
 
-1. Install a newer C++ compiler that supports C++14
-   
-   .. note:: robotpy-cscore has not been tested on Windows
-
+1. Ensure a C++ compiler that supports C++17 is installed
 2. Install Python 3 (cscore is not supported on Python 2) and development headers
 3. Ensure that you have a recent version of pip3/setuptools installed (either via pip3 or using a Linux package manager)
 
@@ -39,14 +52,21 @@ additional steps that you need to do:
 
    * If you compile from source, you **must** enable shared library support,
      cscore cannot use a statically compiled OpenCV python module at this time
-     
+   * If you use OpenCV 4, you must also compile with ``-DOPENCV_GENERATE_PKGCONFIG=ON``
+     and install ``pkgconfig`` via pip for robotpy-cscore to find it.
+
 6. Install robotpy-cscore via pip3. It should be as easy as running
-   ``pip3 install --no-build-isolation robotpy-cscore`` -- though be warned, it takes several minutes to
+   ``pip3 install robotpy-cscore`` -- though be warned, it takes several minutes to
    compile!
 
-In the future we may provide binaries that can be installed on commonly used
-platforms, but there are a number of technical challenges that need to be solved
-and so that won't be until at least 2018 if not later.
+.. note::
+
+   robotpy-cscore has only been lightly tested on Windows, and installation
+   of OpenCV is slightly complicated, but you may have luck using conda.  See
+   `robotpy-cscore issue #17 <https://github.com/robotpy/robotpy-cscore/issues/17>`_
+   for more details.
+
+.. note:: CSCore does not support reading USB cameras on macOS.
 
 .. warning:: Currently, robotpy-cscore does not support using the OpenCV module
              that comes with the `opencv-python <https://pypi.python.org/pypi/opencv-python>`_
