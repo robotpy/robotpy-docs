@@ -8,11 +8,6 @@ Here are things to know about 2020 that are different from prior years. If you
 find things that are different that aren't in this list, please submit a bug
 report.
 
-.. note:: Most importantly, the API documentation has NOT been upgraded for
-          2020 yet. However, our goal is that most API should be identical/close
-          to the 2019 API. If you find something that is different, please file
-          a bug report!
-
 Why is everything so different this year?
 -----------------------------------------
 
