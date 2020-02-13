@@ -75,6 +75,14 @@ at this time. You can work around this by checking for an import error::
 A mock solution could be provided for simulation. If you're interested
 in developing something, contact us!
 
+Command framework
+-----------------
+
+As of 2020, the command frameworks are distributed as separate packages. 
+See the :ref:`install page <install_commands>` for details.
+
+* :ref:`Legacy Commands API Documentation <command_v1_api>`
+
 Class inheritance
 -----------------
 

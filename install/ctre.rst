@@ -27,8 +27,8 @@ Python package
 
 You really don't want to compile this yourself, so don't download this from pypi
 and install it. Instead, you can download a pre-packaged version from our opkg
-repository. Use the RobotPy installation script (comes with the RobotPy download),
-and run the following on your computer while connected to the internet::
+repository. Use the RobotPy installer and run the following on your computer
+while connected to the internet::
 
   py -3 -m robotpy_installer download-opkg robotpy-ctre
 

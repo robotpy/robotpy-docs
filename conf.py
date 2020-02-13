@@ -63,17 +63,31 @@ copyright = "2014-2017, RobotPy development team"
 rtd_version = "latest"
 
 intersphinx_mapping = {
-    "pyfrc": ("http://pyfrc.readthedocs.io/en/%s/" % rtd_version, None),
+    "commandsv1": (
+        "https://robotpy.readthedocs.io/projects/robotpy-commands-v1/en/%s/"
+        % rtd_version,
+        None,
+    ),
+    "pyfrc": (
+        "https://robotpy.readthedocs.io/projects/pyfrc/en/%s/" % rtd_version,
+        None,
+    ),
     "networktables": (
-        "http://pynetworktables.readthedocs.io/en/%s/" % rtd_version,
+        "https://robotpy.readthedocs.io/projects/pynetworktables/en/%s/" % rtd_version,
         None,
     ),
-    "wpilib": ("http://robotpy-wpilib.readthedocs.io/en/%s/" % rtd_version, None),
+    "wpilib": (
+        "https://robotpy.readthedocs.io/projects/wpilib/en/%s/" % rtd_version,
+        None,
+    ),
     "robotpy_ext": (
-        "http://robotpy-wpilib-utilities.readthedocs.io/en/%s/" % rtd_version,
+        "https://robotpy.readthedocs.io/projects/utilities/en/%s/" % rtd_version,
         None,
     ),
-    "cscore": ("http://robotpy-cscore.readthedocs.io/en/%s/" % rtd_version, None),
+    "cscore": (
+        "https://robotpy.readthedocs.io/projects/cscore/en/%s/" % rtd_version,
+        None,
+    ),
 }
 
 # The version info for the project you're documenting, acts as replacement for
@@ -166,7 +180,6 @@ generate_sidebar(
     "robotpy",
     "https://raw.githubusercontent.com/robotpy/docs-sidebar/master/sidebar.toml",
 )
-
 
 
 import sphinx.addnodes

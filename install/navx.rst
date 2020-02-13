@@ -19,10 +19,8 @@ Setup (RoboRIO)
 ---------------
 
 Even if you have robotpy-navx installed locally, you **must** install it on your
-robot **separately**.
-
-Use the RobotPy installation script (comes with the RobotPy download),
-and run the following on your computer while connected to the internet::
+robot **separately**. Use the RobotPy installer and run the following on your computer
+while connected to the internet::
 
   py -3 -m robotpy_installer download-opkg robotpy-navx
 

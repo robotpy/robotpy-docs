@@ -3,6 +3,12 @@
 Command Framework
 =================
 
+.. note:: As of 2020, the command frameworks are distributed separately from
+          WPILib. See the :ref:`installation notes <install_commands>` for
+          details.
+
+          Only the legacy command framework is currently available.
+
 If you're coming from C++ or Java, you are probably familiar with the `Command based robot paradigm <https://wpilib.screenstepslive.com/s/4485/m/13810/l/241892-what-is-command-based-programming>`_.
 All of the pieces you're used to are still here, but this guide might help save
 you a bit of time as you make the transition.
