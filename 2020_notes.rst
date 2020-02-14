@@ -75,6 +75,13 @@ at this time. You can work around this by checking for an import error::
 A mock solution could be provided for simulation. If you're interested
 in developing something, contact us!
 
+Linux specific notes
+--------------------
+
+Linux requires Ubuntu 18.04 or a distribution with an equivalent (or newer)
+glibc installation. See :ref:`linux installation page <install_linux>` for
+more information.
+
 Command framework
 -----------------
 

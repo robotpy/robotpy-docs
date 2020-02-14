@@ -64,7 +64,7 @@ rtd_version = "latest"
 
 intersphinx_mapping = {
     "commandsv1": (
-        "https://robotpy.readthedocs.io/projects/robotpy-commands-v1/en/%s/"
+        "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/"
         % rtd_version,
         None,
     ),
