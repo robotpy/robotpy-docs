@@ -158,6 +158,10 @@ testing/physics, but the work still has not been completed.
 My code segfaulted and there's no Python stack trace!
 -----------------------------------------------------
 
+.. note:: If you are using the Command framework, be sure to upgrade to 
+          at least version 2020.2.2.2, as this fixes an issue that could
+          cause a crash in command-based code.
+
 We are still working through the bugs, and when you find something like this
 here's what you can do:
 
