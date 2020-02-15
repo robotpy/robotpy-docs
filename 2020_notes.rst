@@ -115,6 +115,9 @@ applies to any RobotPy object that you might inherit from::
         def __init__(self):
 
             # Call this first!!
+            # -> this is calling the base class, so if this is a Command it 
+            #    calls Command.__init__, a subsystem would call Subsystem.__init__,
+            #    and so on.
             Command.__init__(self)
 
             # custom stuff here
