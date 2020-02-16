@@ -9,7 +9,8 @@ Commands install
 As of 2020, the command frameworks are distributed as separate packages. The
 legacy command framework is available in robotpy-commands-v1.
 
-.. note:: The new command framework is not yet available for RobotPy 2020.
+.. note:: Only the legacy (v1) command framework is available for 2020. The
+          new (v2) command framework is not yet available for RobotPy 2020.
 
 Setup (tests/simulator)
 -----------------------
