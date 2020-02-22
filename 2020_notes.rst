@@ -149,8 +149,9 @@ recommends against using ``super().__init__()``:
 Where is physics and tests?
 ---------------------------
 
-We are working on the 2020 implementation, and then once completed will
-focus on adding support for these.
+An `initial 2020 physics demo <https://github.com/robotpy/examples/tree/master/physics>`_ 
+is available, but it's pretty hacky. More polished physics support (and
+maybe even some documentation) should be available by the end of Feburary.
 
 Some community members have expressed interest in fixing support for
 testing/physics, but the work still has not been completed.
