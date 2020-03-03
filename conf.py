@@ -57,10 +57,8 @@ master_doc = "index"
 
 # General information about the project.
 project = "RobotPy"
-copyright = "2014-2017, RobotPy development team"
+copyright = "2014-2020, RobotPy development team"
 
-# TODO: detect this at
-rtd_version = "latest"
 
 intersphinx_mapping = {
     "commandsv1": (
@@ -78,6 +76,10 @@ intersphinx_mapping = {
     ),
     "wpilib": (
         "https://robotpy.readthedocs.io/projects/wpilib/en/%s/" % rtd_version,
+        None,
+    ),
+    "hal": (
+        "https://robotpy.readthedocs.io/projects/hal/en/%s/" % rtd_version,
         None,
     ),
     "robotpy_ext": (

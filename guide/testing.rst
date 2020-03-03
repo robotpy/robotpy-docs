@@ -3,6 +3,8 @@
 Unit testing robot code
 =======================
 
+.. warning:: Testing is currently still broken for RobotPy 2020
+
 pyfrc comes with robot.py extensions that support testing robot code using the
 py.test python testing tool. To run the unit tests for your robot, just run your
 robot.py with the following arguments:

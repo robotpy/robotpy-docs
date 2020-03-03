@@ -146,15 +146,23 @@ recommends against using ``super().__init__()``:
     things will fall apart due to differences between Python’s MRO and C++’s
     mechanisms.
 
-Where is physics and tests?
----------------------------
+What happened to physics and tests?
+-----------------------------------
 
-An `initial 2020 physics demo <https://github.com/robotpy/examples/tree/master/physics>`_ 
-is available, but it's pretty hacky. More polished physics support (and
-maybe even some documentation) should be available by the end of Feburary.
+Test support is still not available for 2020.
 
-Some community members have expressed interest in fixing support for
-testing/physics, but the work still has not been completed.
+The simulation 'physics' support for 2020 has been significantly overhauled
+to integrate with the WPILib HAL/Simulation support. As of pyfrc 2020.1.0,
+the physics support has been updated and should work with the integrated
+field widget that comes with WPILib.
+
+All of the physics example projects have been updated for 2020, but here
+are some particularly useful demos:
+
+* `Basic physics demo <https://github.com/robotpy/examples/tree/master/physics/src>`_
+* `NavX rotate to angle <https://github.com/robotpy/examples/tree/master/navx-rotate-to-angle-arcade>`_
+
+Additionally, see the :ref:`PyFRC API docs <physics_model>` for more information.
 
 My code segfaulted and there's no Python stack trace!
 -----------------------------------------------------
