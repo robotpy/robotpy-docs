@@ -41,4 +41,5 @@ Installing extra software packages on the RoboRIO:
     navx
     rev
     revcolor
+    adi
     packages
