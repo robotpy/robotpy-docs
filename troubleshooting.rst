@@ -118,7 +118,8 @@ Thankfully, this is super easy as of 2017. Here's the code::
 
     from networktables import NetworkTables
 
-    NetworkTables.initialize(server='10.xx.xx.2')
+    # replace your team number below
+    NetworkTables.startClientTeam(1234)
 
 Don't know what the right hostname is? That's what the next section is for...
 
