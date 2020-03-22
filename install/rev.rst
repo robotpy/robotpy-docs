@@ -3,12 +3,12 @@
 robotpy-rev install
 ====================
 
-.. note:: The robotpy-rev bindings are new for 2019, and we're still working
-          through issues with them. Please try them out and report any 
-          problems you may find!
-
 Setup (tests/simulator)
 -----------------------
+
+.. note:: REV SPARK support is only installable on 64-bit Windows and Linux. REV
+          does not provide OSX binaries -- contact their support and let them
+          know this is something your team wants!
 
 If you intend to use robotpy-rev in your *robot tests* or via the *pyfrc
 simulator*, you must install this package locally::
