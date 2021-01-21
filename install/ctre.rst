@@ -7,19 +7,17 @@ robotpy-ctre install
 Setup (tests/simulator)
 -----------------------
 
-.. note:: CTRE is only installable on 64-bit Windows and Linux. CTRE
-          does not provide OSX binaries -- contact their support and let them
-          know this is something your team wants!
+.. note:: CTRE is only installable on 64-bit Windows, 64-bit Linux, and OSX
 
+If you intend to use robotpy-ctre in your *robot tests* or via the robot 
+*simulator*, you must install this package locally. It is recommended to
+install using the robotpy meta package::
 
-If you intend to use robotpy-ctre in your *robot tests* or via the robot *simulator*,
-you must install this package locally::
-
-    pip3 install -U robotpy-ctre
+    pip3 install -U robotpy[ctre]
 
 Or on Windows::
     
-    py -3 -m pip install -U robotpy-ctre
+    py -3 -m pip install -U robotpy[ctre]
 
 Setup (RoboRIO)
 ---------------
@@ -31,15 +29,14 @@ Python package
 ~~~~~~~~~~~~~~
 
 You really don't want to compile this yourself, so don't download this from pypi
-and install it. Instead, you can download a pre-packaged version from our opkg
-repository. Use the RobotPy installer and run the following on your computer
+and install it. Use the RobotPy installer and run the following on your computer
 while connected to the internet::
 
-  py -3 -m robotpy_installer download-opkg robotpy-ctre
+  py -3 -m robotpy_installer download -U robotpy[ctre]
 
 Then, when connected to the roborio's network, run::
 
-  py -3 -m robotpy_installer install-opkg robotpy-ctre
+  py -3 -m robotpy_installer install robotpy[ctre]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

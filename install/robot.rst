@@ -17,9 +17,9 @@ Automated installation
 
 .. warning:: This guide assumes that your RoboRIO has the current legal RoboRIO
              image installed. If you haven't done this yet, see `the screensteps
-             documentation <http://wpilib.screenstepslive.com/s/4485/m/13503/l/144984-imaging-your-roborio>`_
+             documentation <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/imaging-your-roborio.html>`_
              for imaging instructions. To image the RoboRIO for RobotPy, you
-             only need to have the latest FRC Update Suite installed.
+             only need to have the latest FRC Game Tools installed.
 
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
 distributions, and from Mac macOS also. To install/use the installer, you must
@@ -38,14 +38,17 @@ There are two stages to installing RobotPy. First, download the artifacts.
 Open up a command line, change to a directory you'd like to store the 
 downloaded artifacts, and run this::
 
-    Windows:   py -3 -m robotpy_installer download-robotpy
+    Windows:   py -3 -m robotpy_installer download-python
+               py -3 -m robotpy_installer download robotpy
 	
-	Linux/macOS: robotpy-installer download-robotpy
+	Linux/macOS: robotpy-installer download-python
+               robotpy-installer download robotpy
 
 Once everything has downloaded, you can switch to your Robot's network, and
 use the following commands to install.
 
-	Windows:   py -3 -m robotpy_installer install-robotpy
+	Windows:   py -3 -m robotpy_installer install-python
+             py -3 -m robotpy_installer install robotpy
 	
 	Linux/macOS: robotpy-installer install-robotpy
 
@@ -78,37 +81,3 @@ Then connect to the Robot's network::
 
 If you want to use a beta version of RobotPy (if available), you can add the 
 --pre argument to the download/install command listed above.
-
-
-Manual installation (release)
------------------------------
-
-.. warning:: This isn't recommended, so you're on your own if you go this route.
-             
-If you really want to do this, it's not so bad, but then you lose out on
-the benefits of the automated installer -- in particular, this method requires
-internet access to install the files on the roboRIO in case you need to reimage
-your roboRIO.
-
-* Connect your roboRIO to the internet
-* SSH in, and copy the following to /etc/opkg/robotpy.conf::
-
-    src/gz robotpy http://www.tortall.net/~robotpy/feeds/2020
-
-* Run this::
-
-    opkg update
-    opkg install python38-wpilib netconsole-host
-
-.. note:: When powered off, your roboRIO does not keep track of the correct
-          date, and as a result pip may fail with an SSL related error message.
-          To set the date, you can either:
-
-          * Set the date via the web interface 
-          * You can login to your roboRIO via SSH, and set the date via the
-            date command::
-
-          		date -s "2015-01-03 00:00:00"
-
-Upgrading requires you to run the same commands, but with the appropriate
-flags set to tell pip3/opkg to upgrade the packages for you.

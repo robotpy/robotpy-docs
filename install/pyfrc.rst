@@ -21,18 +21,19 @@ Install via pip on Windows
 
 .. note:: pip typically requires internet access
 
-The easiest installation is by using pip. pip is installed by default with Python
-3.5+. Run the following command from the command line:
+The easiest installation is by using pip. pip is installed by default with 
+Python 3.5+. Run the following command from the command line to install pyfrc
+via the RobotPy meta package:
 
 .. code-block:: sh
 
-    py -3 -m pip install pyfrc
+    py -3 -m pip install robotpy
 
 To upgrade, you can run this:
 
 .. code-block:: sh
 
-    py -3 -m pip install --upgrade pyfrc
+    py -3 -m pip install --upgrade robotpy
 
 If you don't have administrative rights on your computer, either use
 `virtualenv/virtualenvwrapper-win <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_, or
@@ -40,7 +41,7 @@ or you can install to the user site-packages directory:
 
 .. code-block:: sh
 
-    py -3 -m pip install --user pyfrc
+    py -3 -m pip install --user robotpy
 
 Install via pip on macOS
 ------------------------
@@ -55,13 +56,13 @@ following command from the Terminal application (may require admin rights):
 
 .. code-block:: sh
 
-    pip3 install pyfrc
+    pip3 install robotpy
 
 To upgrade, you can run this:
 
 .. code-block:: sh
 
-    pip3 install --upgrade pyfrc
+    pip3 install --upgrade robotpy
 
 If you don't have administrative rights on your computer, either use
 `virtualenv/virtualenvwrapper <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_, or
@@ -69,7 +70,7 @@ or you can install to the user site-packages directory:
 
 .. code-block:: sh
 
-    pip3 install --user pyfrc
+    pip3 install --user robotpy
 
 .. _install_linux:
 

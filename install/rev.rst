@@ -11,13 +11,14 @@ Setup (tests/simulator)
           know this is something your team wants!
 
 If you intend to use robotpy-rev in your *robot tests* or via the *pyfrc
-simulator*, you must install this package locally::
+simulator*, you must install this package locally. It is recommended to
+install using the robotpy meta package::
 
-    pip3 install -U robotpy-rev
+    pip3 install -U robotpy[rev]
 
 Or on Windows::
     
-    py -3 -m pip install -U robotpy-rev
+    py -3 -m pip install -U robotpy[rev]
 
 Setup (RoboRIO)
 ---------------
@@ -29,15 +30,14 @@ Python package
 ~~~~~~~~~~~~~~
 
 You really don't want to compile this yourself, so don't download this from pypi
-and install it. Instead, you can download a pre-packaged version from our opkg
-repository. Use the RobotPy installer and run the following on your computer
+and install it. Use the RobotPy installer and run the following on your computer
 while connected to the internet::
 
-  py -3 -m robotpy_installer download-opkg robotpy-rev
+  py -3 -m robotpy_installer download robotpy[rev]
 
 Then, when connected to the roborio's network, run::
 
-  py -3 -m robotpy_installer install-opkg robotpy-rev
+  py -3 -m robotpy_installer install robotpy[rev]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

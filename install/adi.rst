@@ -24,11 +24,11 @@ Even if you have robotpy-adi installed locally, you **must** install it on your
 robot **separately**. Use the RobotPy installer and run the following on your computer
 while connected to the internet::
 
-  py -3 -m robotpy_installer download-opkg robotpy-adi
+  py -3 -m robotpy_installer download robotpy-adi
 
 Then, when connected to the roborio's network, run::
 
-  py -3 -m robotpy_installer install-opkg robotpy-adi
+  py -3 -m robotpy_installer install robotpy-adi
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

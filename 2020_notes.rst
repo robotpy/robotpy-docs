@@ -1,10 +1,10 @@
 
 .. _2020_notes:
 
-2020 Notes
-==========
+2020+ Notes
+===========
 
-Here are things to know about 2020 that are different from prior years. If you
+Here are things to know about 2020-2021 that are different from prior years. If you
 find things that are different that aren't in this list, please submit a bug
 report.
 
@@ -17,19 +17,19 @@ work, and as WPILib and third party vendors add even more features it was
 becoming slowly impossible to keep up.
 
 In 2020, we switched to using mostly automatically generated wrappers around
-C++ libraries. Ideally, once completed, this will significantly lower the
-amount of work needed to update/maintain RobotPy in the future. Unfortunately
-in the short term, there's a lot of work needed to get there (however -- we're
-most of the way there as of this writing!).
+C++ libraries. This has significantly lowered the amount of work needed to
+update/maintain RobotPy -- previously it took several volunteers over a month
+or two to do updates each year, and now a single person can do much of the
+work required within a week or so.
 
 See this `github issue <https://github.com/robotpy/robotpy-wpilib/issues/605>`_ 
 for a longer discussion about this.
 
-2020 has been a bit bumpy, but with your help hopefully we can smooth out
-the rough spots and make 2021 a seamless transition!
+2020 was a bit bumpy, and in 2021 we're focusing on cleaning things up so that
+2022 is super smooth!
 
-Upgrading from prior years
---------------------------
+Upgrading from 2019 or prior
+----------------------------
 
 Before installing 2020 software (or after if you forgot), you should uninstall
 the following packages manually:
@@ -59,21 +59,18 @@ Windows-specific notes
 OSX-specific notes
 ------------------
 
-CTRE and REV do not support simulation on OSX, so these packages do not work 
+REV does not yet support simulation on OSX, so these packages do not work 
 at this time. You can work around this by checking for an import error::
 
     try:
-        import ctre
+        import rev
     except ImportError:
-        ctre = None
+        rev = None
     
     ... 
 
-    if ctre is not None:
-        .. 
-
-A mock solution could be provided for simulation. If you're interested
-in developing something, contact us!
+    if rev is not None:
+        ..
 
 Linux specific notes
 --------------------
@@ -155,6 +152,8 @@ The simulation 'physics' support for 2020 has been significantly overhauled
 to integrate with the WPILib HAL/Simulation support. As of pyfrc 2020.1.0,
 the physics support has been updated and should work with the integrated
 field widget that comes with WPILib.
+
+.. note:: 2021 support needs some work still
 
 All of the physics example projects have been updated for 2020, but here
 are some particularly useful demos:
