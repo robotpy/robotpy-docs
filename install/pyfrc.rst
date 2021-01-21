@@ -79,11 +79,29 @@ Install via pip on Linux
 
 .. note:: pip typically requires internet access
 
-Unfortunately, RobotPy does not distribute manylinux compatible wheels 
-for Linux, so you will most likely need a C++17 compiler installed for
-instaling RobotPy components. WPILib is compiled on Ubuntu 18.04, and it
-is likely that on Linux RobotPy can only be used on a system that has an
-equivalent version of glibc or newer.
+Since 2021, RobotPy distributes manylinux binary wheels on PyPI. However,
+installing these requires a distro that has glibc 2.27 or newer, and
+an installer that implements :pep:`600`, such as pip 20.3 or newer.
+You can check your version of pip with the following command:
+
+.. code-block:: sh
+
+   pip3 --version
+
+If you need to upgrade your version of pip, it is highly recommended to use a
+`virtual environment <https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/>`_.
+
+If you have a compatible version of pip, you can simply run:
+
+.. code-block:: sh
+
+    pip3 install robotpy
+
+To upgrade, you can run this:
+
+.. code-block:: sh
+
+    pip3 install --upgrade robotpy
 
 The following Linux distributions are known to work, but this list is not
 necessarily comprehensive:
@@ -92,52 +110,32 @@ necessarily comprehensive:
 * Fedora 31
 * Arch Linux
 
-binary install
-~~~~~~~~~~~~~~
+If you manage to install the packages and get the following error or
+something similar, your system is most likely not compatible with RobotPy::
 
-If you have Ubuntu 18.04 or a Linux distribution with a compatible glibc,
-you can try using our `precompiled wheels to install RobotPy <https://www.tortall.net/~robotpy/wheels/2020/linux_x86_64/>`_.
-
-.. code-block:: sh
-
-    pip3 install --find-links https://www.tortall.net/~robotpy/wheels/2020/linux_x86_64/ pyfrc
-
-To upgrade, you can run this:
-
-.. code-block:: sh
-
-    pip3 install --find-links https://www.tortall.net/~robotpy/wheels/2020/linux_x86_64/ --upgrade pyfrc
-
-If you get the following error or something similar, your system is
-most likely not compatible with RobotPy.
-
-    OSError: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.22' not found (required by /usr/local/lib/python3.7/dist-packages/wpiutil/lib/libwpiutil.so)`
+    OSError: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.22' not found (required by /usr/local/lib/python3.7/dist-packages/wpiutil/lib/libwpiutil.so)
 
 source install
 ~~~~~~~~~~~~~~
 
-Alternatively, if you have a compatible C++ compiler installed, you can use
-pip to install RobotPy from source.
+Alternatively, if you have a C++17 compiler installed, you may be able
+to use pip to install RobotPy from source.
 
 .. warning:: It may take a very long time to install!
 
-.. code-block:: sh
+.. warning::
 
-    pip3 install pyfrc
+   Mixing our pre-built wheels with source installs may cause runtime errors.
+   This is due to internal ABI incompatibility between compiler versions.
 
-To upgrade, you can run this:
+   Our wheels are built on Ubuntu 18.04 with GCC 7.
 
-.. code-block:: sh
-
-    pip3 install --upgrade pyfrc
-
-If you don't have administrative rights on your computer, either use
-`virtualenv/virtualenvwrapper <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_, or
-or you can install to the user site-packages directory:
+If you need to build with a specific compiler version, you can specify them
+using the :envvar:`CC` and :envvar:`CXX` environment variables:
 
 .. code-block:: sh
 
-    pip3 install --user pyfrc
+   export CC=gcc-7 CXX=g++-7
 
 Manual install (without pip)
 ----------------------------
