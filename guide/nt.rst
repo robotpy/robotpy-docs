@@ -30,7 +30,7 @@ For example, if your team number was 1234, then the static IP to connect to
 would be  ``10.12.34.2``.
 
 For information on configuring your RoboRIO and other devices to use static IPs, see the
-`WPILib screensteps documentation <https://wpilib.screenstepslive.com/s/4485/m/24193/l/319135-ip-networking-at-the-event>`_.
+:doc:`WPILib documentation <frc:docs/networking/networking-introduction/ip-configurations>`.
 
 Server initialization (Robot)
 -----------------------------

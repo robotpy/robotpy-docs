@@ -16,8 +16,8 @@ Automated installation
 ----------------------
 
 .. warning:: This guide assumes that your RoboRIO has the current legal RoboRIO
-             image installed. If you haven't done this yet, see `the screensteps
-             documentation <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/imaging-your-roborio.html>`_
+             image installed. If you haven't done this yet, see :doc:`the WPILib
+             documentation <frc:docs/zero-to-robot/step-3/imaging-your-roborio>`
              for imaging instructions. To image the RoboRIO for RobotPy, you
              only need to have the latest FRC Game Tools installed.
 

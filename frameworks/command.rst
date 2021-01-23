@@ -9,7 +9,7 @@ Command Framework
 
           Only the legacy command framework is currently available.
 
-If you're coming from C++ or Java, you are probably familiar with the `Command based robot paradigm <https://docs.wpilib.org/en/stable/docs/software/old-commandbased/index.html>`_.
+If you're coming from C++ or Java, you are probably familiar with the :doc:`Command based robot paradigm <frc:docs/software/old-commandbased/index>`.
 All of the pieces you're used to are still here, but this guide might help save
 you a bit of time as you make the transition.
 

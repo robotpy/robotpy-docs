@@ -62,8 +62,7 @@ copyright = "2014-2020, RobotPy development team"
 
 intersphinx_mapping = {
     "commandsv1": (
-        "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/"
-        % rtd_version,
+        "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/" % rtd_version,
         None,
     ),
     "pyfrc": (
@@ -90,6 +89,7 @@ intersphinx_mapping = {
         "https://robotpy.readthedocs.io/projects/cscore/en/%s/" % rtd_version,
         None,
     ),
+    "frc": ("https://docs.wpilib.org/en/stable", None),
 }
 
 # The version info for the project you're documenting, acts as replacement for
@@ -190,7 +190,7 @@ import docutils.nodes
 
 def process_child(node):
     """This function changes class references to not have the
-       intermediate module name by hacking at the doctree"""
+    intermediate module name by hacking at the doctree"""
 
     # Edit descriptions to be nicer
     if isinstance(node, sphinx.addnodes.desc_addname):

@@ -328,7 +328,7 @@ and it will read/write to NetworkTables.
 For more information about creating custom dashboards, see the following:
 
 * `pynetworktables2js docs <http://pynetworktables2js.readthedocs.io/en/latest/>`_
-* `Smartdashboard docs <https://wpilib.screenstepslive.com/s/4485/m/26401>`_
+* :doc:`Shuffleboard docs <frc:docs/software/wpilib-tools/shuffleboard/index>`
 
 
 Example Components

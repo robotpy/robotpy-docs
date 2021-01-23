@@ -25,7 +25,7 @@ To run the simulator, run your robot.py with the following arguments:
 User interface
 --------------
 
-See the `WPILib Simulation User Interface <http://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/simulation-gui.html>`_
+See the :doc:`WPILib Simulation User Interface <frc:docs/software/wpilib-tools/robot-simulation/simulation-gui>`
 documentation for more details.
 
 2D Field Widget and Physics

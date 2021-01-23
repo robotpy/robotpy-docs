@@ -63,7 +63,7 @@ Starting deployed code at boot
 If you wish for the deployed code to be started up when the roboRIO boots up,
 you need to make sure that "Disable RT Startup App" is **not** checked in the
 roboRIO's web configuration. See the
-`FIRST documentation <http://wpilib.screenstepslive.com/s/4485/m/24166/l/262266-roborio-webdashboard>`_
+:doc:`FIRST documentation <frc:docs/software/roborio-info/roborio-web-dashboard>`
 for more information.
 
 Manually deploying code

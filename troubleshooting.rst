@@ -18,7 +18,7 @@ the latest versions of the FIRST robot software installed:
 * Robot Image
 * Driver Station + Tools
 
-The `FIRST screensteps documentation <https://wpilib.screenstepslive.com/s/4485>`_
+The `FIRST WPILib documentation <https://docs.wpilib.org>`_
 contains information on what the current versions are, and how to go about
 updating the software.
 

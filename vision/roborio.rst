@@ -113,6 +113,6 @@ can be found in the RobotPy examples repository.
 More information
 ----------------
 
-* The `WPILib screensteps documentation for cscore <http://wpilib.screenstepslive.com/s/4485/m/24194/l/682778-read-and-process-video-cameraserver-class>`_
+* The :doc:`WPILib documentation for cscore <frc:docs/software/vision-processing/introduction/cameraserver-class>`
   may be useful to explain concepts (though some details are different)
 * :ref:`CSCore Troubleshooting <troubleshooting_cscore>`
