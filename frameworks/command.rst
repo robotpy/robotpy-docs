@@ -9,7 +9,7 @@ Command Framework
 
           Only the legacy command framework is currently available.
 
-If you're coming from C++ or Java, you are probably familiar with the `Command based robot paradigm <https://wpilib.screenstepslive.com/s/4485/m/13810/l/241892-what-is-command-based-programming>`_.
+If you're coming from C++ or Java, you are probably familiar with the `Command based robot paradigm <https://docs.wpilib.org/en/stable/docs/software/old-commandbased/index.html>`_.
 All of the pieces you're used to are still here, but this guide might help save
 you a bit of time as you make the transition.
 
@@ -24,10 +24,10 @@ is available. You can start with that and modify it to meet your needs.
 The Basics
 ----------
 The structure of a Command based program is simple and predictable. You inherit
-from the ``IterativeRobot`` class, configure the robot in ``robotInit()``, and
-then run the ``Scheduler`` inside the ``*Periodic()`` methods.
+from the :class:`wpilib.TimedRobot` class, configure the robot in ``robotInit()``,
+and then run the ``Scheduler`` inside the ``*Periodic()`` methods.
 
-Writing it can be done rather quickly, but the robotpy-wpilib-utilities package
+Writing it can be done rather quickly, but the robotpy commands packages
 contains a pre-built skeleton class you can inherit, meaning that your program
 only needs to implement functions unique to your robot. Here is an example::
 
@@ -51,7 +51,7 @@ only needs to implement functions unique to your robot. Here is an example::
 Setting up the scheduler and running it are handled by the CommandBasedRobot
 class. You only need to write the code for ``*Init()`` methods you want to use.
 Since you are overriding that class, you can easily change any functionality
-that doesn't work for your robot, though `the default implementation <https://github.com/robotpy/robotpy-wpilib-utilities/blob/master/commandbased/commandbasedrobot.py>`_
+that doesn't work for your robot, though :class:`the default implementation <commandbased.commandbasedrobot.CommandBasedRobot>`
 should work for most cases.
 
 Error Handling
@@ -67,7 +67,7 @@ canceled, the error will be printed on the driver's station, and the Scheduler
 loop will continue running normally.
 
 If you need more advanced error handling functionality, you can override the
-```handleCrash()``` method in your robot.py.
+``handleCrash()`` method in your robot.py.
 
 Pythonic Command Based Programming
 ----------------------------------
@@ -116,7 +116,7 @@ instantiated. Then you can access your subsystem from any Command like this::
 By using this method you can override any Command provided by WPILib or
 robotpy-wpilib-utilities, with pythonic namespacing. For even better structure,
 make ``subsystems`` a package that holds the code for all of your subsystems, as
-demonstrated in the `example program <https://github.com/robotpy/examples/tree/master/command-based/subsystems>`_.
+demonstrated in the `example program <https://github.com/robotpy/examples/tree/main/command-based/subsystems>`_.
 
 RobotMap
 ~~~~~~~~
@@ -166,13 +166,13 @@ Whichever method you choose, you can utilize it simply by importing::
 Flow Control
 --------------
 
-`Command groups <http://robotpy.readthedocs.io/projects/wpilib/en/latest/wpilib.command/CommandGroup.html>`_
+:class:`Command groups <wpilib.command.CommandGroup>`
 are great tools for writing complex behaviors, especially for the autonomous
 period. A few commands can be strung together effortlessly, creating a readable
 flow of behavior. It is possible to run multiple commands at the same time using
 the parallel scheduling, or force them into order with sequential scheduling.
 
-`Conditional commands <http://robotpy.readthedocs.io/projects/wpilib/en/latest/wpilib.command/ConditionalCommand.html>`_
+:class:`Conditional commands <wpilib.command.ConditionalCommand>`
 are a great tool for adding logic to a robotics program. With their introduction
 it is possible to choose which ``Command`` to run based on arbitrarily complex
 conditions.
