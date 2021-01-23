@@ -41,7 +41,7 @@ You should also have the latest version of the RobotPy software packages:
 Problem: no module named 'wpilib'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you're on your local computer, did you :ref:`install pyfrc via pip <install_pyfrc>`?
+If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
 
 If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
 
@@ -54,7 +54,7 @@ If you're using a non-WPILib vendor library, it must be installed separately.
 * :ref:`install_navx`
 * :ref:`install_rev`
 
-If you're on your local computer, did you :ref:`install pyfrc via pip <install_pyfrc>`?
+If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
 
 If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
 

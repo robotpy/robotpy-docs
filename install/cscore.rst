@@ -4,6 +4,8 @@
 robotpy-cscore install
 ======================
 
+.. note:: cscore is not installed when you ``pip install robotpy``
+
 RoboRIO installation
 --------------------
 
@@ -11,10 +13,10 @@ If you have robotpy-installer on your computer, then installing ``robotpy-cscore
 is very simple::
    
    # While connected to the internet
-   robotpy-installer download-opkg cscore
+   robotpy-installer opkg download cscore
    
    # While connected to the network with a RoboRIO on it
-   robotpy-installer install-opkg cscore
+   robotpy-installer opkg install cscore
     
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

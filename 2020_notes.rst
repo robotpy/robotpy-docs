@@ -38,13 +38,13 @@ the following packages manually:
 
     py -3 -m pip uninstall robotpy-hal-sim robotpy-hal-base
 
-After that, you can install pyfrc et al in the normal way:
+After that, you can install RobotPy in the normal way:
 
 .. code-block:: sh
 
-    py -3 -m pip install --upgrade pyfrc
+    py -3 -m pip install --upgrade robotpy
 
-See :ref:`Installing pyfrc <install_pyfrc>` for more details about installing
+See :ref:`Computer Installation <install_computer>` for more details about installing
 RobotPy on your computer.
 
 Windows-specific notes
@@ -56,10 +56,10 @@ Windows-specific notes
 * CTRE and REV do not support simulation in 32-bit programs, so you must have
   a 64-bit Python installed.
 
-OSX-specific notes
-------------------
+macOS-specific notes
+--------------------
 
-REV does not yet support simulation on OSX, so these packages do not work 
+REV does not yet support simulation on macOS, so these packages do not work 
 at this time. You can work around this by checking for an import error::
 
     try:
@@ -146,7 +146,7 @@ recommends against using ``super().__init__()``:
 What happened to physics and tests?
 -----------------------------------
 
-Test support is still not available for 2020.
+Test support is still not available for 2020+.
 
 The simulation 'physics' support for 2020 has been significantly overhauled
 to integrate with the WPILib HAL/Simulation support. As of pyfrc 2020.1.0,

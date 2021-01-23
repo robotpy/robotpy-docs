@@ -6,11 +6,11 @@ Installation
 
 Writing Robot code in Python:
 
+* If you wish to deploy code or use the Robot Simulator, see the :ref:`computer
+  Installation documentation <install_computer>`.
+
 * To install RobotPy on your robot, see the :ref:`RobotPy installation
   documentation <install_robotpy>`.
-
-* If you wish to deploy code or use the Robot Simulator, see the :ref:`pyfrc installation
-  documentation <install_pyfrc>`.
 
 Using NetworkTables from Python:
 
@@ -28,14 +28,24 @@ Installing extra software packages on the RoboRIO:
   robotpy-ctre, and other python packages on your RoboRIO using the :ref:`RobotPy
   Installer <install_packages>`. 
 
+.. toctree::
+    :hidden:
+   
+    components
+    computer
+    robot
+    cscore
+
+Package notes
+-------------
+
+Notes specific to individual packages
 
 .. toctree::
     :hidden:
-    
-    robot
+
     pyfrc
     pynetworktables
-    cscore
     commands
     ctre
     navx

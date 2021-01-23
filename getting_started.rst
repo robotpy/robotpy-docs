@@ -19,7 +19,7 @@ You can run RobotPy-based programs either on your computer or on a robot. There
 are a lot of different ways you can get started with RobotPy, but we recommend
 the following steps:
 
-* :ref:`Install the Robot Simulator and related tools <install_pyfrc>`
+* :ref:`Install RobotPy on your computer <install_computer>`
 * Learn how to write Python-based robot code via :ref:`anatomy` and the various
   sections of the :ref:`programmer's guide <programmers_guide>`
 

@@ -45,6 +45,8 @@ your program's console output, by launching a netconsole listener.
     
     Linux/macOS: python3 robot.py deploy --nc
 
+.. note:: This requires the driver station software to be connected to your robot
+
 Skipping Tests
 ~~~~~~~~~~~~~~
 
