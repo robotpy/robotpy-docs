@@ -68,4 +68,4 @@ Red, Green, Blue, and the IR (infrared) values from the sensor, as well as the p
     if __name__ == "__main__":
         wpilib.run(MyRobot)
 
-There's also a more in depth example found at `the example folder for the library <https://github.com/robotpy/robotpy-rev-color/blob/master/examples/read_rgb_values/robot.py>`_
+There's also a more in depth example found at `the example folder for the library <https://github.com/robotpy/robotpy-rev-color/blob/main/examples/read_rgb_values/robot.py>`_

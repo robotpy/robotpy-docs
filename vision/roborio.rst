@@ -24,7 +24,7 @@ On the RoboRIO
            processing code using RobotPy. However, if you're writing your Robot
            code using Java, we do have an example which would allow you to
            launch Python image processing code from your Java Robot code. `See
-           this file for details <https://github.com/robotpy/robotpy-cscore/blob/master/examples/CameraServer.java>`_.
+           this file for details <https://github.com/robotpy/robotpy-cscore/blob/main/examples/CameraServer.java>`_.
 
 Installation
 ------------
@@ -47,7 +47,7 @@ That's it! You should be able to connect to the camera using SmartDashboard,
 the default LabVIEW Dashboard, or if you point your browser at
 ``http://roborio-XXXX-frc.local:1181``.
 
-The `quick vision example <https://github.com/robotpy/examples/tree/master/cscore-quick-vision>`_
+The `quick vision example <https://github.com/robotpy/examples/tree/main/cscore-quick-vision>`_
 can be found in the RobotPy examples repository.
 
 Image processing
@@ -107,7 +107,7 @@ Important notes
 * The camera code will be killed when the ``robot.py`` program exits. If you
   wish to perform cleanup, you should register an atexit handler.
 
-The `intermediate vision example <https://github.com/robotpy/examples/tree/master/cscore-intermediate-vision>`_
+The `intermediate vision example <https://github.com/robotpy/examples/tree/main/cscore-intermediate-vision>`_
 can be found in the RobotPy examples repository.
 
 More information

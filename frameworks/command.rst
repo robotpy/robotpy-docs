@@ -18,7 +18,7 @@ with it in other languages, make sure you familiarize yourself with it before
 proceeding. This guide only covers differences between Python and the other
 languages's versions of that paradigm.
 
-For the impatient, a `fully-working example program <https://github.com/robotpy/examples/tree/master/command-based>`_
+For the impatient, a `fully-working example program <https://github.com/robotpy/examples/tree/main/command-based>`_
 is available. You can start with that and modify it to meet your needs.
 
 The Basics

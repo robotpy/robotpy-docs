@@ -158,8 +158,8 @@ field widget that comes with WPILib.
 All of the physics example projects have been updated for 2020, but here
 are some particularly useful demos:
 
-* `Basic physics demo <https://github.com/robotpy/examples/tree/master/physics/src>`_
-* `NavX rotate to angle <https://github.com/robotpy/examples/tree/master/navx-rotate-to-angle-arcade>`_
+* `Basic physics demo <https://github.com/robotpy/examples/tree/main/physics/src>`_
+* `NavX rotate to angle <https://github.com/robotpy/examples/tree/main/navx-rotate-to-angle-arcade>`_
 
 Additionally, see the :ref:`PyFRC API docs <physics_model>` for more information.
 

@@ -51,7 +51,7 @@ Examples
 ~~~~~~~~
 
 See the `intermediate_cameraserver.py` example in the
-`robotpy-cscore examples folder <https://github.com/robotpy/robotpy-cscore/tree/master/examples>`_
+`robotpy-cscore examples folder <https://github.com/robotpy/robotpy-cscore/tree/main/examples>`_
 
 Launching your script at startup
 --------------------------------
