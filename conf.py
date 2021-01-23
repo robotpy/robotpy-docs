@@ -97,7 +97,7 @@ intersphinx_mapping = {
 # built documents.
 #
 # The short X.Y version.
-version = "2019"
+version = "2021"
 # The full version, including alpha/beta/rc tags.
 release = version
 
