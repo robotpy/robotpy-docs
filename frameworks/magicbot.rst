@@ -15,9 +15,9 @@ well.
 Philosophy
 ----------
 
-You should use the :class:`MagicRobot <robotpy_ext:magicbot.magicrobot.MagicRobot>`
+You should use the :class:`MagicRobot <magicbot.magicrobot.MagicRobot>`
 class as your base robot class. You'll  note that it's similar to
-:class:`IterativeRobot <wpilib.iterativerobot.IterativeRobot>`::
+:class:`TimedRobot <wpilib.TimedRobot>`::
 
     import magicbot
     import wpilib

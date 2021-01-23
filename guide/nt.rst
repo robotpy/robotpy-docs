@@ -97,11 +97,11 @@ strings, booleans, various array types, or raw binary. Strictly speaking, the
 keys can be any string value, but they are typically path-like values such as
 ``/SmartDashboard/foo``.
 
-When you call :meth:`NetworkTables.getTable <networktables.NetworkTables.getTable>`,
+When you call :meth:`NetworkTablesInstance.getTable <networktables.NetworkTablesInstance.getTable>`,
 this retrieves a :class:`NetworkTable <networktables.NetworkTable>` instance
 that allows you to perform operations on a specified path::
 
-    table = NetworkTables.getTable('SmartDashboard')
+    table = NetworkTablesInstance.getTable('SmartDashboard')
     
     # This retrieves a boolean at /SmartDashboard/foo
     foo = table.getBoolean('foo', True)

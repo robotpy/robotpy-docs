@@ -42,13 +42,12 @@ Robot object
 ------------
 
 Every valid robot program must define a robot object that inherits from
-:class:`wpilib.iterativerobot.IterativeRobot`, :class:`wpilib.timedrobot.TimedRobot`,
-or :class:`wpilib.samplerobot.SampleRobot`. These classes define a number of
-functions that you need to override, which get called at various times.
+:class:`wpilib.IterativeRobot` or :class:`wpilib.TimedRobot`.
+These classes define a number of functions that you need to override,
+which get called at various times.
 
-* :class:`wpilib.iterativerobot.IterativeRobot` functions
-* :class:`wpilib.timedrobot.TimedRobot` functions
-* :class:`wpilib.samplerobot.SampleRobot` functions
+* :class:`wpilib.IterativeRobot` functions
+* :class:`wpilib.TimedRobot` functions
 
 .. note:: It is recommended that inexperienced programmers use the
 		  TimedRobot class, which is what this guide will discuss.
@@ -78,7 +77,7 @@ Adding motors and sensors
 
 Everything that interacts with the robot hardware directly must use the wpilib
 library to do so. Starting in 2015, full documentation for the python version
-of WPILib is published online. Check out the API documentation (:mod:`wpilib`)
+of WPILib is published online. Check out the API documentation (:std:doc:`wpilib`)
 for details on all the objects available in WPILib.
 
 .. note::
@@ -91,7 +90,7 @@ Creating individual devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's say you wanted to create an object that interacted with a Jaguar motor
-controller via PWM. First, you would read through the table (:mod:`wpilib`) and
+controller via PWM. First, you would read through the table (:std:doc:`wpilib`) and
 see that there is a :class:`.Jaguar` object. Looking further, you can see that
 the constructor takes a single  argument that indicates which PWM port to
 connect to. You could create the `Jaguar` object that is using port 4 using the
@@ -120,7 +119,8 @@ of three classes:
 * :class:`wpilib.drive.KilloughDrive` for Killough (Kiwi) triangular drive platforms.
 * :class:`wpilib.drive.MecanumDrive` for mecanum drive platforms.
 
-For example, when you create a :class:`.DifferentialDrive` object, you can pass in motor controller instances::
+For example, when you create a :class:`wpilib.drive.DifferentialDrive` object, you can
+pass in motor controller instances::
 
     l_motor = wpilib.Talon(0)
     r_motor = wpilib.Talon(1)
@@ -142,7 +142,7 @@ Once you have one of these objects, it has various methods that you can use
 to control the robot via joystick, or you can specify the control inputs
 manually.
 
-.. seealso:: Documentation for the :mod:`wpilib.drive` module, and the FIRST WPILib Programming Guide.
+.. seealso:: Documentation for the :std:doc:`wpilib.drive`, and the FIRST WPILib Programming Guide.
 
 Robot Operating Modes (TimedRobot)
 --------------------------------------
@@ -175,7 +175,7 @@ while the robot remains in teleoperated mode.
              avoid doing the following operations in the xxxPeriodic functions
              or functions that have xxxPeriodic in the call stack:
              
-             * Never use :meth:`.Timer.delay`, as you will momentarily lose
+             * Never use ``time.sleep()`` as you will momentarily lose
                control of your robot during the delay, and it will not be
                as responsive.
              * Avoid using loops, as unexpected conditions may cause you to
