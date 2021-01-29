@@ -56,22 +56,6 @@ Windows-specific notes
 * CTRE and REV do not support simulation in 32-bit programs, so you must have
   a 64-bit Python installed.
 
-macOS-specific notes
---------------------
-
-REV does not yet support simulation on macOS, so these packages do not work 
-at this time. You can work around this by checking for an import error::
-
-    try:
-        import rev
-    except ImportError:
-        rev = None
-    
-    ... 
-
-    if rev is not None:
-        ..
-
 Linux specific notes
 --------------------
 
