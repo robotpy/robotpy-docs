@@ -6,9 +6,7 @@ robotpy-rev install
 Setup (tests/simulator)
 -----------------------
 
-.. note:: REV SPARK support is only installable on 64-bit Windows and Linux. REV
-          does not provide OSX binaries -- contact their support and let them
-          know this is something your team wants!
+.. note:: REV SPARK MAX support is only available for 64-bit operating systems.
 
 If you intend to use robotpy-rev in your *robot tests* or via the *pyfrc
 simulator*, you must install this package locally. It is recommended to
@@ -17,7 +15,7 @@ install using the robotpy meta package::
     pip3 install -U robotpy[rev]
 
 Or on Windows::
-    
+
     py -3 -m pip install -U robotpy[rev]
 
 Setup (RoboRIO)
