@@ -7,7 +7,8 @@ Command Framework
           WPILib. See the :ref:`installation notes <install_commands>` for
           details.
 
-          Only the legacy command framework is currently available.
+          This covers the legacy command framework, docs for the new command
+          framework will be coming soon!
 
 If you're coming from C++ or Java, you are probably familiar with the :doc:`Command based robot paradigm <frc:docs/software/old-commandbased/index>`.
 All of the pieces you're used to are still here, but this guide might help save

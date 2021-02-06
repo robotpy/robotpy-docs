@@ -65,6 +65,10 @@ intersphinx_mapping = {
         "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/" % rtd_version,
         None,
     ),
+    "commandsv2": (
+        "https://robotpy.readthedocs.io/projects/commands-v2/en/%s/" % rtd_version,
+        None,
+    ),
     "pyfrc": (
         "https://robotpy.readthedocs.io/projects/pyfrc/en/%s/" % rtd_version,
         None,

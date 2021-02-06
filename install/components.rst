@@ -24,6 +24,7 @@ Vendor categories:
 
 Optional WPILib component categories:
 
+* ``commands2`` - WPILib Commands framework (2020+)
 * ``commands`` - WPILib old Commands framework
 * ``sim`` - WPILib extra simulation support
 
