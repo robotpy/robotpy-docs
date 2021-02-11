@@ -16,11 +16,19 @@ code before you run it on the robot.
 2. Make sure you have pyfrc installed (:ref:`pyfrc install guide <install_pyfrc>`)
 3. Once that is done, you can just run the following command and it will upload the code and start it immediately.
 
-.. code-block:: sh
-    
-    Windows:   py -3 robot.py deploy
+.. tabs::
 
-    Linux/macOS: python3 robot.py deploy
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 robot.py deploy
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         python3 robot.py deploy
 
 You can watch your robot code's output (and see any problems) by using the
 netconsole program (you can either use NI's tool, or `pynetconsole <https://github.com/robotpy/pynetconsole>`_.
@@ -39,11 +47,19 @@ feedback from your robot without launching a separate NetConsole window, a
 really useful option is ``--nc``. This will cause the deploy command to show
 your program's console output, by launching a netconsole listener.
 
-.. code-block:: sh
+.. tabs::
 
-    Windows:   py -3 robot.py deploy --nc
-    
-    Linux/macOS: python3 robot.py deploy --nc
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 robot.py deploy --nc
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         python3 robot.py deploy --nc
 
 .. note:: This requires the driver station software to be connected to your robot
 
@@ -53,11 +69,19 @@ Skipping Tests
 Now perhaps your tests are failing, but you really need to upload the code, and
 don't care about the tests. That's OK, you can still upload code to the robot:
 
-.. code-block:: sh
+.. tabs::
 
-    Windows:   py -3 robot.py deploy --skip-tests
+   .. group-tab:: Windows
 
-    Linux/macOS: python3 robot.py deploy --skip-tests
+      .. code-block:: sh
+
+         py -3 robot.py deploy --skip-tests
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         python3 robot.py deploy --skip-tests
 
 Starting deployed code at boot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

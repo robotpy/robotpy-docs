@@ -42,15 +42,35 @@ of the categories in brackets.
 Let's say that you wanted to install the latest version of the NavX software
 along with command based programming. You would do this
 
-.. code-block:: sh
+.. tabs::
 
-    pip3 install -U robotpy[navx,commands]
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m pip install -U robotpy[navx,commands]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         pip3 install -U robotpy[navx,commands]
 
 Or if you wanted to install everything:
 
-.. code-block:: sh
+.. tabs::
 
-    pip3 install -U robotpy[all]
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m pip install -U robotpy[all]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         pip3 install -U robotpy[all]
 
 
 RoboRIO vs Computer

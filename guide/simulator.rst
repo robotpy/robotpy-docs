@@ -14,13 +14,21 @@ WPILib simulation GUI instead.
 Running the simulator
 ---------------------
 
-To run the simulator, run your robot.py with the following arguments:
+To run the GUI simulator, run your robot.py with the following arguments:
 
-.. code-block:: sh
+.. tabs::
 
-    Windows:   py -3 robot.py sim
-    
-    Linux/macOS: python3 robot.py sim
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 robot.py sim
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         python3 robot.py sim
 
 User interface
 --------------
@@ -46,7 +54,7 @@ calculate robot position for common drivetrain types.
 We have a variety of examples and documentation available:
 
 * :ref:`PyFRC API docs <physics_model>`
-* :ref:`HAL Simulation API docs <hal_simulation_package>`
+* :std:doc:`wpilib.simulation`
 * `RobotPy Examples Repository <https://github.com/robotpy/examples>`_
 
 .. _smartdashboard:

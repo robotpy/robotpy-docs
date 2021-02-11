@@ -8,13 +8,21 @@ Setup (tests)
 
 If you intend to use the color sensor with your tests or with the
 simulator, you'll need to install this package. It is recommended to
-install using the robotpy meta package::
+install using the robotpy meta package:
 
-    pip3 install -U robotpy[rev]
+.. tabs::
 
-Or on Windows::
+   .. group-tab:: Windows
 
-    py -3 -m pip install -U robotpy[rev]
+      .. code-block:: sh
+
+         py -3 -m pip install -U robotpy[rev]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         pip3 install -U robotpy[rev]
 
 Setup (RoboRIO)
 -----------------------
@@ -28,13 +36,21 @@ Even if you have robotpy-rev-color installed locally, you **must** install it
 on your robot **separately**.
 
 Use the RobotPy installer and run the following on your computer while connected
-to the internet::
+to the internet:
 
-    py -3 -m robotpy_installer download robotpy[rev]
+.. tabs::
 
-Then, when connected to the roborio's network, run::
+   .. group-tab:: Windows
 
-    py -3 -m robotpy_installer install robotpy[rev]
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer download -U robotpy[rev]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer download -U robotpy[rev]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

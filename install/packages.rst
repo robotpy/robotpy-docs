@@ -39,16 +39,25 @@ invoking the --help command.
 Installing/Executing the installer
 ----------------------------------
 
+.. note:: The installer is included when you install the RobotPy meta package,
+          so if you installed that then you likely already have it
+
 To install/use the installer, you must have Python 3.6+ installed. You should install
 the installer via pip.
 
-On Windows::
-  
-  py -3 -m pip install robotpy-installer
-  
-On Linux/macOS::
+.. tabs::
 
-  pip3 install robotpy-installer
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m pip install robotpy-installer
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         pip3 install robotpy-installer
 
 To upgrade the installed version of the installer, you need to add the ``-U``
 flag to pip.
@@ -56,41 +65,66 @@ flag to pip.
 Executing the installer
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have the installer program installed, to execute the installer on
-Windows you can do::
-  
-  py -3 -m robotpy_installer [command..]
-  
-On Linux/macOS::
+Once you have the installer program installed, to execute the installer do:
 
-  robotpy-installer [command..]
+.. tabs::
 
-RobotPy
--------
+   .. group-tab:: Windows
 
-These commands allow you to install/upgrade RobotPy without needing to download
-a new version from github.
+      .. code-block:: sh
 
-install-robotpy
-~~~~~~~~~~~~~~~
+         py -3 -m robotpy_installer [command..]
 
-::
+   .. group-tab:: Linux/macOS
 
-	robotpy-installer install-robotpy
+      .. code-block:: sh
 
-This will copy the appropriate RobotPy components to the robot, and install
-them. If the components are already installed on the robot, then they will
-be reinstalled. You must already have the RobotPy components downloaded (via
-``download-robotpy``), or this command will fail.
+         robotpy-installer [command..]
 
-download-robotpy
+Python
+------
+
+These commands allow you to install/upgrade Python on your roboRIO. Once Python
+is installed, it's likely that you won't need to upgrade it.
+
+download-python
 ~~~~~~~~~~~~~~~~
 
-::
+.. tabs::
 
-	robotpy-installer download-robotpy
+   .. group-tab:: Windows
 
-This will update the cached RobotPy packages to the newest versions available.
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer download-python
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer download-python
+
+This will update the cached Python package to the newest versions available.
+
+install-python
+~~~~~~~~~~~~~~~
+
+.. tabs::
+
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer install-python
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer install-python
+
+.. note:: You must already have Python downloaded (via ``download-python``), or
+          this command will fail.
 
 Python Packages
 ---------------
@@ -98,15 +132,27 @@ Python Packages
 If you want to use a python package hosted on Pypi in your robot code, these
 commands allow you to easily download and install those packages.
 
-.. note:: Some binary packages such as NumPy need to be installed as opkg
-          packages
+.. note:: If you need Python packages that require compilation, the RobotPy 
+          project distributes some commonly used packages. See the
+          `roborio-wheels <https://github.com/robotpy/roborio-wheels/>`_
+          project for more details.
 
-download-pip
-~~~~~~~~~~~~
+download
+~~~~~~~~
 
-::
+.. tabs::
 
-	robotpy-installer download-pip PACKAGE [PACKAGE ..]
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer download PACKAGE [PACKAGE ..]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer download PACKAGE [PACKAGE ..]
 
 Specify python package(s) to download, similar to what you would pass the
 'pip install' command. This command does not install files on the robot, and
@@ -118,16 +164,36 @@ the download cache.
 You can also use a `requirements.txt` file to specify which packages should
 be downloaded.
 
-::
+.. tabs::
 
-	robotpy-installer download-pip -r requirements.txt
+   .. group-tab:: Windows
 
-install-pip
-~~~~~~~~~~~
+      .. code-block:: sh
 
-::
+         py -3 -m robotpy_installer download -r requirements.txt
 
-	robotpy-installer install PACKAGE [PACKAGE ..]
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer download -r requirements.txt
+
+install
+~~~~~~~
+
+.. tabs::
+
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer install PACKAGE [PACKAGE ..]
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer install PACKAGE [PACKAGE ..]
 
 Copies python packages over to the roboRIO, and installs them. If the
 package already has been installed, it will be reinstalled.
@@ -135,66 +201,26 @@ package already has been installed, it will be reinstalled.
 You can also use a `requirements.txt` file to specify which packages should
 be downloaded.
 
-::
 
-	robotpy-installer install-pip -r requirements.txt
+.. tabs::
+
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m robotpy_installer install -r requirements.txt
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         robotpy-installer install -r requirements.txt
 
 .. warning:: The 'install' command will only install packages that have been
              downloaded using the 'download' command, or packages that are
              on the robot's pypi cache.
 
 .. warning:: If your robot does not have a python3 interpeter installed, this
-             command will fail. Run the `install-robotpy` command first.
+             command will fail. Run the `install-python` command first.
 
-.. _install_ipk:
 
-IPK (binary) packages
----------------------
-
-The RobotPy project maintains a number of custom binary packages that are useful
-for FRC teams. For a list of packages that you can install, see
-`https://www.tortall.net/~robotpy/feeds/2020/ <https://www.tortall.net/~robotpy/feeds/2020/>`_.
-These commands can be used to install those and other precompiled Linux packages
-that NI makes available.
-
-download-opkg
-~~~~~~~~~~~~~
-
-::
-
-    robotpy-installer download-opkg PACKAGE [PACKAGE ..]
-
-Downloads an ipk file from the RobotPy and NI's online opkg repositories, along
-with the dependencies for the package.
-
-You can also use a `requirements.txt` file to specify which packages should be downloaded::
-
-  robotpy-installer download-opkg -r requirements.txt
-
-This file is a list of packages to install, similar to the syntax of a standard pip `requirements.txt`.
-
-::
-
-  # Example requirements.txt file
-
-  # Vendor dependencies for motor controllers
-  python38-robotpy-ctre
-  python38-robotpy-rev
-
-install-opkg
-~~~~~~~~~~~~
-
-::
-
-    robotpy-installer install-opkg PACKAGE [PACKAGE ..]
-
-Copies ipk files over to the roboRIO, and installs them and their dependencies.
-If the package already has been installed, it will do nothing.
-
-You can also use a `requirements.txt` file to specify which packages should be downloaded::
-
-  robotpy-installer install-opkg -r requirements.txt
-
-.. warning:: The ``install-opkg`` command will only install packages that have
-             been downloaded using the ``download-opkg`` command, or packages
-             that are already in the robot's opkg cache

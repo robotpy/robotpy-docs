@@ -28,11 +28,21 @@ You should also have the latest version of the RobotPy software packages:
 
 .. warning:: Make sure that the version of WPILib on your computer matches the
    version installed on the robot! You can check what version you have locally
-   by running::
-      
-      Windows: py -3 -m pip list
-      
-      Linux/macOS: pip3 list
+   by running
+
+   .. tabs::
+
+      .. group-tab:: Windows
+
+         .. code-block:: sh
+
+             py -3 -m pip list
+
+      .. group-tab:: Linux/macOS
+
+         .. code-block:: sh
+
+             pip3 list
 
 1. Did you run the deploy command to put the code on the robot?
 2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
@@ -83,10 +93,22 @@ During deployment, pyfrc does a number of checks to ensure that your robot is se
 
 You should either:
 
-* Upgrade the RobotPy installation on the robot to match the newer version on your computer. See the `RobotPy install guide <http://robotpy.readthedocs.org/en/latest/getting_started.html#upgrading>`_ for more info.
-* Upgrade the pyfrc installation on your computer to match the version on the robot. Just run::
+* Upgrade the RobotPy installation on the robot to match the newer version on your computer. See the :ref:`RobotPy install guide <install_robotpy>` for more info.
+* Upgrade the robotpy installation on your computer to match the version on the robot. Just run:
 
-      pip3 install pyfrc --upgrade
+  .. tabs::
+
+   .. group-tab:: Windows
+
+      .. code-block:: sh
+
+         py -3 -m pip install --upgrade robotpy
+
+   .. group-tab:: Linux/macOS
+
+      .. code-block:: sh
+
+         pip3 install --upgrade robotpy
 
 If you `really` don't want pyfrc to do the version check and need to deploy the code `now`, you can specify the ``--no-version-check`` option. However, this isn't recommended.
 
