@@ -16,19 +16,17 @@ Running the simulator
 
 To run the GUI simulator, run your robot.py with the following arguments:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 robot.py sim
 
-         py -3 robot.py sim
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 robot.py sim
+      python3 robot.py sim
 
 User interface
 --------------

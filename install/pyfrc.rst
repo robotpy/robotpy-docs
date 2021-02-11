@@ -11,19 +11,17 @@ WPILib, pynetworktables, unit testing support, and the
 
 It is recommended to install using the robotpy meta package:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install robotpy
 
-         py -3 -m pip install robotpy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install robotpy
+      pip3 install robotpy
 
 code coverage support
 ---------------------
@@ -33,20 +31,18 @@ package. It requires a compiler to install from source. However, if you are usin
 a supported version of Python and a modern version of pip, it may install a
 binary wheel instead, which removes the need for a compiler.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install coverage
 
-         py -3 -m pip install coverage
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
+      pip3 install coverage
 
-         pip3 install coverage
-    
 If you run into compile errors, then you will need to install a compiler on your
 system.
 

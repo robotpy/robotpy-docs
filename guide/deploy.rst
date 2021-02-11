@@ -16,19 +16,17 @@ code before you run it on the robot.
 2. Make sure you have pyfrc installed (:ref:`pyfrc install guide <install_pyfrc>`)
 3. Once that is done, you can just run the following command and it will upload the code and start it immediately.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 robot.py deploy
 
-         py -3 robot.py deploy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 robot.py deploy
+      python3 robot.py deploy
 
 You can watch your robot code's output (and see any problems) by using the
 netconsole program (you can either use NI's tool, or `pynetconsole <https://github.com/robotpy/pynetconsole>`_.
@@ -47,19 +45,17 @@ feedback from your robot without launching a separate NetConsole window, a
 really useful option is ``--nc``. This will cause the deploy command to show
 your program's console output, by launching a netconsole listener.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 robot.py deploy --nc
 
-         py -3 robot.py deploy --nc
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 robot.py deploy --nc
+      python3 robot.py deploy --nc
 
 .. note:: This requires the driver station software to be connected to your robot
 
@@ -69,19 +65,17 @@ Skipping Tests
 Now perhaps your tests are failing, but you really need to upload the code, and
 don't care about the tests. That's OK, you can still upload code to the robot:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 robot.py deploy --skip-tests
 
-         py -3 robot.py deploy --skip-tests
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 robot.py deploy --skip-tests
+      python3 robot.py deploy --skip-tests
 
 Starting deployed code at boot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -27,19 +27,17 @@ have Python 3.6+ installed. You should install the installer via pip (requires
 internet access) by installing the core RobotPy components (see the 
 :ref:`computer installation <install_computer>` section for more details).
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install robotpy
 
-         py -3 -m pip install robotpy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install robotpy
+      pip3 install robotpy
 
 Install process
 ---------------
@@ -64,36 +62,32 @@ As of 2021, installing Python and the RobotPy packages are separated into
 two different steps. Once you are connected to the internet, you can run this
 to download Python for roboRIO onto your computer.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download-python
 
-         py -3 -m robotpy_installer download-python
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download-python
+      robotpy-installer download-python
 
 Once everything has downloaded, you can switch to your Robot's network, and
 use the following commands to install.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install-python
 
-         py -3 -m robotpy_installer install-python
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install-python
+      robotpy-installer install-python
 
 It will ask you a few questions, and copy the right files over to your robot
 and set things up for you. 
@@ -109,19 +103,17 @@ a 'requirements.txt' file if desired.
 As mentioned above, installation needs to be done in two steps (download then
 install). Once you are connected to the internet:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download robotpy
 
-         py -3 -m robotpy_installer download robotpy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download robotpy
+      robotpy-installer download robotpy
 
 .. seealso:: This command only downloads the core RobotPy packages. See additional
              details for installing :ref:`optional/vendor components
@@ -130,19 +122,17 @@ install). Once you are connected to the internet:
 Once everything has downloaded, you can switch to your Robot's network, and
 use the following commands to install.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install robotpy
 
-         py -3 -m robotpy_installer install robotpy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install robotpy
+      robotpy-installer install robotpy
 
 The robotpy installer uses pip to download and install packages, so you can 
 replace ``robotpy`` above with the name of a pure python package as published
@@ -160,33 +150,29 @@ The ``download`` and ``install`` commands support some pip options, so to
 upgrade you can use the ``-U`` flag on the commands mentioned above to
 download the latest versions of RobotPy.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download -U robotpy
 
-         py -3 -m robotpy_installer download -U robotpy
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download -U robotpy
+      robotpy-installer download -U robotpy
 
 The robotpy installer can tell you what packages you have installed on a 
 roboRIO:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer list
 
-         py -3 -m robotpy_installer list
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer list
+      robotpy-installer list

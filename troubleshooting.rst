@@ -30,19 +30,17 @@ You should also have the latest version of the RobotPy software packages:
    version installed on the robot! You can check what version you have locally
    by running
 
-   .. tabs::
+   .. tab:: Windows
 
-      .. group-tab:: Windows
+      .. code-block:: sh
 
-         .. code-block:: sh
+         py -3 -m pip list
 
-             py -3 -m pip list
+   .. tab:: Linux/macOS
 
-      .. group-tab:: Linux/macOS
+      .. code-block:: sh
 
-         .. code-block:: sh
-
-             pip3 list
+         pip3 list
 
 1. Did you run the deploy command to put the code on the robot?
 2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
@@ -96,19 +94,17 @@ You should either:
 * Upgrade the RobotPy installation on the robot to match the newer version on your computer. See the :ref:`RobotPy install guide <install_robotpy>` for more info.
 * Upgrade the robotpy installation on your computer to match the version on the robot. Just run:
 
-  .. tabs::
+  .. tab:: Windows
 
-   .. group-tab:: Windows
+     .. code-block:: sh
 
-      .. code-block:: sh
+        py -3 -m pip install --upgrade robotpy
 
-         py -3 -m pip install --upgrade robotpy
+  .. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+     .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install --upgrade robotpy
+        pip3 install --upgrade robotpy
 
 If you `really` don't want pyfrc to do the version check and need to deploy the code `now`, you can specify the ``--no-version-check`` option. However, this isn't recommended.
 
