@@ -42,7 +42,7 @@ Package notes
 Notes specific to individual packages
 
 .. toctree::
-    :hidden:
+    :maxdepth: 1
 
     pyfrc
     pynetworktables
