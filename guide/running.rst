@@ -14,27 +14,25 @@ different for each operating system.
 How to execute the script
 -------------------------
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   On Windows, you will typically execute your robot code by opening up the
+   command prompt (cmd), changing directories to where your robot code is,
+   and then running this:
 
-      On Windows, you will typically execute your robot code by opening up the
-      command prompt (cmd), changing directories to where your robot code is,
-      and then running this:
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 robot.py
 
-         py -3 robot.py
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   On Linux/macOS, you will typically execute your robot code by opening up the
+   Terminal program, changing directories to where your robot code is, and
+   then running this:
 
-      On Linux/macOS, you will typically execute your robot code by opening up the
-      Terminal program, changing directories to where your robot code is, and
-      then running this:
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 robot.py
+      python3 robot.py
 
 Commands
 --------
@@ -44,20 +42,18 @@ saying something like ``robot.py: error: the following arguments are required:
 command``. RobotPy tools install various commands that you can run from your
 robot code. To discover the various features that are installed, you can use the
 ``--help`` command:
-    
-.. tabs::
 
-   .. group-tab:: Windows
+.. tab:: Windows
 
-      .. code-block:: batch
+   .. code-block:: batch
 
-         py -3 robot.py --help
-   
-   .. group-tab:: Linux/macOS
+      py -3 robot.py --help
 
-      .. code-block:: sh
-    
-         python3 robot.py --help
+.. tab:: Linux/macOS
+
+   .. code-block:: sh
+
+      python3 robot.py --help
 
 .. note:: RobotPy supports an extension mechanism that allows advanced users the
           ability to create their own custom ``robot.py`` commandline options.

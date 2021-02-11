@@ -9,19 +9,17 @@ Setup (tests/simulator)
 If you intend to use robotpy-adi in your *robot tests* or via the *pyfrc
 simulator*, you must install this package locally:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install -U robotpy[adi]
 
-         py -3 -m pip install -U robotpy[adi]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install -U robotpy[adi]
+      pip3 install -U robotpy[adi]
 
 .. note:: The vendor does not currently support simulation, but it will install
 
@@ -32,35 +30,31 @@ Even if you have robotpy-adi installed locally, you **must** install it on your
 robot **separately**. Use the RobotPy installer and run the following on your computer
 while connected to the internet:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download robotpy[adi]
 
-         py -3 -m robotpy_installer download robotpy[adi]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 -m robotpy_installer download robotpy[adi]
+      python3 -m robotpy_installer download robotpy[adi]
 
 Then, when connected to the roborio's network, run:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install robotpy[adi]
 
-         py -3 -m robotpy_installer install robotpy[adi]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         python3 -m robotpy_installer install robotpy[adi]
+      python3 -m robotpy_installer install robotpy[adi]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.

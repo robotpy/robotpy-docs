@@ -45,19 +45,17 @@ Installing/Executing the installer
 To install/use the installer, you must have Python 3.6+ installed. You should install
 the installer via pip.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install robotpy-installer
 
-         py -3 -m pip install robotpy-installer
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install robotpy-installer
+      pip3 install robotpy-installer
 
 To upgrade the installed version of the installer, you need to add the ``-U``
 flag to pip.
@@ -67,19 +65,17 @@ Executing the installer
 
 Once you have the installer program installed, to execute the installer do:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer [command..]
 
-         py -3 -m robotpy_installer [command..]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer [command..]
+      robotpy-installer [command..]
 
 Python
 ------
@@ -90,38 +86,34 @@ is installed, it's likely that you won't need to upgrade it.
 download-python
 ~~~~~~~~~~~~~~~~
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download-python
 
-         py -3 -m robotpy_installer download-python
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download-python
+      robotpy-installer download-python
 
 This will update the cached Python package to the newest versions available.
 
 install-python
 ~~~~~~~~~~~~~~~
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install-python
 
-         py -3 -m robotpy_installer install-python
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install-python
+      robotpy-installer install-python
 
 .. note:: You must already have Python downloaded (via ``download-python``), or
           this command will fail.
@@ -140,19 +132,17 @@ commands allow you to easily download and install those packages.
 download
 ~~~~~~~~
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download PACKAGE [PACKAGE ..]
 
-         py -3 -m robotpy_installer download PACKAGE [PACKAGE ..]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download PACKAGE [PACKAGE ..]
+      robotpy-installer download PACKAGE [PACKAGE ..]
 
 Specify python package(s) to download, similar to what you would pass the
 'pip install' command. This command does not install files on the robot, and
@@ -164,36 +154,32 @@ the download cache.
 You can also use a `requirements.txt` file to specify which packages should
 be downloaded.
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download -r requirements.txt
 
-         py -3 -m robotpy_installer download -r requirements.txt
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download -r requirements.txt
+      robotpy-installer download -r requirements.txt
 
 install
 ~~~~~~~
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install PACKAGE [PACKAGE ..]
 
-         py -3 -m robotpy_installer install PACKAGE [PACKAGE ..]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install PACKAGE [PACKAGE ..]
+      robotpy-installer install PACKAGE [PACKAGE ..]
 
 Copies python packages over to the roboRIO, and installs them. If the
 package already has been installed, it will be reinstalled.
@@ -202,19 +188,17 @@ You can also use a `requirements.txt` file to specify which packages should
 be downloaded.
 
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install -r requirements.txt
 
-         py -3 -m robotpy_installer install -r requirements.txt
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install -r requirements.txt
+      robotpy-installer install -r requirements.txt
 
 .. warning:: The 'install' command will only install packages that have been
              downloaded using the 'download' command, or packages that are

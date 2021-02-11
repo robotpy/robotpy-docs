@@ -1,4 +1,4 @@
 sphinx
 sphinx-rtd-theme
 robotpy-sphinx-plugin
-sphinx-tabs
+sphinx-inline-tabs

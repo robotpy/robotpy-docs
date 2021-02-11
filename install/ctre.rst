@@ -13,19 +13,17 @@ If you intend to use robotpy-ctre in your *robot tests* or via the robot
 *simulator*, you must install this package locally. It is recommended to
 install using the robotpy meta package:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m pip install -U robotpy[ctre]
 
-         py -3 -m pip install -U robotpy[ctre]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         pip3 install -U robotpy[ctre]
+      pip3 install -U robotpy[ctre]
 
 Setup (RoboRIO)
 ---------------
@@ -40,35 +38,31 @@ You really don't want to compile this yourself, so don't download this from pypi
 and install it. Use the RobotPy installer and run the following on your computer
 while connected to the internet:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer download -U robotpy[ctre]
 
-         py -3 -m robotpy_installer download -U robotpy[ctre]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer download -U robotpy[ctre]
+      robotpy-installer download -U robotpy[ctre]
 
 Then, when connected to the roborio's network, run:
 
-.. tabs::
+.. tab:: Windows
 
-   .. group-tab:: Windows
+   .. code-block:: sh
 
-      .. code-block:: sh
+      py -3 -m robotpy_installer install robotpy[ctre]
 
-         py -3 -m robotpy_installer install robotpy[ctre]
+.. tab:: Linux/macOS
 
-   .. group-tab:: Linux/macOS
+   .. code-block:: sh
 
-      .. code-block:: sh
-
-         robotpy-installer install robotpy[ctre]
+      robotpy-installer install robotpy[ctre]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
