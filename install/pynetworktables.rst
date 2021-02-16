@@ -88,3 +88,5 @@ Getting Started
 
 See the :ref:`NetworkTables guide <networktables_guide>` to learn more about
 using pynetworktables to communicate with your robot.
+
+HAHAHAH CONTENT
