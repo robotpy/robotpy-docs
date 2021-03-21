@@ -1,14 +1,14 @@
 .. _install_pwfusion:
 
-robotpy-pwfusion install
-========================
+robotpy-playingwithfusion install
+=================================
 
 Setup (tests/simulator)
 -----------------------
 
 .. note:: Playing With Fusion support is only available for 64-bit operating systems.
 
-If you intend to use robotpy-pwfusion in your *robot tests* or via the *pyfrc
+If you intend to use robotpy-playingwithfusion in your *robot tests* or via the *pyfrc
 simulator*, you must install this package locally. It is recommended to
 install using the robotpy meta package:
 
@@ -16,18 +16,18 @@ install using the robotpy meta package:
 
    .. code-block:: sh
 
-      py -3 -m pip install -U robotpy[pwfusion]
+      py -3 -m pip install -U robotpy[playingwithfusion]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      pip3 install -U robotpy[pwfusion]
+      pip3 install -U robotpy[playingwithfusion]
 
 Setup (RoboRIO)
 ---------------
 
-Even if you have robotpy-pwfusion installed locally, you **must** install it on your
+Even if you have robotpy-playingwithfusion installed locally, you **must** install it on your
 robot **separately**. See below.
 
 Python package
@@ -41,13 +41,13 @@ while connected to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[pwfusion]
+      py -3 -m robotpy_installer download -U robotpy[playingwithfusion]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer download -U robotpy[pwfusion]
+      robotpy-installer download -U robotpy[playingwithfusion]
 
 Then, when connected to the roborio's network, run:
 
@@ -55,13 +55,13 @@ Then, when connected to the roborio's network, run:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer install robotpy[pwfusion]
+      py -3 -m robotpy_installer install robotpy[playingwithfusion]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer install robotpy[pwfusion]
+      robotpy-installer install robotpy[playingwithfusion]
 
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
