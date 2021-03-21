@@ -49,6 +49,7 @@ Notes specific to individual packages
     commands
     ctre
     navx
+    pwfusion
     rev
     revcolor
     adi
