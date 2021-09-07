@@ -10,7 +10,7 @@ RoboRIO installation
 --------------------
 
 If you have robotpy-installer on your computer, then installing ``robotpy-cscore``
-is very simple::
+is very simple:
 
 .. tab:: Windows
 
