@@ -1,0 +1,23 @@
+name: CI
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install Python Dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Build HTML
+      run: |
+        make html
+    - name: Archive HTML
+      uses: actions/upload-artifact@v2
+      with:
+        name: robotpy-docs-html
+        path: build/html/
