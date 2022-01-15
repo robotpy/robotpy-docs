@@ -45,6 +45,12 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_inline_tabs",
+    "sphinxext.opengraph",
+]
+
+ogp_custom_meta_tags = [
+    '<meta property="og:ignore_canonical" content="true" />',
+    '<meta name="theme-color" content="#3393d5" />',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
