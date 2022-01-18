@@ -175,8 +175,7 @@ Current RobotPy developers include:
 
 * Dustin Spicuzza (`@virtuald <https://github.com/virtuald>`_)
 * David Vo (`@auscompgeek <https://github.com/auscompgeek>`_)
-* Ellery Newcomer (`@ariovistus <https://github.com/ariovistus>`_)
-* Tim Winters (`@ArchdukeTim <https://github.com/ArchdukeTim>`_)
+* Vasista Vovveti (`@TheTripleV <https://github.com/TheTripleV>`_)
 
 How can I help?
 ---------------
