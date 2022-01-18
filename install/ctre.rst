@@ -7,8 +7,6 @@ robotpy-ctre install
 Setup (tests/simulator)
 -----------------------
 
-.. note:: CTRE is only installable on 64-bit Windows, 64-bit Linux, and OSX
-
 If you intend to use robotpy-ctre in your *robot tests* or via the robot 
 *simulator*, you must install this package locally. It is recommended to
 install using the robotpy meta package:

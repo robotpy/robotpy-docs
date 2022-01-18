@@ -6,8 +6,9 @@ Computer Installation
 
 .. note:: installation via pip typically requires internet access
 
-RobotPy requires Python 3.6/3.7/3.8/3.9 to be installed on your computer. It
-is highly recommended to install a 64-bit version of Python.
+RobotPy requires Python 3.7/3.8/3.9/3.10 to be installed on your computer. We
+no longer support 32-bit installations of Python, you must have a 64-bit
+python installed.
 
 * `Python for Windows <https://www.python.org/downloads/windows/>`_
 * `Python for macOS <https://www.python.org/downloads/mac-osx/>`_
@@ -50,7 +51,7 @@ not recommended nor is it supported.
 
 .. tab:: macOS
 
-     .. warning:: Due to WPILib dependencies, RobotPy only supports non-ARM OSX 10.14+
+     .. warning:: Due to WPILib dependencies, RobotPy only supports non-ARM MacOS 10.15+
 
      On a macOS system that has pip installed, just run the following command from the
      Terminal application (may require admin rights):

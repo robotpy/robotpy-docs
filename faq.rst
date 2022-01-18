@@ -38,7 +38,7 @@ documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
 -  RobotPy WPILib on the roboRIO uses the latest version of Python 3 at kickoff.
-   In 2020, this was Python 3.8.  When using pyfrc or similar projects,
+   In 2022, this was Python 3.10.  When using pyfrc or similar projects,
    you should use a Python 3.6 or newer interpreter (the latest is recommended).
 -  RobotPy 2014.x is based on Python 3.2.5.
 

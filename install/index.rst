@@ -49,8 +49,7 @@ Notes specific to individual packages
     commands
     ctre
     navx
+    photonvision
     pwfusion
     rev
-    revcolor
-    adi
     packages

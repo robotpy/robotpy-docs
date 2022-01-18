@@ -20,12 +20,15 @@ Vendor categories:
 * ``adi`` - Analog Devices 6-axis accelerometer support
 * ``ctre`` - Cross The Road Electronics motor controllers
 * ``navx`` - Kauai Labs NavX MXP Robotics Navigation 
+* ``playingwithfusion`` - PlayingWithFusion motor controllers
+* ``photonvision`` - PhotonVision computer vision vendor library
 * ``rev`` - REV Robotics motor controllers and color sensors
 
 Optional WPILib component categories:
 
 * ``commands2`` - WPILib Commands framework (2020+)
 * ``commands`` - WPILib old Commands framework
+* ``romi`` - Romi robot specific components
 * ``sim`` - WPILib extra simulation support
 
 Install all vendors and WPILib optional components:

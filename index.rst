@@ -9,12 +9,8 @@ students dedicated to developing python-related projects for the FIRST Robotics
 Competition. This documentation site contains information about various projects
 that RobotPy supports, including guides and API references.
 
-.. note:: RobotPy is available for 2020, but some of our documentation is out of
-          date due to significant changes in RobotPy this year. We'll try to 
-          update the docs soon.
-
-          See the :ref:`2020 Notes <2020_notes>` for important information about 
-          RobotPy in 2020.
+Please read our :ref:`Upgrade Notes<upgrade_notes>` page for things that have
+changed this season that you should be aware of.
 
 .. note:: RobotPy is a community project and the tools we create are not
           officially supported by FIRST. Please see the
