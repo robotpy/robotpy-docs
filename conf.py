@@ -46,6 +46,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx_inline_tabs",
     "sphinxext.opengraph",
+    "sphinx_reredirects",
 ]
 
 ogp_custom_meta_tags = [
@@ -101,6 +102,10 @@ intersphinx_mapping = {
         None,
     ),
     "frc": ("https://docs.wpilib.org/en/stable", None),
+}
+
+redirects = {
+    "2020_notes": "upgrade_notes.html"
 }
 
 # The version info for the project you're documenting, acts as replacement for

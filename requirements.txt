@@ -1,5 +1,6 @@
 sphinx
 sphinx-rtd-theme
+sphinx-reredirects
 robotpy-sphinx-plugin
 sphinx-inline-tabs
 sphinxext-opengraph
