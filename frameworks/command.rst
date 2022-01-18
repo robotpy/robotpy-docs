@@ -10,7 +10,7 @@ Command Framework
           This covers the legacy command framework, docs for the new command
           framework will be coming soon!
 
-If you're coming from C++ or Java, you are probably familiar with the :doc:`Command based robot paradigm <frc:docs/software/old-commandbased/index>`.
+If you're coming from C++ or Java, you are probably familiar with the Command based robot paradigm.
 All of the pieces you're used to are still here, but this guide might help save
 you a bit of time as you make the transition.
 
