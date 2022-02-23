@@ -25,7 +25,7 @@ languages!
 Deploy Artifacts
 ----------------
 
-During build, the deploy process will attempt to generate a ``deploy.json`` that can provide
+During the deploy process, robotpy will attempt to generate a ``deploy.json`` that can provide
 your robot with extra information regarding how code was deployed. It contains information that could
 be used for example, to alert you if your hash contains the git ``-dirty`` flag, or assist in debugging
 an issue by exploring who, when and with what code was deployed with.
