@@ -44,7 +44,38 @@ It contains the following keys:
    }
 
 If you do not manage your code with git, use another VCS, or do not have git installed locally and on your
-path in the usual location, the git tag will not be present
+path in the usual location, the git tag will not be present.
+
+Example code:
+
+.. code-block:: python
+
+   #!/usr/bin/env python3
+
+   import os
+   import json
+   import wpilib
+
+
+   class MyRobot(wpilib.TimedRobot):
+      def robotInit(self):
+         print(self.getDeployData())
+
+      def getDeployData(self):
+         if wpilib.RobotBase.isReal():
+               root_path = "/home/lvuser/py/"
+               data_path = os.path.join(root_path, "deploy.json")
+
+               if os.path.exists(data_path):
+                  with open(data_path) as file:
+                     deploy_data = json.load(file)
+
+                  return deploy_data
+         return {}
+
+
+   if __name__ == "__main__":
+      wpilib.run(MyRobot)
 
 
 How to manually run code
