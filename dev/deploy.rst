@@ -25,7 +25,7 @@ languages!
 Deploy Artifacts
 ----------------
 
-During the deploy process, robotpy will attempt to generate a ``deploy.json`` that can provide
+During the deploy process, robotpy will generate a ``deploy.json`` that can provide
 your robot with extra information regarding how code was deployed. It contains information that could
 be used for example, to alert you if your hash contains the git ``-dirty`` flag, or assist in debugging
 an issue by exploring who, when and with what code was deployed with.
@@ -36,7 +36,8 @@ It contains the following keys:
 .. code-block:: json
 
    {
-    "git": "latestTag-22-g00000000",
+    "git-hash": "0000000-dirty",
+    "git-branch": "feat/working_code",
     "build-host": "MyLaptop",
     "builder": "me",
     "path": "/home/me/robots/MyRobotCode",
@@ -46,6 +47,8 @@ It contains the following keys:
 If you do not manage your code with git, use another VCS, or do not have git installed locally and on your
 path in the usual location, the git tag will not be present.
 
+To get a preview of the information, the command ``./robotpy.py deploy-info`` can be used.
+
 Example code:
 
 .. code-block:: python
@@ -54,25 +57,14 @@ Example code:
 
    import os
    import json
-   import wpilib
+   import wpilib.deployinfo
 
 
    class MyRobot(wpilib.TimedRobot):
       def robotInit(self):
-         print(self.getDeployData())
+         data = wpilib.deployinfo.getDeployData()
 
-      def getDeployData(self):
-         if wpilib.RobotBase.isReal():
-               root_path = "/home/lvuser/py/"
-               data_path = os.path.join(root_path, "deploy.json")
-
-               if os.path.exists(data_path):
-                  with open(data_path) as file:
-                     deploy_data = json.load(file)
-
-                  return deploy_data
-         return {}
-
+         print(data)
 
    if __name__ == "__main__":
       wpilib.run(MyRobot)
