@@ -47,7 +47,7 @@ It contains the following keys:
 If you do not manage your code with git, use another VCS, or do not have git installed locally and on your
 path in the usual location, the git tag will not be present.
 
-To get a preview of the information, the command ``./robotpy.py deploy-info`` can be used.
+You can use ``./robotpy.py deploy-info`` to connect to the robot and fetch the deploy.json.
 
 Example code:
 
