@@ -22,6 +22,54 @@ languages!
 
 .. _manual_code_deploy:
 
+Deploy Artifacts
+----------------
+
+During the deploy process, robotpy will generate a ``deploy.json`` that can provide
+your robot with extra information regarding how code was deployed. It contains information that could
+be used for example, to alert you if your hash contains the git ``-dirty`` flag, or assist in debugging
+an issue by exploring who, when and with what code was deployed with.
+
+The ``deploy.json`` is not present on the dev filesystem and is copied over via sftp at deploy time.
+It contains the following keys:
+
+.. code-block:: json
+
+   {
+    "git-hash": "0000000-dirty",
+    "git-branch": "feat/working_code",
+    "build-host": "MyLaptop",
+    "builder": "me",
+    "path": "/home/me/robots/MyRobotCode",
+    "build-date": "2018-6-10T02:40:55"
+   }
+
+If you do not manage your code with git, use another VCS, or do not have git installed locally and on your
+path in the usual location, the git tag will not be present.
+
+You can use ``./robotpy.py deploy-info`` to connect to the robot and fetch the deploy.json.
+
+Example code:
+
+.. code-block:: python
+
+   #!/usr/bin/env python3
+
+   import os
+   import json
+   import wpilib.deployinfo
+
+
+   class MyRobot(wpilib.TimedRobot):
+      def robotInit(self):
+         data = wpilib.deployinfo.getDeployData()
+
+         print(data)
+
+   if __name__ == "__main__":
+      wpilib.run(MyRobot)
+
+
 How to manually run code
 ------------------------
 
