@@ -49,6 +49,7 @@ Notes specific to individual packages
     commands
     ctre
     navx
+    pathplannerlib
     photonvision
     pwfusion
     rev
