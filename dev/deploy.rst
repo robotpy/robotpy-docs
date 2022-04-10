@@ -36,8 +36,8 @@ It contains the following keys:
 .. code-block:: json
 
    {
-    "git-desc": "v1.0-15-g42096-dirty",
-    "git-hash": "0000000",
+    "git-desc": "2022.1-8-gb4fc2aca-dirty",
+    "git-hash": "b4fc2aca399810f1fe28faf23314cd422a6db920",
     "git-branch": "feat/working_code",
     "deploy-host": "MyLaptop",
     "deploy-user": "me",
