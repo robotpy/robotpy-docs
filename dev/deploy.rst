@@ -36,12 +36,13 @@ It contains the following keys:
 .. code-block:: json
 
    {
-    "git-hash": "0000000-dirty",
+    "git-desc": "v1.0-15-g42096-dirty",
+    "git-hash": "0000000",
     "git-branch": "feat/working_code",
-    "build-host": "MyLaptop",
-    "builder": "me",
-    "path": "/home/me/robots/MyRobotCode",
-    "build-date": "2018-6-10T02:40:55"
+    "deploy-host": "MyLaptop",
+    "deploy-user": "me",
+    "deploy-date": "2018-6-10T02:40:55",
+    "code-path": "/home/me/robots/MyRobotCode"
    }
 
 If you do not manage your code with git, use another VCS, or do not have git installed locally and on your
