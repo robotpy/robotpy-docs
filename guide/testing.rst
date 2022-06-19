@@ -86,7 +86,7 @@ For more information:
 * `RobotPy example code <https://github.com/robotpy/examples>`_
 * `py.test documentation <http://pytest.org/latest/example/index.html>`_
 
-code coverage for tests
+Code coverage for tests
 -----------------------
 
 pyfrc supports measuring code coverage using the `coverage.py <http://nedbatchelder.com/code/coverage/>`_
