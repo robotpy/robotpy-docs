@@ -19,6 +19,7 @@
 
 import sys
 import os
+from datetime import date
 
 from os.path import abspath, join, dirname
 
@@ -65,7 +66,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "RobotPy"
-copyright = "2014-2020, RobotPy development team"
+copyright = f"2014-{date.today().year}, RobotPy development team"
 
 
 intersphinx_mapping = {
@@ -113,7 +114,7 @@ redirects = {
 # built documents.
 #
 # The short X.Y version.
-version = "2021"
+version = str(date.today().year)
 # The full version, including alpha/beta/rc tags.
 release = version
 
