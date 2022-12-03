@@ -20,6 +20,7 @@
 import sys
 import os
 from datetime import date
+import subprocess
 
 from os.path import abspath, join, dirname
 
@@ -114,7 +115,7 @@ redirects = {
 # built documents.
 #
 # The short X.Y version.
-version = str(date.today().year)
+version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[0]
 # The full version, including alpha/beta/rc tags.
 release = version
 
