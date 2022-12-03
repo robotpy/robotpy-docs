@@ -19,6 +19,8 @@
 
 import sys
 import os
+from datetime import date
+import subprocess
 
 from os.path import abspath, join, dirname
 
@@ -65,7 +67,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "RobotPy"
-copyright = "2014-2020, RobotPy development team"
+copyright = f"2014-{date.today().year}, RobotPy development team"
 
 
 intersphinx_mapping = {
@@ -113,7 +115,7 @@ redirects = {
 # built documents.
 #
 # The short X.Y version.
-version = "2021"
+version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[0]
 # The full version, including alpha/beta/rc tags.
 release = version
 
