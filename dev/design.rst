@@ -1,41 +1,6 @@
 Design
 ======
 
-Goals
------
-
-The python implementation of WPILib/HAL is derived from the Java implementation
-of WPILib. In particular, we strive to keep the python implementation of WPILib
-as close to the spirit of the original WPILib java libraries as we can, only
-adding language-specific features where it makes sense.
-
-Things that you won't find in the original WPILib can be found in the _impl
-package.
-
-If you have a suggestion for things to add to WPILib, we suggest making a
-request to the WPILib team directly, or if appropriate you can add it to
-the `robotpy_ext <https://github.com/robotpy/robotpy-wpilib-utilities>`_ package,
-which is a separate package for "high quality code of things that should be in
-WPILib, but aren't". This package is installed by the RobotPy installer by 
-default.
-
-HAL Loading
------------
-
-Currently, the HAL is split into two python packages:
-
-* hal - Provided by the robotpy-hal-base package
-* hal_impl - Provided by either robotpy-hal-roborio or robotpy-hal-sim
-
-You can only have a single hal_impl package installed in a particular python
-installation.
-
-The :mod:`hal` package provides the definition of the functions and various
-types & required constants.
-
-The :mod:`hal_impl` package provides the actual implementation of the HAL
-functions, or links them to a shared DLL via ctypes. 
-
 .. _robotpy_extension_options:
 
 Adding options to robot.py

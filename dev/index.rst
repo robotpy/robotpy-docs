@@ -11,4 +11,3 @@ We will endeavor to keep these pages up to date. :)
     design
     install
     deploy
-    porting
