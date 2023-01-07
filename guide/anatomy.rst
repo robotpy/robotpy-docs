@@ -77,7 +77,7 @@ Adding motors and sensors
 
 Everything that interacts with the robot hardware directly must use the wpilib
 library to do so. Starting in 2015, full documentation for the python version
-of WPILib is published online. Check out the API documentation (:std:doc:`wpilib`)
+of WPILib is published online. Check out the API documentation (:external+wpilib:doc:`wpilib`)
 for details on all the objects available in WPILib.
 
 .. note::
@@ -90,7 +90,7 @@ Creating individual devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's say you wanted to create an object that interacted with a Jaguar motor
-controller via PWM. First, you would read through the table (:std:doc:`wpilib`) and
+controller via PWM. First, you would read through the table (:external+wpilib:doc:`wpilib`) and
 see that there is a :class:`.Jaguar` object. Looking further, you can see that
 the constructor takes a single  argument that indicates which PWM port to
 connect to. You could create the `Jaguar` object that is using port 4 using the
@@ -142,7 +142,7 @@ Once you have one of these objects, it has various methods that you can use
 to control the robot via joystick, or you can specify the control inputs
 manually.
 
-.. seealso:: Documentation for the :std:doc:`wpilib.drive`, and the FIRST WPILib Programming Guide.
+.. seealso:: Documentation for the :external+wpilib:doc:`wpilib.drive`, and the FIRST WPILib Programming Guide.
 
 Robot Operating Modes (TimedRobot)
 --------------------------------------

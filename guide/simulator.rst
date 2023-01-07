@@ -52,7 +52,7 @@ calculate robot position for common drivetrain types.
 We have a variety of examples and documentation available:
 
 * :ref:`PyFRC API docs <physics_model>`
-* :std:doc:`wpilib.simulation`
+* :external+wpilib:doc:`wpilib.simulation`
 * `RobotPy Examples Repository <https://github.com/robotpy/examples>`_
 
 .. _smartdashboard:
