@@ -6,7 +6,7 @@ Computer Installation
 
 .. note:: installation via pip typically requires internet access
 
-RobotPy requires Python 3.7/3.8/3.9/3.10 to be installed on your computer. We
+RobotPy requires Python 3.7/3.8/3.9/3.10/3.11 to be installed on your computer. We
 no longer support 32-bit installations of Python, you must have a 64-bit
 python installed.
 
@@ -51,8 +51,6 @@ not recommended nor is it supported.
 
 .. tab:: macOS
 
-     .. warning:: Due to WPILib dependencies, RobotPy only supports non-ARM MacOS 10.15+
-
      On a macOS system that has pip installed, just run the following command from the
      Terminal application (may require admin rights):
 
@@ -83,7 +81,7 @@ not recommended nor is it supported.
      .. _install_linux:
 
      Since 2021, RobotPy distributes manylinux binary wheels on PyPI. However,
-     installing these requires a distro that has glibc 2.27 or newer, and
+     installing these requires a distro that has glibc 2.35 or newer, and
      an installer that implements :pep:`600`, such as pip 20.3 or newer.
      You can check your version of pip with the following command:
 
@@ -113,8 +111,8 @@ not recommended nor is it supported.
      The following Linux distributions are known to work, but this list is not
      necessarily comprehensive:
 
-     * Ubuntu 18.04+
-     * Fedora 31+
+     * Ubuntu 22.04+
+     * Fedora 36+
      * Arch Linux
 
      If you manage to install the packages and get the following error or
@@ -134,12 +132,12 @@ not recommended nor is it supported.
          Mixing our pre-built wheels with source installs may cause runtime errors.
          This is due to internal ABI incompatibility between compiler versions.
 
-         Our wheels are built on Ubuntu 18.04 with GCC 7.
+         Our wheels are built on Ubuntu 22.04 with GCC 11.
 
      If you need to build with a specific compiler version, you can specify them
      using the :envvar:`CC` and :envvar:`CXX` environment variables:
 
      .. code-block:: sh
 
-         export CC=gcc-7 CXX=g++-7
+         export CC=gcc-12 CXX=g++-12
 

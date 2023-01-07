@@ -4,6 +4,8 @@
 Using NetworkTables
 ===================
 
+.. warning:: This documentation has not been documented for the 2023 season yet
+
 NetworkTables is a communications protocol used in FIRST Robotics. It provides a
 simple to use mechanism for communicating information between several computers.
 There is a single server (typically your robot) and zero or more clients. These
@@ -126,10 +128,7 @@ table is updated.
 Code Samples
 ~~~~~~~~~~~~
 
-There are many code samples showing various aspects of NetworkTables operation.
-See the :ref:`pynetworktables examples <pynetworktables_examples>` page.
-
-.. seealso:: :ref:`NetworkTables API Reference <pynetworktables_api>`
+.. seealso:: :ref:`NTCore API Reference <ntcore_api>`
 
 Troubleshooting
 ~~~~~~~~~~~~~~~

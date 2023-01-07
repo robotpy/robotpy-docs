@@ -3,11 +3,10 @@
 RobotPy Components
 ==================
 
-New in 2021, RobotPy now provides a meta installation package that makes it
-simpler to install and upgrade RobotPy. The meta package allows you to run
-``pip install robotpy`` and this install all of the core RobotPy packages. This
-meta package is used both for installation on your computer and on your 
-robot.
+RobotPy provides a meta installation package that makes it simpler to install
+and upgrade RobotPy. The meta package allows you to run ``pip install robotpy``
+and this install all of the core RobotPy packages. This meta package is used
+both for installation on your computer and on your robot.
 
 Optional/Vendor Components
 --------------------------
@@ -17,17 +16,18 @@ RobotPy wrappers around WPILib will be installed. However there are several
 groups of optional components that you can install. 
 Vendor categories:
 
-* ``adi`` - Analog Devices 6-axis accelerometer support
 * ``ctre`` - Cross The Road Electronics motor controllers
 * ``navx`` - Kauai Labs NavX MXP Robotics Navigation 
-* ``playingwithfusion`` - PlayingWithFusion motor controllers
+* ``photonvision`` - PhotonVision computer vision vendor library
+* ``pathplannerlib`` - PathPlannerLib path planning vendor library
 * ``photonvision`` - PhotonVision computer vision vendor library
 * ``rev`` - REV Robotics motor controllers and color sensors
 
 Optional WPILib component categories:
 
+* ``apriltag`` - WPILib apriltag library 
 * ``commands2`` - WPILib Commands framework (2020+)
-* ``commands`` - WPILib old Commands framework
+* ``cscore`` - WPILib cscore library
 * ``romi`` - Romi robot specific components
 * ``sim`` - WPILib extra simulation support
 

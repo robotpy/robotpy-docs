@@ -6,12 +6,9 @@
 Commands install
 ================
 
-As of 2020, the command frameworks are distributed as separate packages. The
-latest command framework is available as robotpy-commands-v2, and the
-legacy command framework is available in robotpy-commands-v1.
-
-The instructions below discuss installing the new command framework. To install
-the legacy framework replace ``commands2`` with ``commands``.
+The WPILib command framework is distributed separately from WPILib, and is
+called robotpy-commands-v2. The instructions below discuss installing the
+new command framework.
 
 Setup (tests/simulator)
 -----------------------

@@ -23,7 +23,7 @@ Install requirements
 
 RobotPy is truly cross platform, and can be installed from Windows, most Linux
 distributions, and from Mac macOS also. To install/use the installer, you must
-have Python 3.6+ installed. You should install the installer via pip (requires
+have Python 3.7+ installed. You should install the installer via pip (requires
 internet access) by installing the core RobotPy components (see the 
 :ref:`computer installation <install_computer>` section for more details).
 
@@ -58,9 +58,9 @@ Install Python on a roboRIO
 
 .. note:: This step only needs to be done once. 
 
-As of 2021, installing Python and the RobotPy packages are separated into 
-two different steps. Once you are connected to the internet, you can run this
-to download Python for roboRIO onto your computer.
+Installing Python and the RobotPy packages are separated into two different steps.
+Once you are connected to the internet, you can run this to download Python for
+roboRIO onto your computer.
 
 .. tab:: Windows
 

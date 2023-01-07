@@ -83,8 +83,8 @@ intersphinx_mapping = {
         "https://robotpy.readthedocs.io/projects/pyfrc/en/%s/" % rtd_version,
         None,
     ),
-    "networktables": (
-        "https://robotpy.readthedocs.io/projects/pynetworktables/en/%s/" % rtd_version,
+    "ntcore": (
+        "https://robotpy.readthedocs.io/projects/pyntcore/en/%s/" % rtd_version,
         None,
     ),
     "wpilib": (
@@ -186,7 +186,7 @@ texinfo_documents = [
 epub_title = "RobotPy"
 epub_author = "RobotPy development team"
 epub_publisher = "RobotPy development team"
-epub_copyright = "2014-2020, RobotPy development team"
+epub_copyright = "2014-2022, RobotPy development team"
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]

@@ -16,6 +16,9 @@ changed this season that you should be aware of.
           officially supported by FIRST. Please see the
           :ref:`FAQ <faq>` for more information.
 
+          We are working with the WPILib team to make Python an officially
+          supported language in 2024. See https://wpilib.org/blog/bringing-python-to-frc for the announcement.
+
 Projects
 --------
 
@@ -30,10 +33,11 @@ FRC robot code using Python, and we have several projects related to this:
 Additionally, RobotPy is home to several projects that are useful for all teams,
 even if they aren’t writing their robot code in python:
 
-* `pynetworktables <https://github.com/robotpy/pynetworktables>`_: python bindings for NetworkTables that you can use to communcate with SmartDashboard and/or your robot.
-* `pynetworktables2js <https://github.com/robotpy/pynetworktables2js>`_: Forwards NetworkTables traffic to a web page, allowing you to write custom dashboards for your robot using HTML/Javascript
+* `pyntcore <https://github.com/robotpy/pyntcore>`_: python bindings for NetworkTables that you can use to communcate with a dashboard and/or your robot.
+* `pynetworktables <https://github.com/robotpy/pynetworktables>`_: legacy NetworkTables implementation that you can use to communcate with SmartDashboard and/or your robot.
 * `pynetconsole <https://github.com/robotpy/pynetconsole>`_: A simple netconsole implementation in python
 * `robotpy-cscore <https://github.com/robotpy/robotpy-cscore>`_: Python bindings for cscore, a powerful camera/streaming library
+* `robotpy-apriltag <https://github.com/robotpy/robotpy-apriltag>`_: Python bindings for the WPILib apriltag library
 * `roborio-vm <https://github.com/robotpy/roborio-vm>`_: Scripts to create a QEMU virtual machine from the RoboRIO image file
 
 There is a lot of good documentation, but there's still room for improvement.

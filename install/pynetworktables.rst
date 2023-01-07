@@ -4,6 +4,9 @@
 pynetworktables install
 =======================
 
+.. warning:: This page has not been updated for 2023. We recommend using pyntcore
+             instead of pynetworktables.
+
 pynetworktables is a python package that allows FRC teams to use Python to
 communicate with their robots via NetworkTables. It should work without issues
 on your Driver Station, on a coprocessor such as a Raspberry Pi, or anywhere

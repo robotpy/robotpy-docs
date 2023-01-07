@@ -38,8 +38,8 @@ documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
 -  RobotPy WPILib on the roboRIO uses the latest version of Python 3 at kickoff.
-   In 2022, this was Python 3.10.  When using pyfrc or similar projects,
-   you should use a Python 3.6 or newer interpreter (the latest is recommended).
+   In 2023, this was Python 3.11.  When using pyfrc or similar projects,
+   you should use a Python 3.7 or newer interpreter (the latest is recommended).
 -  RobotPy 2014.x is based on Python 3.2.5.
 
 `pynetworktables <https://github.com/robotpy/pynetworktables>`__ is
@@ -71,7 +71,7 @@ Prior to 2015, the API matched the C++ version of WPILib.
 Is Command-based programming available?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Of course! Check out the :mod:`wpilib.command <wpilib.command>` package. There
+Of course! Check out the :mod:`commands2 <commands2>` package. There
 is also some :ref:`python-specific documentation available <command_framework_docs>`.
 
 Is there an easy way to test my code outside of the robot?
@@ -81,8 +81,6 @@ Glad you asked! Our pyfrc project has a built in :ref:`lightweight robot simulat
 you can use to run your code, and also has builtin support for unit testing
 with `py.test <http://pytest.org>`_.
 
-.. note:: These are in the process of being updated for 2020
-
 Competition
 -----------
 
@@ -90,6 +88,10 @@ Competition
 
 Is RobotPy competition-legal?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Python is not an official FRC language yet, but we are working with
+the WPILib team to make it official in 2024. See
+https://wpilib.org/blog/bringing-python-to-frc for the announcement.
 
 As RobotPy was not written by anyone involved with the GDC, we can't
 provide a guaranteed answer (particularly not for future years).

@@ -111,6 +111,46 @@ You should either:
 
 If you `really` don't want pyfrc to do the version check and need to deploy the code `now`, you can specify the ``--no-version-check`` option. However, this isn't recommended.
 
+Problem: My code segfaulted and there's no Python stack trace!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you find something like this here's what you can do:
+
+First, figure out where the code is crashing. Traditional debugging techniques
+apply here, but a simple way is to just delete and/or comment out things until
+it no longer fails. Then add the last thing back in and verify that the code 
+still crashes.
+
+Advanced users can compile a custom version of the robotpy libraries with
+symbols and use gdb to get a full stack trace (documentation TBD).
+
+Once you've identified where it crashes, file a bug on github and we can help
+you out.
+
+Common causes
+^^^^^^^^^^^^^
+
+Python objects are reference counted, and sometimes when you pass one directly
+to a C++ function without retaining a reference a crash can occur::
+
+    class Foo:
+        def do_something(self):
+            some_function(Thing())
+
+In this example, ``Thing`` is immediately destroyed after some_function returns
+(because there are no references to it), but some_function (or something else)
+tries to use the object after it is destroyed. This causes a segfault or memory
+access exception of some kind.
+
+These are considered bugs in RobotPy code and if you report an issue on github
+we can fix it. However, as a workaround you can retain a reference to the thing
+that you created and that often resolves the issue::
+
+    class Foo:
+        def do_something(self):
+            self.thing = Thing()
+            some_function(self.thing)
+
 .. _troubleshooting_nt:
 
 pynetworktables
