@@ -142,37 +142,3 @@ on PyPI.
           project distributes some commonly used packages. See the
           `roborio-wheels <https://github.com/robotpy/roborio-wheels/>`_
           project for more details.
-
-Upgrading RobotPy on a roboRIO
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The ``download`` and ``install`` commands support some pip options, so to 
-upgrade you can use the ``-U`` flag on the commands mentioned above to
-download the latest versions of RobotPy.
-
-.. tab:: Windows
-
-   .. code-block:: sh
-
-      py -3 -m robotpy_installer download -U robotpy
-
-.. tab:: Linux/macOS
-
-   .. code-block:: sh
-
-      robotpy-installer download -U robotpy
-
-The robotpy installer can tell you what packages you have installed on a 
-roboRIO:
-
-.. tab:: Windows
-
-   .. code-block:: sh
-
-      py -3 -m robotpy_installer list
-
-.. tab:: Linux/macOS
-
-   .. code-block:: sh
-
-      robotpy-installer list
