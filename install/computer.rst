@@ -7,8 +7,8 @@ Computer Installation
 .. note:: installation via pip typically requires internet access
 
 RobotPy requires Python 3.7/3.8/3.9/3.10/3.11 to be installed on your computer. We
-no longer support 32-bit installations of Python, you must have a 64-bit
-python installed.
+no longer support 32-bit installations of Python except on ARM coprocessors, you
+must have a 64-bit python installed.
 
 * `Python for Windows <https://www.python.org/downloads/windows/>`_
 * `Python for macOS <https://www.python.org/downloads/mac-osx/>`_
