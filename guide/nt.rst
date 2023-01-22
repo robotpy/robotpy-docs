@@ -23,8 +23,8 @@ home and sometimes in the pits, it tends to not work correctly on the field at
 events. For this reason, if you use NetworkTables on the field, we strongly
 encourage teams to `ensure every device has a static IP address`.
 
-* Static IPs are ``10.XX.XX.2``
-* mDNS Hostnames are ``roborio-XXXX-frc.local`` (don't use these!)
+- Static IPs are ``10.XX.XX.2``
+- mDNS Hostnames are ``roborio-XXXX-frc.local`` (don't use these!)
 
 For example, if your team number was 1234, then the static IP to connect to
 would be  ``10.12.34.2``.
@@ -35,14 +35,10 @@ For information on configuring your RoboRIO and other devices to use static IPs,
 Resources
 ---------
 
-Installation:
+- :doc:`Networktables concepts and documentation <frc:docs/software/networktables/index>`
 
-.. seealso:: :ref:`pyntcore installation <install_pyntcore>`
+- :ref:`pyntcore installation <install_pyntcore>`
 
-API:
+- :ref:`NTCore API Reference <ntcore_api>`
 
-.. seealso:: :ref:`NTCore API Reference <ntcore_api>`
-
-Troubleshooting:
-
-.. seealso:: :ref:`NetworkTables troubleshooting <troubleshooting_nt>`
+- :ref:`NetworkTables troubleshooting <troubleshooting_nt>`
