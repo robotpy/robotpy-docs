@@ -98,7 +98,7 @@ Important notes
 ~~~~~~~~~~~~~~~
   
 * Your image processing code will be launched via a stub that will setup logging
-  and initialize pynetworktables to talk to your robot code
+  and initialize NetworkTables to talk to your robot code
 * The child process will NOT be launched when running the robot code in
   simulation or unit testing mode
 * If your image processing code contains a ``if __name__ == '__main__':`` block,

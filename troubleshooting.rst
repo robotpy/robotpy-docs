@@ -153,8 +153,8 @@ that you created and that often resolves the issue::
 
 .. _troubleshooting_nt:
 
-pynetworktables
----------------
+pyntcore
+--------
 
 isConnected() returns False!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -167,30 +167,42 @@ will fail.
 Ensure you're using the correct mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you're running pynetworktables as part of a RobotPy robot -- relax,
-pynetworktables is setup as a server automatically for you, just like in
+If you're running NetworkTables as part of a RobotPy robot -- relax,
+NetworkTables is setup as a server automatically for you, just like in
 WPILib!
 
 If you're trying to connect to the robot from a coprocessor (such as a
 Raspberry Pi) or from the driver station, then you will need to ensure that
-you initialize pynetworktables correctly. 
+you initialize NetworkTables correctly. The following shows how to initialize
+pyntcore correctly as a client.
 
-Thankfully, this is super easy as of 2017. Here's the code::
+.. code-block:: python
 
-    from networktables import NetworkTables
+    import ntcore
 
-    # replace your team number below
-    NetworkTables.startClientTeam(1234)
+    inst = ntcore.NetworkTableInstance.getDefault()
+
+    # start a NT4 client
+    inst.startClient4("example client")
+
+    # connect to a roboRIO with team number TEAM
+    inst.setServerTeam(TEAM)
+
+    # starting a DS client will try to get the roboRIO address from the DS application
+    inst.startDSClient()
+
+    # connect to a specific host/port
+    inst.setServer("host", ntcore.NetworkTableInstance.kDefaultPort4)
 
 Don't know what the right hostname is? That's what the next section is for...
 
-Use static IPs when using pynetworktables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use static IPs when using NetworkTables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. seealso:: :ref:`networktables_guide`
 
 
-Problem: I can't determine if networktables has connected
+Problem: I can't determine if NetworkTables has connected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Make sure that you have enabled python logging (it's not enabled by default)::
@@ -205,8 +217,8 @@ Once you've enabled logging, look for messages that look like this::
 
 If you see a message like this, it means that your client has connected to the
 robot successfully. If you don't see it, that means there's still a problem.
-Usually the problem is that you set the hostname incorrectly in your call to
-``NetworkTables.initialize``.
+Much of the time this occurs when not using a static IP for your robot, and is
+fixed when you start using a static IP for your robot.
 
 .. _troubleshooting_cscore:
 

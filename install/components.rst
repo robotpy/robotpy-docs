@@ -57,6 +57,12 @@ along with command based programming. You would do this
 
       pip3 install -U robotpy[navx,commands]
 
+.. tab:: Linux ARM Coprocessor
+
+   .. code-block:: sh
+
+      pip3 install --find-links=https://tortall.net/~robotpy/wheels/2023/raspbian/ -U robotpy[navx,commands]
+
 Or if you wanted to install everything:
 
 .. tab:: Windows
@@ -71,19 +77,15 @@ Or if you wanted to install everything:
 
       pip3 install -U robotpy[all]
 
+.. tab:: Linux ARM Coprocessor
+
+   .. code-block:: sh
+
+      pip3 install --find-links=https://tortall.net/~robotpy/wheels/2023/raspbian/ -U robotpy[all]
+
 
 RoboRIO vs Computer
 -------------------
 
 The RobotPy meta package is used for installation on both the RoboRIO and
 on your computer.
-
-Coprocessor installation
-------------------------
-
-Building RobotPy components can take a really long time, so its best if you
-use the pre-built wheels that we publish for ARM32 and AARCH64 systems.
-
-.. code-block:: sh
-
-   pip3 install --find-links=https://tortall.net/~robotpy/wheels/2023/raspbian/ -U robotpy

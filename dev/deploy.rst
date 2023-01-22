@@ -16,7 +16,7 @@ If you wish for the code to be started up when the roboRIO boots up, you need to
 make sure that "Disable RT Startup App" is **not** checked in the roboRIO's web
 configuration.
 
-These steps are compatible with what C++/Java does when deployed by eclipse,
+These steps are compatible with what C++/Java does when deployed by GradleRIO,
 so you should be able to seamlessly switch between python and other FRC
 languages!
 

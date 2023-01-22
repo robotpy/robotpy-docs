@@ -122,7 +122,7 @@ not recommended nor is it supported.
 
      **source install**
 
-     Alternatively, if you have a C++17 compiler installed, you may be able
+     Alternatively, if you have a C++20 compiler installed, you may be able
      to use pip to install RobotPy from source.
 
      .. warning:: It may take a very long time to install!
@@ -141,3 +141,32 @@ not recommended nor is it supported.
 
          export CC=gcc-12 CXX=g++-12
 
+.. tab:: Linux ARM Coprocessor
+
+     We now publish prebuilt wheels at https://tortall.net/~robotpy/wheels/2023/raspbian/, which can be downloaded by giving the ``--find-links`` option to
+     pip:
+
+     .. code-block:: sh
+
+         pip3 install --find-links=https://tortall.net/~robotpy/wheels/2023/raspbian/ robotpy
+
+     **source install**
+
+     Alternatively, if you have a C++20 compiler installed, you may be able
+     to use pip to install RobotPy from source.
+
+     .. warning:: It may take a very long time to install!
+
+     .. warning::
+
+         Mixing our pre-built wheels with source installs may cause runtime errors.
+         This is due to internal ABI incompatibility between compiler versions.
+
+         Our ARM wheels are built on Ubuntu 22.04 with GCC 10.
+
+     If you need to build with a specific compiler version, you can specify them
+     using the :envvar:`CC` and :envvar:`CXX` environment variables:
+
+     .. code-block:: sh
+
+         export CC=gcc-12 CXX=g++-12

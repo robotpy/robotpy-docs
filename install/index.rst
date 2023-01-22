@@ -14,9 +14,9 @@ Writing Robot code in Python:
 
 Using NetworkTables from Python:
 
-* To install pynetworktables on a system that does not have RobotPy
+* To install NetworkTables on a system that does not have RobotPy
   or pyfrc installed on it (such as a coprocessor like the Raspberry Pi), see the
-  :ref:`pynetworktables installation documentation <install_pynetworktables>`.
+  :ref:`pyntcore installation documentation <install_pyntcore>`.
 
 Using cscore from Python:
 
@@ -45,7 +45,7 @@ Notes specific to individual packages
     :maxdepth: 1
 
     pyfrc
-    pynetworktables
+    pyntcore
     commands
     ctre
     navx

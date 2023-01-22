@@ -4,8 +4,6 @@
 robotpy-cscore install
 ======================
 
-.. note:: cscore is not installed when you ``pip install robotpy``
-
 RoboRIO installation
 --------------------
 
@@ -17,20 +15,20 @@ is very simple:
    .. code-block:: sh
 
       # While connected to the internet
-      py -3 -m robotpy_installer download robotpy-cscore
+      py -3 -m robotpy_installer download robotpy[cscore]
 
       # While connected to the network with a RoboRIO on it
-      py -3 -m robotpy_installer install robotpy-cscore
+      py -3 -m robotpy_installer install robotpy[cscore]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
    
       # While connected to the internet
-      robotpy-installer download robotpy-cscore
+      robotpy-installer download robotpy[cscore]
 
       # While connected to the network with a RoboRIO on it
-      robotpy-installer install robotpy-cscore
+      robotpy-installer install robotpy[cscore]
     
 For additional details about running robotpy-installer on your computer, see
 the :ref:`robotpy-installer documentation <install_packages>`.
@@ -38,8 +36,7 @@ the :ref:`robotpy-installer documentation <install_packages>`.
 Non-roboRIO installation
 ------------------------
 
-We now distribute wheels for CSCore on pypi, so you can just use the robotpy-meta
-package to install it:
+We now distribute pre-built wheels for CSCore, so you can just use pip to install it:
 
 .. tab:: Windows
 
@@ -52,6 +49,12 @@ package to install it:
    .. code-block:: sh
 
       pip3 install -U robotpy[cscore]
+
+.. tab:: ARM Coprocessor
+
+   .. code-block:: sh
+
+      pip3 install -U robotpy[cscore] --find-links=https://tortall.net/~robotpy/wheels/2023/raspbian/
 
 
 Next steps

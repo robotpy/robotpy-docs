@@ -20,7 +20,6 @@ its NT3 support, but we recommend all users to switch to pyntcore.
 pyntcore now provides a similar API to networktables, but it lives in the
 :py:mod:`ntcore` package now.
 
-
 Linux specific notes
 --------------------
 

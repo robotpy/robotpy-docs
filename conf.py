@@ -107,7 +107,8 @@ intersphinx_mapping = {
 }
 
 redirects = {
-    "2020_notes": "upgrade_notes.html"
+    "2020_notes": "upgrade_notes.html",
+    "install/pynetworktables": "pyntcore.html"
 }
 
 # The version info for the project you're documenting, acts as replacement for
