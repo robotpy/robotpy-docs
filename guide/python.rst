@@ -12,6 +12,8 @@ Introduction to Python
           * `List of various guides to learn Python <http://docs.python-guide.org/en/latest/intro/learning/>`_
           * `CodeAcademy <http://www.codecademy.com/tracks/python>`_
           * `Python 3.5 Tutorial <https://docs.python.org/3.5/tutorial/>`_
+          * `Python Programming <https://pythonprogramming.net/>`
+          * `A Byte of Python <https://python.swaroopch.com/>`
           
           If you want to practice some of these concepts, try out
           `pybasictraining <https://github.com/virtuald/pybasictraining>`_!
