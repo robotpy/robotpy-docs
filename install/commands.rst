@@ -41,7 +41,7 @@ to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[commands2]
+      py -3 -m robotpy_installer download robotpy[commands2]
 
 .. tab:: Linux/macOS
 

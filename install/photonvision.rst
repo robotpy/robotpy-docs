@@ -39,13 +39,13 @@ while connected to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[photonvision]
+      py -3 -m robotpy_installer download robotpy[photonvision]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer download -U robotpy[photonvision]
+      robotpy-installer download robotpy[photonvision]
 
 Then, when connected to the roborio's network, run:
 

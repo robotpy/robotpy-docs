@@ -39,13 +39,13 @@ while connected to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[pathplannerlib]
+      py -3 -m robotpy_installer download robotpy[pathplannerlib]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer download -U robotpy[pathplannerlib]
+      robotpy-installer download robotpy[pathplannerlib]
 
 Then, when connected to the roborio's network, run:
 

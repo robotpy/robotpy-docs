@@ -40,13 +40,13 @@ while connected to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[ctre]
+      py -3 -m robotpy_installer download robotpy[ctre]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer download -U robotpy[ctre]
+      robotpy-installer download robotpy[ctre]
 
 Then, when connected to the roborio's network, run:
 

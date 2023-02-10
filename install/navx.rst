@@ -33,13 +33,13 @@ computer while connected to the internet:
 
    .. code-block:: sh
 
-      py -3 -m robotpy_installer download -U robotpy[navx]
+      py -3 -m robotpy_installer download robotpy[navx]
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      robotpy-installer download -U robotpy[navx]
+      robotpy-installer download robotpy[navx]
 
 Then, when connected to the roborio's network, run:
 
