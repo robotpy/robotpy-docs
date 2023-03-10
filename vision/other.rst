@@ -3,9 +3,7 @@ Other platforms
 ===============
 
 ``robotpy-cscore`` is a great solution for running image processing on a
-coprocessor such as the Raspberry Pi or on the Driver Station. However, we 
-do not provide precompiled packages at this time and you will need to compile
-binary packages for your platform.
+coprocessor such as the Raspberry Pi or on the Driver Station.
 
 Installation
 ------------
