@@ -18,7 +18,6 @@ Vendor categories:
 
 * ``ctre`` - Cross The Road Electronics motor controllers
 * ``navx`` - Kauai Labs NavX MXP Robotics Navigation 
-* ``photonvision`` - PhotonVision computer vision vendor library
 * ``pathplannerlib`` - PathPlannerLib path planning vendor library
 * ``photonvision`` - PhotonVision computer vision vendor library
 * ``rev`` - REV Robotics motor controllers and color sensors
