@@ -42,8 +42,8 @@ PyFRC simulator had. This allows you to drive your robot around on a
 virtual field -- in particular, it's very useful for testing the logic of
 autonomous mode movements.
 
-.. note:: To enable the field view, go to the 'Window' menu, and select
-          2D field view.
+.. note:: To enable the field view, go to the "NetworkTables" > "SmartDashboard"
+          menu, and select "Field".
 
 For the robot to move across the field, you must implement a physics module
 (it's a lot easier than it sounds!). Helper functions are provided to
