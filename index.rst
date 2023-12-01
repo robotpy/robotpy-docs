@@ -33,7 +33,7 @@ FRC robot code using Python, and we have several projects related to this:
 Additionally, RobotPy is home to several projects that are useful for all teams,
 even if they aren’t writing their robot code in python:
 
-* `pyntcore <https://github.com/robotpy/pyntcore>`_: python bindings for NetworkTables that you can use to communcate with a dashboard and/or your robot.
+* `pyntcore <https://github.com/robotpy/pyntcore>`_: python bindings for NetworkTables that you can use to communicate with a dashboard and/or your robot.
 * `pynetworktables <https://github.com/robotpy/pynetworktables>`_: legacy NetworkTables implementation that you can use to communcate with SmartDashboard and/or your robot.
 * `pynetconsole <https://github.com/robotpy/pynetconsole>`_: A simple netconsole implementation in python
 * `robotpy-cscore <https://github.com/robotpy/robotpy-cscore>`_: Python bindings for cscore, a powerful camera/streaming library
