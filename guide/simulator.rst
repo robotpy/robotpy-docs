@@ -20,13 +20,13 @@ To run the GUI simulator, run your robot.py with the following arguments:
 
    .. code-block:: sh
 
-      py -3 robot.py sim
+      py -3 -m robotpy sim
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py sim
+      python3 -m robotpy sim
 
 User interface
 --------------
@@ -52,7 +52,7 @@ calculate robot position for common drivetrain types.
 We have a variety of examples and documentation available:
 
 * :ref:`PyFRC API docs <physics_model>`
-* :external+wpilib:doc:`wpilib.simulation`
+* :external+robotpy:doc:`wpilib.simulation`
 * `RobotPy Examples Repository <https://github.com/robotpy/examples>`_
 
 .. _smartdashboard:

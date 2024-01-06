@@ -19,4 +19,3 @@ Programmer's Guide
     testing
     guidelines
     nt
-    examples

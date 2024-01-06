@@ -12,21 +12,20 @@ code, and if they pass then it will upload the robot code to the roboRIO.
 Running the tests is really important, it allows you to catch errors in your
 code before you run it on the robot. 
 
-1. Make sure you have RobotPy installed on the robot (:ref:`RobotPy install guide <install_robotpy>`)
-2. Make sure you have pyfrc installed (:ref:`pyfrc install guide <install_pyfrc>`)
-3. Once that is done, you can just run the following command and it will upload the code and start it immediately.
+1. Make sure you have RobotPy installed on the robot (:ref:`RobotPy install guide <install_robotpy>`) and on your computer
+2. Once that is done, you can just run the following command and it will upload the code and start it immediately.
 
 .. tab:: Windows
 
    .. code-block:: sh
 
-      py -3 robot.py deploy
+      py -3 -m robotpy deploy
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py deploy
+      python3 -m robotpy deploy
 
 You can watch your robot code's output (and see any problems) by using the
 netconsole program (you can either use NI's tool, or `pynetconsole <https://github.com/robotpy/pynetconsole>`_.
@@ -49,13 +48,13 @@ your program's console output, by launching a netconsole listener.
 
    .. code-block:: sh
 
-      py -3 robot.py deploy --nc
+      py -3 -m robotpy deploy --nc
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py deploy --nc
+      python3 -m robotpy deploy --nc
 
 .. note:: This requires the driver station software to be connected to your robot
 
@@ -69,13 +68,13 @@ don't care about the tests. That's OK, you can still upload code to the robot:
 
    .. code-block:: sh
 
-      py -3 robot.py deploy --skip-tests
+      py -3 -m robotpy deploy --skip-tests
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py deploy --skip-tests
+      python3 -m robotpy deploy --skip-tests
 
 Starting deployed code at boot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

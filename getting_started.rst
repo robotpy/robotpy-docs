@@ -19,7 +19,3 @@ the following steps:
 
 Once you've played around with some code in simulation, then you should 
 :ref:`install RobotPy on your robot <install_robotpy>`.
-
-If you're looking to use NetworkTables on the driver station or on a
-coprocessor, then check out the :ref:`pyntcore install docs <install_pyntcore>`.
-

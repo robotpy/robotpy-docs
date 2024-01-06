@@ -37,8 +37,6 @@ Resources
 
 - :doc:`Networktables concepts and documentation <frc:docs/software/networktables/index>`
 
-- :ref:`pyntcore installation <install_pyntcore>`
-
 - :ref:`NTCore API Reference <ntcore_api>`
 
 - :ref:`NetworkTables troubleshooting <troubleshooting_nt>`

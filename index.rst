@@ -9,6 +9,8 @@ students dedicated to developing python-related projects for the FIRST Robotics
 Competition. This documentation site contains information about various projects
 that RobotPy supports, including guides and API references.
 
+Some of the tools  RobotPy project 
+
 Please read our :ref:`Upgrade Notes<upgrade_notes>` page for things that have
 changed this season that you should be aware of.
 
@@ -27,7 +29,6 @@ FRC robot code using Python, and we have several projects related to this:
 
 * `robotpy-wpilib <https://github.com/robotpy/robotpy-wpilib>`_: the python implementation of WPILib for FRC
 * `pyfrc <https://github.com/robotpy/pyfrc>`_: provides unit testing, realtime robot simulation, and easy upload capabilities for your RobotPy code
-* `roborio-packages <https://github.com/robotpy/roborio-packages>`_: Various python packages for the RoboRIO platform installable by opkg, including the python interpreter and numpy
 * `robotpy-wpilib-utilities <https://github.com/robotpy/robotpy-wpilib-utilities>`_: Community focused extensions for WPILib
 
 Additionally, RobotPy is home to several projects that are useful for all teams,
@@ -43,7 +44,31 @@ even if they aren’t writing their robot code in python:
 There is a lot of good documentation, but there's still room for improvement.
 We welcome contributions from all members of the FIRST community!
 
+.. toctree::
+    :caption: RobotPy
+    :maxdepth: 2
+
+    getting_started
+    upgrade_notes
+    install/index
+    guide/index
+    frameworks/index
+    
 .. include:: _sidebar.rst.inc
+
+.. toctree::
+    :caption: Additional Info
+    :maxdepth: 2
+
+    troubleshooting
+    support
+    faq
+
+.. toctree::
+    :caption: RobotPy Developers
+    :maxdepth: 2
+
+    dev/index
 
 Indices and tables
 ==================

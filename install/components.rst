@@ -16,16 +16,17 @@ RobotPy wrappers around WPILib will be installed. However there are several
 groups of optional components that you can install. 
 Vendor categories:
 
-* ``ctre`` - Cross The Road Electronics motor controllers
 * ``navx`` - Kauai Labs NavX MXP Robotics Navigation 
 * ``pathplannerlib`` - PathPlannerLib path planning vendor library
-* ``photonvision`` - PhotonVision computer vision vendor library
+* ``phoenix5`` - CTRE Phoenix v5
+* ``phoenix6`` - CTRE Phoenix v6
+* ``playingwithfusion`` - Playing With Fusion vendor library
 * ``rev`` - REV Robotics motor controllers and color sensors
 
 Optional WPILib component categories:
 
 * ``apriltag`` - WPILib apriltag library 
-* ``commands2`` - WPILib Commands framework (2020+)
+* ``commands2`` - WPILib Commands framework v2 (2020+)
 * ``cscore`` - WPILib cscore library
 * ``romi`` - Romi robot specific components
 * ``sim`` - WPILib extra simulation support

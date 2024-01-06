@@ -70,11 +70,9 @@ project = "RobotPy"
 copyright = f"2014-{date.today().year}, RobotPy development team"
 
 
+frc_docs = "https://docs.wpilib.org/en/stable"
+
 intersphinx_mapping = {
-    "commandsv1": (
-        "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/" % rtd_version,
-        None,
-    ),
     "commandsv2": (
         "https://robotpy.readthedocs.io/projects/commands-v2/en/%s/" % rtd_version,
         None,
@@ -83,32 +81,37 @@ intersphinx_mapping = {
         "https://robotpy.readthedocs.io/projects/pyfrc/en/%s/" % rtd_version,
         None,
     ),
-    "ntcore": (
-        "https://robotpy.readthedocs.io/projects/pyntcore/en/%s/" % rtd_version,
-        None,
-    ),
-    "wpilib": (
-        "https://robotpy.readthedocs.io/projects/wpilib/en/%s/" % rtd_version,
-        None,
-    ),
-    "hal": (
-        "https://robotpy.readthedocs.io/projects/hal/en/%s/" % rtd_version,
+    "robotpy": (
+        "https://robotpy.readthedocs.io/projects/robotpy/en/%s/" % rtd_version,
         None,
     ),
     "robotpy_ext": (
         "https://robotpy.readthedocs.io/projects/utilities/en/%s/" % rtd_version,
         None,
     ),
-    "cscore": (
-        "https://robotpy.readthedocs.io/projects/cscore/en/%s/" % rtd_version,
-        None,
-    ),
-    "frc": ("https://docs.wpilib.org/en/stable", None),
+    "frc": (frc_docs, None),
 }
 
 redirects = {
     "2020_notes": "upgrade_notes.html",
-    "install/pynetworktables": "pyntcore.html"
+    "install/pynetworktables": "pyntcore.html",
+    "frameworks/command": f"{frc_docs}/docs/software/commandbased/index",
+    "guide/examples": "https://github.com/robotpy/examples",
+    "guide/nt": f"{frc_docs}/docs/software/networktables/index.html",
+    "hw": f"{frc_docs}/docs/hardware/hardware-basics/index.html",
+    "install/commands": "install/components",
+    "install/cscore": "install/components",
+    "install/ctre": "install/components",
+    "install/navx": "install/components",
+    "install/pathplannerlib": "install/components",
+    "install/pwfusion": "install/components",
+    "install/pyfrc": "install/components",
+    "install/pyntcore": "install/components",
+    "install/rev": "install/components",
+    "vision/code": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/index": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/other": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/roborio": f"{frc_docs}/docs/software/vision-processing/roborio/index.html",
 }
 
 # The version info for the project you're documenting, acts as replacement for
@@ -116,7 +119,9 @@ redirects = {
 # built documents.
 #
 # The short X.Y version.
-version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[0]
+version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[
+    0
+]
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -133,15 +138,7 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "default"
-
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-
-    html_theme = "sphinx_rtd_theme"
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    html_theme = "default"
+html_theme = "sphinx_rtd_theme"
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = "RobotPy"

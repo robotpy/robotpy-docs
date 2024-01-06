@@ -86,7 +86,7 @@ pretty simple too.
 
 ::
 
-	python3 robot.py run 
+	python3 -m robotpy run 
 
 Your driver station should be able to connect to your code, and it will be able
 to operate your robot!

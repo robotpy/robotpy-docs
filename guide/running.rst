@@ -8,9 +8,6 @@ Now that you've created your first Python robot program, you probably want to
 know how to run the code. The process to run a python script is slightly
 different for each operating system.
 
-.. note:: This section assumes that you've already :ref:`installed pyfrc <install_pyfrc>`.
-          If you haven't, now's a great time to do so!
-
 How to execute the script
 -------------------------
 
@@ -22,7 +19,7 @@ How to execute the script
 
    .. code-block:: sh
 
-      py -3 robot.py
+      py -3 -m robotpy
 
 .. tab:: Linux/macOS
 
@@ -32,7 +29,7 @@ How to execute the script
 
    .. code-block:: sh
 
-      python3 robot.py
+      python3 -m robotpy
 
 Commands
 --------
@@ -47,16 +44,16 @@ robot code. To discover the various features that are installed, you can use the
 
    .. code-block:: batch
 
-      py -3 robot.py --help
+      py -3 -m robotpy --help
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py --help
+      python3 -m robotpy --help
 
 .. note:: RobotPy supports an extension mechanism that allows advanced users the
-          ability to create their own custom ``robot.py`` commandline options.
+          ability to create their own custom ``robotpy`` commandline options.
           For more information, see :ref:`robotpy_extension_options`
 
 Next steps

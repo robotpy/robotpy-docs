@@ -16,11 +16,11 @@ Using NetworkTables from Python:
 
 * To install NetworkTables on a system that does not have RobotPy
   or pyfrc installed on it (such as a coprocessor like the Raspberry Pi), see the
-  :ref:`pyntcore installation documentation <install_pyntcore>`.
+  :ref:`pyntcore installation documentation <robotpy_components>`.
 
 Using cscore from Python:
 
-* See the :ref:`robotpy-cscore installation documentation <install_cscore>`.
+* See the :ref:`robotpy-cscore installation documentation <robotpy_components>`.
 
 Installing extra software packages on the RoboRIO:
 
@@ -33,24 +33,5 @@ Installing extra software packages on the RoboRIO:
    
     components
     computer
-    robot
-    cscore
-
-Package notes
--------------
-
-Notes specific to individual packages
-
-.. toctree::
-    :maxdepth: 1
-
-    pyfrc
-    pyntcore
-    commands
-    ctre
-    navx
-    pathplannerlib
-    photonvision
-    pwfusion
-    rev
     packages
+    robot
