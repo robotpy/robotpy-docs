@@ -9,72 +9,17 @@ Troubleshooting
 Robot Code
 ----------
 
-Problem: I can't run code on the robot!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There are lots of things that can go wrong here. It is very important to have
-the latest versions of the FIRST robot software installed:
-
-* Robot Image
-* Driver Station + Tools
-
-The `FIRST WPILib documentation <https://docs.wpilib.org>`_
-contains information on what the current versions are, and how to go about
-updating the software.
-
-You should also have the latest version of the RobotPy software packages:
-
-* Do you have the latest version of pyfrc?
-
-.. warning:: Make sure that the version of WPILib on your computer matches the
-   version installed on the robot! You can check what version you have locally
-   by running
-
-   .. tab:: Windows
-
-      .. code-block:: sh
-
-         py -3 -m pip list
-
-   .. tab:: Linux/macOS
-
-      .. code-block:: sh
-
-         pip3 list
-
-1. Did you run the deploy command to put the code on the robot?
-2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
-3. Read any error messages that pyfrc might give you. They might be useful. :)
-
-Problem: no module named 'wpilib'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
-
-If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
-
-Problem: no module named ...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you're using a non-WPILib vendor library, it must be installed separately.
-
-* :ref:`install_ctre`
-* :ref:`install_navx`
-* :ref:`install_photonvision`
-* :ref:`install_pwfusion`
-* :ref:`install_rev`
+..
+  Problem: I can't run code on the robot!
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
+Problem: deploy cannot connect to the robot, or appears to hang
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
-
-Problem: pyfrc cannot connect to the robot, or appears to hang
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Can you ping your robot from the machine that you're deploying code from? If not, pyfrc isn't going to be able to connect to the robot either.
-2. Try to ssh into your robot, using `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ or the ``ssh`` command on Linux/macOS. The username to use is ``lvuser``, and the password is an empty string. If this doesn't work, pyfrc won't be able to copy files to your robot
-3. If all of that works, it might just be that you typed the wrong hostname to connect to. There's a file called ``.deploy_cfg`` next to your ``robot.py`` that pyfrc created. Delete it, and try again.
+1. Can you ping your robot from the machine that you're deploying code from? If not, the deploy process isn't going to be able to connect to the robot either.
+2. Try to ssh into your robot, using `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ or the ``ssh`` command on Linux/macOS. The username to use is ``lvuser``, and the password is an empty string. If this doesn't work, the deploy process won't be able to copy files to your robot
+3. If all of that works, it might just be that you typed the wrong hostname to connect to. Delete ``.wpilib/wpilib_preferences.json``, and try again.
 
 
 Problem: I deploy successfully, but the driver station still shows 'No Robot Code'
@@ -84,32 +29,6 @@ Problem: I deploy successfully, but the driver station still shows 'No Robot Cod
 2. If you can't see any useful output there, then ssh into the robot and run ``ps -Af | grep python3``. If nothing shows up, it means your python code crashed and you'll need to debug it. Try running it manually on the robot using this command:: 
     
     python3 /home/lvuser/py/robot.py run
-
-Problem: When I run deploy, it complains that the WPILib versions don't match
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Not surprisingly, the error message is correct.
-
-During deployment, pyfrc does a number of checks to ensure that your robot is setup properly for running python robot code. One of these checks is testing the WPILib version number against the version installed on your computer (it's installed when you install pyfrc).
-
-You should either:
-
-* Upgrade the RobotPy installation on the robot to match the newer version on your computer. See the :ref:`RobotPy install guide <install_robotpy>` for more info.
-* Upgrade the robotpy installation on your computer to match the version on the robot. Just run:
-
-  .. tab:: Windows
-
-     .. code-block:: sh
-
-        py -3 -m pip install --upgrade robotpy
-
-  .. tab:: Linux/macOS
-
-     .. code-block:: sh
-
-        pip3 install --upgrade robotpy
-
-If you `really` don't want pyfrc to do the version check and need to deploy the code `now`, you can specify the ``--no-version-check`` option. However, this isn't recommended.
 
 Problem: My code segfaulted and there's no Python stack trace!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -199,7 +118,7 @@ Don't know what the right hostname is? That's what the next section is for...
 Use static IPs when using NetworkTables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. seealso:: :ref:`networktables_guide`
+.. seealso:: :doc:`frc:docs/networking/networking-introduction/ip-configurations`
 
 
 Problem: I can't determine if NetworkTables has connected

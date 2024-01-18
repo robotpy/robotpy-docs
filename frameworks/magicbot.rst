@@ -32,11 +32,6 @@ class as your base robot class. You'll  note that it's similar to
             '''Called when teleop starts; optional'''
             
         def teleopPeriodic(self):
-            '''Called on each iteration of the control loop'''
-            
-    if __name__ == '__main__':
-        wpilib.run(MyRobot)
-
 
 A robot control program can be divided into several logical parts (think
 drivetrain, forklift, elevator, etc). We refer to these parts as
@@ -300,8 +295,6 @@ The simplest method to communicate with other programs external to your robot
 code (examples include dashboards and image processing code) is using
 NetworkTables. NetworkTables is a distributed keystore, or put more simply,
 it is similar to a python dictionary that is shared across multiple processes.
- 
-.. note:: For more information about NetworkTables, see :ref:`networktables_guide`
 
 Magicbot provides a simple way to interact with NetworkTables, using the
 :func:`tunable <robotpy_ext:magicbot.magic_tunable.tunable>` property.

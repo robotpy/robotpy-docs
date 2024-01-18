@@ -27,7 +27,7 @@ Installing and Running RobotPy
 How do I install RobotPy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See our :ref:`getting started guide <getting_started>`.
+RobotPy installation documentation is now at :doc:`frc-docs <frc:docs/zero-to-robot/step-2/python-setup>`.
 
 What version of Python do RobotPy projects use?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,8 +38,8 @@ documentation <https://docs.python.org/3/>`__ instead of the Python
 2.x documentation.
 
 -  RobotPy WPILib on the roboRIO uses the latest version of Python 3 at kickoff.
-   In 2023, this was Python 3.11.  When using pyfrc or similar projects,
-   you should use a Python 3.7 or newer interpreter (the latest is recommended).
+   In 2024, this was Python 3.12.  When using pyfrc or similar projects,
+   you should use a Python 3.8 or newer interpreter (the latest is recommended).
 -  RobotPy 2014.x is based on Python 3.2.5.
 
 `pynetworktables <https://github.com/robotpy/pynetworktables>`__ is
@@ -71,15 +71,19 @@ Prior to 2015, the API matched the C++ version of WPILib.
 Is Command-based programming available?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Of course! Check out the :mod:`commands2 <commands2>` package. There
-is also some :ref:`python-specific documentation available <command_framework_docs>`.
+Of course! Check out the :mod:`commands2 <commands2>` package.
 
-Is there an easy way to test my code outside of the robot?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Are Vendor libraries available?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Glad you asked! Our pyfrc project has a built in :ref:`lightweight robot simulator <simulator>`
-you can use to run your code, and also has builtin support for unit testing
-with `py.test <http://pytest.org>`_.
+We encourage vendors to make Python versions of their libraries available. Since
+Python support has only been official since 2024, not all vendors do this. If
+you are a vendor, please reach out to our team and we'd be happy to assist.
+
+The RobotPy project also provides unofficial wrappers for vendor libraries that don't
+take a lot of effort to create and maintain.
+
+.. seealso:: :doc:`frc:docs/software/vscode-overview/3rd-party-libraries`
 
 Competition
 -----------
@@ -89,46 +93,19 @@ Competition
 Is RobotPy competition-legal?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python is not an official FRC language yet, but we are working with
-the WPILib team to make it official in 2024. See
-https://wpilib.org/blog/bringing-python-to-frc for the announcement.
-
-As RobotPy was not written by anyone involved with the GDC, we can't
-provide a guaranteed answer (particularly not for future years).
-However, we see no reason that RobotPy would not be legal: to the
-cRIO/RoboRIO, it looks just like any other C++ WPILib-using program that
-reads text files. RobotPy itself should be considered COTS software as
-it is freely available to all teams. Teams have been using RobotPy since
-2010 without any problems from FIRST, and we expect that to continue.
-
-Caveat emptor: while RobotPy is almost certainly legal to use, your team
-should carefully consider the risk of using such a large piece of
-unofficial software; unless RobotPy is used by many teams, if you run
-into trouble at a competition, there may not be anyone else there to
-help! However, we've found that most problems teams run into are
-problems with WPILib itself, and not RobotPy.
-
-Also, be sure to keep in mind the fact that Python is a dynamic language
-and is NOT compiled. This means that typos can easily go undetected
-until your robot runs that particular line of code, resulting in an
-exception and 5 second restart. Make sure to test your code thoroughly
-(see our :ref:`unit testing documentation <unit_tests>`).
-
+As of 2024, Python is officially supported for use in FRC.
 
 .. _is_stable:
 
 Is RobotPy stable?
 ~~~~~~~~~~~~~~~~~~
 
-Yes! While Python is not an officially supported language, teams have been
+Yes! Teams have been
 using RobotPy since 2010, and the maintainer of RobotPy is a member of the
 WPILib team. Much of the time when bugs are found, they are found in the
 underlying WPILib, instead of RobotPy itself.
 
-One caveat to this is that because RobotPy doesn't have a beta period like
-WPILib does, bugs tend to be found during the first half of competition season.
-However, by the time build season ends, RobotPy is just as stable as any of
-the officially suported languages.
+One caveat to this is that because RobotPy is not yet widely adopted, bugs tend to be found during the first half of competition season. However, by the time build season ends, RobotPy is just as stable.
 
 How often does RobotPy get updated?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,8 +147,17 @@ Ross Light, FRC Team 973. Peter is a member of the FIRST WPILib team,
 and also created the `ntcore <https://github.com/wpilibsuite/ntcore/>`_
 and `cscore <https://github.com/wpilibsuite/cscore/>`_ libraries.
 
-The current RobotPy maintainer is `Dustin
-Spicuzza <http://github.com/virtuald>`_, also a member of the FIRST WPILib team.
+How is RobotPy different from WPILib?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All current RobotPy developers are members of the FIRST WPILib team, so in some sense RobotPy is a subgroup of WPILib. However, RobotPy is still separate from WPILib in many ways and has it's own shiny logo, but as time goes on we are aiming to integrate more into the greater WPILib whole.
+
+One thing that makes RobotPy different from WPILib is that we also maintain separate libraries for interacting with various 3rd party vendors, but we expect as Python gets more traction in FRC that vendors will develop and maintain their own libraries.
+
+Who develops RobotPy?
+---------------------
+
+The current RobotPy maintainer is `Dustin Spicuzza <http://github.com/virtuald>`_.
 
 Current RobotPy developers include:
 
@@ -186,6 +172,7 @@ RobotPy is an open project that all members of the FIRST community can
 easily and quickly contribute to. If you find a bug, or have an idea
 that you think others can use:
 
+-  Add Python documentation to :doc:`the official WPILib documentation <frc:index>`
 -  Test and report any issues you find.
 -  Port and test a useful library.
 -  Write a Python module and share it with others (and contribute it to

@@ -3,9 +3,6 @@
 Unit testing robot code
 =======================
 
-.. warning:: Testing is currently still broken, but expected to be available
-             later in the 2022 season
-
 pyfrc comes with robot.py extensions that support testing robot code using the
 py.test python testing tool. To run the unit tests for your robot, just run your
 robot.py with the following arguments:
@@ -14,13 +11,13 @@ robot.py with the following arguments:
 
    .. code-block:: sh
 
-      py -3 robot.py test
+      py -3 -m robotpy test
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py test
+      python3 -m robotpy test
 
 Your tests must be in a directory called 'tests' either next to robot.py, or in
 the directory above where robot.py resides. See 'samples/simple' for an example
@@ -39,13 +36,13 @@ tests to your robot code, you can run the following:
 
    .. code-block:: sh
 
-      py -3 robot.py add-tests
+      py -3 -m robotpy add-tests
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py add-tests
+      python3 -m robotpy add-tests
 
 Running this command creates a directory called 'tests' if it doesn't already
 exist, and then creates a file in your tests directory called pyfrc_test.py,
@@ -84,7 +81,7 @@ plugin that it uses to provide this special functionality to your tests.
 For more information:
 
 * `RobotPy example code <https://github.com/robotpy/examples>`_
-* `py.test documentation <http://pytest.org/latest/example/index.html>`_
+* `pytest documentation <http://pytest.org/latest/example/index.html>`_
 
 Code coverage for tests
 -----------------------
@@ -99,13 +96,13 @@ For example, to run the 'test' command to run unit tests:
 
    .. code-block:: sh
 
-      py -3 robot.py coverage test
+      py -3 -m robotpy coverage test
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py coverage test
+      python3 -m robotpy coverage test
 
 Or to run coverage over the simulator:
 
@@ -113,13 +110,13 @@ Or to run coverage over the simulator:
 
    .. code-block:: sh
 
-      py -3 robot.py coverage sim
+      py -3 -m robotpy coverage sim
 
 .. tab:: Linux/macOS
 
    .. code-block:: sh
 
-      python3 robot.py coverage sim
+      python3 -m robotpy coverage sim
 
 Running code coverage while the simulator is running is nice, because you
 don't have to write unit tests to make sure that you've completely covered
@@ -133,15 +130,11 @@ This allows coverage.py to completely track code coverage, otherwise any
 modules that are imported by robot.py (and much of robot.py itself) would not
 be reported as covered. 
 
-.. note:: There is a py.test module called pytest-cov that is supposed to allow
+.. note:: There is a pytest module called pytest-cov that is supposed to allow
    you to run code coverage tests. However, I've found that it doesn't work
    particularly well for me, and doesn't appear to be maintained anymore.
 
 .. note:: For some reason, when running the simulation under the code coverage
    tool, the output is buffered until the process exits. This does not happen
-   under py.test, however. It's not clear why this occurs. 
+   under pytest, however. It's not clear why this occurs. 
 
-Next Steps
-----------
-
-Learn more about some :ref:`best_practices` when creating robot code. 

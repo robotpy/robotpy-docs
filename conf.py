@@ -70,11 +70,9 @@ project = "RobotPy"
 copyright = f"2014-{date.today().year}, RobotPy development team"
 
 
+frc_docs = "https://docs.wpilib.org/en/stable"
+
 intersphinx_mapping = {
-    "commandsv1": (
-        "https://robotpy.readthedocs.io/projects/commands-v1/en/%s/" % rtd_version,
-        None,
-    ),
     "commandsv2": (
         "https://robotpy.readthedocs.io/projects/commands-v2/en/%s/" % rtd_version,
         None,
@@ -83,32 +81,50 @@ intersphinx_mapping = {
         "https://robotpy.readthedocs.io/projects/pyfrc/en/%s/" % rtd_version,
         None,
     ),
-    "ntcore": (
-        "https://robotpy.readthedocs.io/projects/pyntcore/en/%s/" % rtd_version,
-        None,
-    ),
-    "wpilib": (
-        "https://robotpy.readthedocs.io/projects/wpilib/en/%s/" % rtd_version,
-        None,
-    ),
-    "hal": (
-        "https://robotpy.readthedocs.io/projects/hal/en/%s/" % rtd_version,
+    "robotpy": (
+        "https://robotpy.readthedocs.io/projects/robotpy/en/%s/" % rtd_version,
         None,
     ),
     "robotpy_ext": (
         "https://robotpy.readthedocs.io/projects/utilities/en/%s/" % rtd_version,
         None,
     ),
-    "cscore": (
-        "https://robotpy.readthedocs.io/projects/cscore/en/%s/" % rtd_version,
-        None,
-    ),
-    "frc": ("https://docs.wpilib.org/en/stable", None),
+    "frc": (frc_docs, None),
 }
 
 redirects = {
+    "getting_started": f"{frc_docs}/docs/zero-to-robot/introduction.html",
     "2020_notes": "upgrade_notes.html",
-    "install/pynetworktables": "pyntcore.html"
+    "install/pynetworktables": "pyntcore.html",
+    "frameworks/command": f"{frc_docs}/docs/software/commandbased/",
+    "guide/anatomy": f"{frc_docs}/docs/zero-to-robot/step-4/creating-test-drivetrain-program-cpp-java-python.html",
+    "guide/index": f"{frc_docs}/docs/software/python/",
+    "guide/deploy": f"{frc_docs}/docs/software/python/subcommands/deploy.html",
+    "guide/examples": "https://github.com/robotpy/examples",
+    "guide/guidelines": "guidelines",
+    "guide/nt": f"{frc_docs}/docs/software/networktables/index.html",
+    "guide/running": f"{frc_docs}/docs/software/python/subcommands/index.html",
+    "guide/python": "https://docs.python-guide.org/en/latest/intro/learning/",
+    "guide/simulator": f"{frc_docs}/docs/software/wpilib-tools/robot-simulation/introduction.html",
+    "guide/testing": "testing",
+    "hw": f"{frc_docs}/docs/hardware/hardware-basics/index.html",
+    "install/computer": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/components": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/packages": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/robot": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/commands": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/cscore": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/ctre": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/navx": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pathplannerlib": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pwfusion": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pyfrc": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/pyntcore": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/rev": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "vision/code": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/index": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/other": f"{frc_docs}/docs/software/vision-processing/index.html",
+    "vision/roborio": f"{frc_docs}/docs/software/vision-processing/roborio/index.html",
 }
 
 # The version info for the project you're documenting, acts as replacement for
@@ -116,7 +132,9 @@ redirects = {
 # built documents.
 #
 # The short X.Y version.
-version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[0]
+version = subprocess.check_output(("git", "describe", "--tags"), text=True).split(".")[
+    0
+]
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -133,15 +151,7 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "default"
-
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-
-    html_theme = "sphinx_rtd_theme"
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    html_theme = "default"
+html_theme = "sphinx_rtd_theme"
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = "RobotPy"
@@ -187,7 +197,7 @@ texinfo_documents = [
 epub_title = "RobotPy"
 epub_author = "RobotPy development team"
 epub_publisher = "RobotPy development team"
-epub_copyright = "2014-2022, RobotPy development team"
+epub_copyright = "2014-2024, RobotPy development team"
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]

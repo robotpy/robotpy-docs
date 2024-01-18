@@ -4,25 +4,9 @@
 Upgrade Notes
 =============
 
-Here are major things that have changed for the 2023 season:
+Here are major things that have changed for the 2024 season:
 
-* See below for NT4 related changes
-* cscore is much easier to build now, and we distribute wheels for Windows/Linux/macOS
-* robotpy-commands is no longer supported, only commands v2
-* There are two new packages: robotpy-apriltag and robotpy-wpinet
-
-NetworkTables 4 (NT4)
----------------------
-
-pynetworktables will not be upgraded to support NT4. We will still fix bugs in
-its NT3 support, but we recommend all users to switch to pyntcore.
-
-pyntcore now provides a similar API to networktables, but it lives in the
-:py:mod:`ntcore` package now.
-
-Linux specific notes
---------------------
-
-Linux requires Ubuntu 22.04 or a distribution with an equivalent (or newer)
-glibc installation. See :ref:`linux installation page <install_linux>` for
-more information.
+* Python is now an officially supported language 
+* robotpy-commands-v2 is now a pure python implementation of the Command framework
+* Instead of executing ``robot.py`` directly, we now require that you execute the ``robotpy`` module
+* Robot projects now can contain a ``pyproject.toml`` which lists the pip requirements for a particular robot project. The packages can be downloaded via the ``sync`` command, and are now installed at deploy time.
