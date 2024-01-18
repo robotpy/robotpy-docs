@@ -138,7 +138,3 @@ be reported as covered.
    tool, the output is buffered until the process exits. This does not happen
    under pytest, however. It's not clear why this occurs. 
 
-Next Steps
-----------
-
-Learn more about some :ref:`best_practices` when creating robot code. 

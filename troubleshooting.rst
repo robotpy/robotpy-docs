@@ -9,61 +9,10 @@ Troubleshooting
 Robot Code
 ----------
 
-Problem: I can't run code on the robot!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+  Problem: I can't run code on the robot!
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are lots of things that can go wrong here. It is very important to have
-the latest versions of the FIRST robot software installed:
-
-* Robot Image
-* Driver Station + Tools
-
-The `FIRST WPILib documentation <https://docs.wpilib.org>`_
-contains information on what the current versions are, and how to go about
-updating the software.
-
-You should also have the latest version of the RobotPy software packages:
-
-* Do you have the latest version of pyfrc?
-
-.. warning:: Make sure that the version of WPILib on your computer matches the
-   version installed on the robot! You can check what version you have locally
-   by running
-
-   .. tab:: Windows
-
-      .. code-block:: sh
-
-         py -3 -m pip list
-
-   .. tab:: Linux/macOS
-
-      .. code-block:: sh
-
-         pip3 list
-
-1. Did you run the deploy command to put the code on the robot?
-2. Make sure you have the latest version of pyfrc! Older versions **won't** work.
-3. Read any error messages that pyfrc might give you. They might be useful. :)
-
-Problem: no module named 'wpilib'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
-
-If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
-
-Problem: no module named ...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you're using a non-WPILib vendor library, it must be installed separately.
-
-* :ref:`robotpy_components`
-
-
-If you're on your local computer, did you :ref:`install robotpy via pip <install_computer>`?
-
-If you're on the roboRIO, did you :ref:`install RobotPy <install_robotpy>`?
 
 Problem: deploy cannot connect to the robot, or appears to hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -169,7 +118,7 @@ Don't know what the right hostname is? That's what the next section is for...
 Use static IPs when using NetworkTables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. seealso:: :ref:`networktables_guide`
+.. seealso:: :doc:`frc:docs/networking/networking-introduction/ip-configurations`
 
 
 Problem: I can't determine if NetworkTables has connected

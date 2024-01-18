@@ -6,6 +6,8 @@ become increasingly more difficult to introduce all of the pieces to new
 users. This is the foundation for a unified documentation site for all
 RobotPy projects, in hopes of reducing that confusion.
 
+Now that Python is an officialy supported language, this site still aims to unify the various API documentation for RobotPy projects. However, much of our documentation has been moved to the [WPILib documentation](https://docs.wpilib.org).
+
 All of our documentation is built using Sphinx, and is hosted at
 http://robotpy.readthedocs.io/
 

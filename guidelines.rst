@@ -3,9 +3,7 @@
 Best Practices
 ==============
 
-This section has a selection of things that other teams have found to be good
-things to keep in mind to build robot code that works consistently, and to 
-eliminate possible failures.
+This section has a selection of Python-specific things that other teams have found to be good things to keep in mind to build robot code that works consistently, and to eliminate possible failures.
 
 .. contents:: :local:
 
@@ -132,14 +130,3 @@ With these thoughts in mind, here's an example of what I mean::
           robot's drive function is in it's own exception handler, so even if
           everything else in the robot dies, at least you can still drive
           around.
-
-Consider using a robot framework
---------------------------------
-
-If you're creating anything more than a simple robot, you may find it easier to
-use a robot framework to help you organize your code and take care of some of
-the boring details for you. While frameworks sometimes have a learning curve
-associated with them, once you learn how they work you will find that they can
-save you a lot of effort and prevent you from making certain kinds of mistakes.
-
-See our documentation on :ref:`frameworks`

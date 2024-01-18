@@ -32,11 +32,6 @@ class as your base robot class. You'll  note that it's similar to
             '''Called when teleop starts; optional'''
             
         def teleopPeriodic(self):
-            '''Called on each iteration of the control loop'''
-            
-    if __name__ == '__main__':
-        wpilib.run(MyRobot)
-
 
 A robot control program can be divided into several logical parts (think
 drivetrain, forklift, elevator, etc). We refer to these parts as

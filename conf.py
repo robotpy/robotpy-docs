@@ -93,21 +93,34 @@ intersphinx_mapping = {
 }
 
 redirects = {
+    "getting_started": f"{frc_docs}/docs/zero-to-robot/introduction.html",
     "2020_notes": "upgrade_notes.html",
     "install/pynetworktables": "pyntcore.html",
-    "frameworks/command": f"{frc_docs}/docs/software/commandbased/index",
+    "frameworks/command": f"{frc_docs}/docs/software/commandbased/",
+    "guide/anatomy": f"{frc_docs}/docs/zero-to-robot/step-4/creating-test-drivetrain-program-cpp-java-python.html",
+    "guide/index": f"{frc_docs}/docs/software/python/",
+    "guide/deploy": f"{frc_docs}/docs/software/python/subcommands/deploy.html",
     "guide/examples": "https://github.com/robotpy/examples",
+    "guide/guidelines": "guidelines",
     "guide/nt": f"{frc_docs}/docs/software/networktables/index.html",
+    "guide/running": f"{frc_docs}/docs/software/python/subcommands/index.html",
+    "guide/python": "https://docs.python-guide.org/en/latest/intro/learning/",
+    "guide/simulator": f"{frc_docs}/docs/software/wpilib-tools/robot-simulation/introduction.html",
+    "guide/testing": "testing",
     "hw": f"{frc_docs}/docs/hardware/hardware-basics/index.html",
-    "install/commands": "install/components",
-    "install/cscore": "install/components",
-    "install/ctre": "install/components",
-    "install/navx": "install/components",
-    "install/pathplannerlib": "install/components",
-    "install/pwfusion": "install/components",
-    "install/pyfrc": "install/components",
-    "install/pyntcore": "install/components",
-    "install/rev": "install/components",
+    "install/computer": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/components": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/packages": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/robot": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/commands": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/cscore": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/ctre": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/navx": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pathplannerlib": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pwfusion": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
+    "install/pyfrc": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/pyntcore": f"{frc_docs}/docs/zero-to-robot/step-2/python-setup.html",
+    "install/rev": f"{frc_docs}/docs/software/vscode-overview/3rd-party-libraries.html",
     "vision/code": f"{frc_docs}/docs/software/vision-processing/index.html",
     "vision/index": f"{frc_docs}/docs/software/vision-processing/index.html",
     "vision/other": f"{frc_docs}/docs/software/vision-processing/index.html",
@@ -184,7 +197,7 @@ texinfo_documents = [
 epub_title = "RobotPy"
 epub_author = "RobotPy development team"
 epub_publisher = "RobotPy development team"
-epub_copyright = "2014-2022, RobotPy development team"
+epub_copyright = "2014-2024, RobotPy development team"
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ["search.html"]

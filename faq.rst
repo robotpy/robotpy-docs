@@ -27,7 +27,7 @@ Installing and Running RobotPy
 How do I install RobotPy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See our :ref:`getting started guide <getting_started>`.
+RobotPy installation documentation is now at :doc:`frc-docs <frc:docs/zero-to-robot/step-2/python-setup>`.
 
 What version of Python do RobotPy projects use?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,6 +83,8 @@ you are a vendor, please reach out to our team and we'd be happy to assist.
 The RobotPy project also provides unofficial wrappers for vendor libraries that don't
 take a lot of effort to create and maintain.
 
+.. seealso:: :doc:`frc:docs/software/vscode-overview/3rd-party-libraries`
+
 Competition
 -----------
 
@@ -103,10 +105,7 @@ using RobotPy since 2010, and the maintainer of RobotPy is a member of the
 WPILib team. Much of the time when bugs are found, they are found in the
 underlying WPILib, instead of RobotPy itself.
 
-One caveat to this is that because RobotPy doesn't have a beta period like
-WPILib does, bugs tend to be found during the first half of competition season.
-However, by the time build season ends, RobotPy is just as stable as any of
-the officially suported languages.
+One caveat to this is that because RobotPy is not yet widely adopted, bugs tend to be found during the first half of competition season. However, by the time build season ends, RobotPy is just as stable.
 
 How often does RobotPy get updated?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,8 +147,17 @@ Ross Light, FRC Team 973. Peter is a member of the FIRST WPILib team,
 and also created the `ntcore <https://github.com/wpilibsuite/ntcore/>`_
 and `cscore <https://github.com/wpilibsuite/cscore/>`_ libraries.
 
-The current RobotPy maintainer is `Dustin
-Spicuzza <http://github.com/virtuald>`_, also a member of the FIRST WPILib team.
+How is RobotPy different from WPILib?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All current RobotPy developers are members of the FIRST WPILib team, so in some sense RobotPy is a subgroup of WPILib. However, RobotPy is still separate from WPILib in many ways and has it's own shiny logo, but as time goes on we are aiming to integrate more into the greater WPILib whole.
+
+One thing that makes RobotPy different from WPILib is that we also maintain separate libraries for interacting with various 3rd party vendors, but we expect as Python gets more traction in FRC that vendors will develop and maintain their own libraries.
+
+Who develops RobotPy?
+---------------------
+
+The current RobotPy maintainer is `Dustin Spicuzza <http://github.com/virtuald>`_.
 
 Current RobotPy developers include:
 
@@ -164,6 +172,7 @@ RobotPy is an open project that all members of the FIRST community can
 easily and quickly contribute to. If you find a bug, or have an idea
 that you think others can use:
 
+-  Add Python documentation to :doc:`the official WPILib documentation <frc:index>`
 -  Test and report any issues you find.
 -  Port and test a useful library.
 -  Write a Python module and share it with others (and contribute it to
