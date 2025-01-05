@@ -4,6 +4,8 @@
 Upgrade Notes
 =============
 
+Nothing particularly major has changed for the 2025 season.
+
 Here are major things that have changed for the 2024 season:
 
 * Python is now an officially supported language 
