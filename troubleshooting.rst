@@ -18,17 +18,22 @@ Problem: deploy cannot connect to the robot, or appears to hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Can you ping your robot from the machine that you're deploying code from? If not, the deploy process isn't going to be able to connect to the robot either.
-2. Try to ssh into your robot, using `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ or the ``ssh`` command on Linux/macOS. The username to use is ``lvuser``, and the password is an empty string. If this doesn't work, the deploy process won't be able to copy files to your robot
+2. Try to ssh into your robot, using the ``ssh`` command. The username to use is ``systemcore``, and the password is ``systemcore``. If this doesn't work, the deploy process won't be able to connect either.
 3. If all of that works, it might just be that you typed the wrong hostname to connect to. Delete ``.wpilib/wpilib_preferences.json``, and try again.
+4. If you are debugging the deploy internals themselves, see :ref:`internal_deploy`.
 
 
 Problem: I deploy successfully, but the driver station still shows 'No Robot Code'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Did you use the ``--nc`` option to the deploy command? Your code may have crashed, and the output should be visible on netconsole.
-2. If you can't see any useful output there, then ssh into the robot and run ``ps -Af | grep python3``. If nothing shows up, it means your python code crashed and you'll need to debug it. Try running it manually on the robot using this command:: 
-    
-    python3 /home/lvuser/py/robot.py run
+2. If you can't see any useful output there, ssh into the robot and check ``sudo journalctl -u robot --no-pager``.
+3. If you need to run the deployed command manually, first stop the service and inspect the generated command::
+
+    sudo systemctl stop robot
+    cat /home/systemcore/robotCommand
+
+4. If you are debugging the deploy internals themselves, see :ref:`internal_deploy`.
 
 Problem: My code segfaulted and there's no Python stack trace!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
